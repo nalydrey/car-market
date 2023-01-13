@@ -1,0 +1,62 @@
+.filters{
+    background: #071620;
+    border-radius: 3px;
+    width: 390px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h4{
+        border-bottom: 1px solid white;
+        padding: 12px 0;        
+    }
+   
+}
+
+.find{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #152836;
+    border: none;
+    border-radius: 3px;
+    padding: 0 16px;
+    &:before{
+        content: '';
+        display: block;
+        width: 24px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../../../public/icons/find.svg');
+    }
+    input{
+        width: 100%;
+        padding: 12px;
+        background: transparent;
+        border: none;
+    }
+}
+
+h5{
+    margin-bottom: 12px;
+}
+
+.chosePrise{
+    text-align: center;
+    width: 100%;
+    // border: 1px solid #007CC7;
+    background: transparent;
+    padding-bottom: 15px;
+    color: #007CC7;
+    border-radius: 3px;
+}
+
+.resetButton{
+    width: 100%;
+    border: 1px solid #007CC7;
+    background: transparent;
+    padding: 15px 0;
+    color: #007CC7;
+    border-radius: 3px;
+}

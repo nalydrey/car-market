@@ -1,0 +1,143 @@
+.car{
+    min-width: 314px;
+    border: 2px solid #12232E;
+    border-radius: 3px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+
+}
+
+.horisontal{
+    display: flex;
+    gap: 20px;
+}
+
+.car__img{
+    // flex-grow: 1;
+    border-radius: 3px;
+    overflow: hidden; 
+}
+
+.car__discription{
+    border-bottom: 1px solid #989898;
+    padding: 16px 0;
+    h3{
+        margin-top: 12px;
+        padding-bottom: 20px;
+    }
+    h4{
+        color: #007CC7;
+        margin-bottom: 12px;
+    }
+    h5{
+        margin-bottom: 13px;
+    }
+}
+
+.car__total{
+    flex-grow: 1;
+}
+
+.car__new{
+    display: inline-block;
+    border: 1px solid #007CC7;
+    color: #007CC7;
+    padding: 4px 12px;
+    border-radius: 3px;
+    line-height: 17px;
+}
+
+.car__short{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.horisontal{
+    .car__short{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        justify-content: space-between;
+        gap: 15px;
+    }
+}
+
+.car__label{
+    display: flex;
+    gap: 10px;
+    &:before{
+        content: '';
+        display: block;    
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.car__drive::before{
+    background-image: url('../../../public/icons/steering.svg');
+}
+.car__date::before{
+    background-image: url('../../../public/icons/calendar.svg');
+}
+.car__fuel::before{
+    background-image: url('../../../public/icons/fuel.svg');
+}
+.car__passanger::before{
+    background-image: url('../../../public/icons/people.svg');
+}
+
+.car__bottom{
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.ribbon__text{
+    width: 200px;
+    background-color: #4DA8DA;
+    opacity: .7;
+    padding: 10px 0;
+    text-align: center;
+    
+  
+}
+
+.ribbon{
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    transform: rotate(-45deg);
+    &::before,
+    &::after{
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: #004A77;
+        opacity: .5;
+        position: absolute;
+        transform: rotate(45deg);  
+        z-index: -1;      
+    }
+    &::before{
+        bottom: -14px;
+        left: 27px;
+        height: 58px;
+        
+    }
+    &::after{
+        top: 19px;
+        // bottom: -9px;
+        right: 5px;
+        width: 58px;
+        
+    }
+}
+

@@ -1,0 +1,71 @@
+.find__container{
+    margin: 0 auto;
+    width: 100%;
+    max-height: 5000px;
+    background: #152836;
+}
+
+.find__checkbox-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    max-height: 125px;
+    transition: .5s;
+}
+
+.find__opening{
+    padding: 16px;
+    & input{
+        background-color: transparent;
+        border: 1px solid #D7D7D7;
+        margin-bottom: 13px;
+        padding: 15px;
+        border-radius: 3px;
+        width: 100%;
+        color: white;
+    }
+}
+
+.deploy{
+    transition: .5s ;
+    max-height: 0px;
+    overflow: hidden;
+    &--activate{
+        max-height: 500px;
+    }
+}
+
+.openAll{
+    max-height: 500px;
+}
+
+.find__title{
+    padding: 15px;
+    font-size: 14px;
+    line-height: 16.8px;
+    border-bottom: 1px solid #D7D7D7;
+    display: flex;
+    justify-content: space-between;
+    &::after{
+        content: '';
+        display: block;
+        width: 22px;
+        height: 14px;
+        background-image: url;
+        background-image: url('../../../public/icons/subarrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .5s;
+    }
+    &--active::after{
+        transform: rotate(180deg);
+    }
+}
+
+.find__button{
+    margin-top: 13px;
+    background: none;
+    color: #007CC7;
+    border: none;
+}

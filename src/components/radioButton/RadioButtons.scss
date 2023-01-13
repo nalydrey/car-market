@@ -1,0 +1,44 @@
+$sizeCountur: 20px;
+$sizeDot: 59%;
+
+
+.radio__container{
+    list-style-type: none;
+    // margin-left: 7px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+.radio{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.radio__button{
+    width: $sizeCountur;
+    height: $sizeCountur;
+    border-radius: 50%;
+    border: 3px solid #D7D7D7;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: '';
+        display: block;
+        width: $sizeDot;
+        height: $sizeDot;
+        border-radius: 50%;
+        background-color: white;
+        transform: scale(0);
+        transition: .4s;        
+    }
+    &--active::before{
+        transform: scale(1);
+    }
+}
+

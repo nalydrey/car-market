@@ -1,0 +1,25 @@
+$color: darken(#4DA8DA, 20%);
+
+.pagination{
+    padding: 15px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    user-select: none;
+
+}
+
+.pagination__page{
+    border: 1px solid #4DA8DA;
+    border-radius: 3px;
+    padding: 7px 15px;
+    cursor: pointer;
+}
+.pagination__page:hover{
+    background: $color;
+}
+
+.pagination__page--active{
+    background-color: #4DA8DA;
+}

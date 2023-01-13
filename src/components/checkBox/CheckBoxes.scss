@@ -1,0 +1,46 @@
+$sizeCountur: 18px;
+$sizeDot: 59%;
+$border: 3px;
+
+
+// .checkbox__container{
+//     list-style-type: none;
+//     width: 100%;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     gap: 10px;
+// }
+
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.checkbox__button{
+    width: $sizeCountur;
+    height: $sizeCountur;
+    border-radius: 5px;
+    border: $border solid white;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: '';
+        display: block;
+        width: $sizeDot;
+        height: $sizeDot;
+        border-radius: 1px;
+        background-color: white;
+        transform: scale(0);
+        transition: .4s;        
+    }
+    &--active::before{
+        transform: scale(1);
+    }
+}
+

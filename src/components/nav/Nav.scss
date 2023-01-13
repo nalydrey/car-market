@@ -1,0 +1,67 @@
+.nav__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+.nav__navigation{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.submenu{
+    position: relative;
+    margin-right: 30px;
+    &::after{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 11px;
+        position: absolute;
+        top: 7px;
+        right: -30px; 
+        background-image: url('../../../public/icons/subarrow.svg');
+        background-repeat: no-repeat;
+        transition: 0.5s;
+    }
+}
+.submenu--active.submenu:after{
+    transform: rotate(180deg);
+}
+    
+
+
+.nav__control{    
+    a{
+        margin: 0 60px 0 25px;
+        
+        position: relative;
+
+        &::before{
+            background-image: url('../../../public/icons/signIn.svg');
+        }       
+    }
+    button{
+        cursor: pointer;
+        color: white;
+        border: none;
+        background: none;
+        position: relative;
+        &::before{
+            background-image: url('../../../public/icons/world.svg');
+        }
+    }    
+}
+
+.pre::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: -25px;            
+}
+
