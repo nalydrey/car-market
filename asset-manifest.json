@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/car-market/static/css/main.4cabf166.css",
+    "main.js": "/car-market/static/js/main.01c26ecb.js",
+    "static/media/calendar.svg": "/car-market/static/media/calendar.0263b2ebf368de27c866.svg",
+    "static/media/fuel.svg": "/car-market/static/media/fuel.5f0c48c55b0b4bbd8ebc.svg",
+    "static/media/people.svg": "/car-market/static/media/people.3c5cbf65a76ec2b7e611.svg",
+    "static/media/world.svg": "/car-market/static/media/world.008dfc4ed51a7a465ec6.svg",
+    "static/media/slick.svg": "/car-market/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/car-market/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/car-market/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/car-market/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/steering.svg": "/car-market/static/media/steering.a07687a3e9423e8b2a2b.svg",
+    "index.html": "/car-market/index.html",
+    "static/media/find.svg": "/car-market/static/media/find.1ec532effc1dc3b138c2.svg",
+    "static/media/signIn.svg": "/car-market/static/media/signIn.5e9889a241e70de5cb55.svg",
+    "static/media/subarrow.svg": "/car-market/static/media/subarrow.6d7fdcbd8b0de772bb5b.svg",
+    "main.4cabf166.css.map": "/car-market/static/css/main.4cabf166.css.map",
+    "main.01c26ecb.js.map": "/car-market/static/js/main.01c26ecb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cabf166.css",
+    "static/js/main.01c26ecb.js"
+  ]
+}
