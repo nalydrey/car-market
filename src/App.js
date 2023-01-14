@@ -18,7 +18,7 @@ function App() {
       <div>
         <AppContext>
           <Routes>
-              <Route path='/nalydrey/' element={<CarsLayout/>}>
+              <Route path='/car-market/' element={<CarsLayout/>}>
                 <Route index element={<Home/>}/>
                 <Route path='new_cars' element={<NewCars/>}/>
                 <Route path='used_cars' element={<UsedCars/>}/>
