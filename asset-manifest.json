@@ -1,25 +1,31 @@
 {
   "files": {
-    "main.css": "/car-market/static/css/main.4cabf166.css",
-    "main.js": "/car-market/static/js/main.01c26ecb.js",
+    "main.css": "/car-market/static/css/main.56608e6f.css",
+    "main.js": "/car-market/static/js/main.3f8438a6.js",
+    "static/media/foto3.jpg": "/car-market/static/media/foto3.6c84668788758d4a502f.jpg",
+    "static/media/foto4.jpg": "/car-market/static/media/foto4.f47ef5edecae5d36329a.jpg",
+    "static/media/foto2.jpg": "/car-market/static/media/foto2.66baa4675ef72114b8e3.jpg",
+    "static/media/foto1.jpg": "/car-market/static/media/foto1.52a78b865cb834b7f3c7.jpg",
     "static/media/calendar.svg": "/car-market/static/media/calendar.0263b2ebf368de27c866.svg",
     "static/media/fuel.svg": "/car-market/static/media/fuel.5f0c48c55b0b4bbd8ebc.svg",
     "static/media/people.svg": "/car-market/static/media/people.3c5cbf65a76ec2b7e611.svg",
     "static/media/world.svg": "/car-market/static/media/world.008dfc4ed51a7a465ec6.svg",
+    "static/media/button-hor.svg": "/car-market/static/media/button-hor.9a7685faf39f1fec1e12102785d37c24.svg",
     "static/media/slick.svg": "/car-market/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/car-market/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/car-market/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/button-vert.svg": "/car-market/static/media/button-vert.5f2bc7fe1ef2970babded056458a79f8.svg",
     "static/media/slick.woff": "/car-market/static/media/slick.295183786cd8a1389865.woff",
     "static/media/steering.svg": "/car-market/static/media/steering.a07687a3e9423e8b2a2b.svg",
     "index.html": "/car-market/index.html",
     "static/media/find.svg": "/car-market/static/media/find.1ec532effc1dc3b138c2.svg",
     "static/media/signIn.svg": "/car-market/static/media/signIn.5e9889a241e70de5cb55.svg",
     "static/media/subarrow.svg": "/car-market/static/media/subarrow.6d7fdcbd8b0de772bb5b.svg",
-    "main.4cabf166.css.map": "/car-market/static/css/main.4cabf166.css.map",
-    "main.01c26ecb.js.map": "/car-market/static/js/main.01c26ecb.js.map"
+    "main.56608e6f.css.map": "/car-market/static/css/main.56608e6f.css.map",
+    "main.3f8438a6.js.map": "/car-market/static/js/main.3f8438a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cabf166.css",
-    "static/js/main.01c26ecb.js"
+    "static/css/main.56608e6f.css",
+    "static/js/main.3f8438a6.js"
   ]
 }
