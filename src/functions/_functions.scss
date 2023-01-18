@@ -1,0 +1,34 @@
+$v-min: 320;
+$v-max: 1670;
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+  
+    $b: $b * 1px;
+    
+  
+    @return calc( #{$k} * 100vw + #{$b} );
+  }
+@function calcFluidSize($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+  
+    $b: $b * 1px;
+    
+  
+    @return calc( #{$k} * 100% + #{$b} );
+  }
+
+  @function FluidFontSize($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+  
+    $b: $b * 1%;
+    
+  
+    @return calc( #{$k} * 100vw + #{$b} );
+  }
+  
+  
+ 

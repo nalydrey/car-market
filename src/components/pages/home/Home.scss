@@ -1,0 +1,37 @@
+
+.recomend__control{
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    
+    button{
+        
+        background:none;
+        padding: 7px 20px;
+        border: none;
+        color: #007CC7;
+    }
+
+    .control__active{
+        border-bottom: 1px solid #007CC7;
+    }
+    
+    a{
+        color: #007CC7;
+        
+    }
+    .submenu::after{
+        transform: rotate(-90deg);
+    }
+}
+
+.cars__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,  minmax(314px, 1fr));
+    
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    gap: 20px;
+}
+

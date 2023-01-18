@@ -11,7 +11,6 @@
     gap: 10px;
     overflow: hidden;
     max-height: 125px;
-    transition: .5s;
 }
 
 .find__opening{
@@ -27,7 +26,9 @@
     }
 }
 
-.deploy{
+.deploy{   
+    z-index: 1;
+    width: 100%;
     transition: .5s ;
     max-height: 0px;
     overflow: hidden;
@@ -44,9 +45,10 @@
     padding: 15px;
     font-size: 14px;
     line-height: 16.8px;
-    border-bottom: 1px solid #D7D7D7;
+    border-bottom: 1px solid #d7d7d700;
     display: flex;
     justify-content: space-between;
+    transition: 1s;
     &::after{
         content: '';
         display: block;
@@ -57,6 +59,10 @@
         background-repeat: no-repeat;
         background-position: center;
         transition: .5s;
+    }
+    &--active{
+        border-bottom: 1px solid #D7D7D7;
+
     }
     &--active::after{
         transform: rotate(180deg);

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Cards from "../cards/Cards"
+import Cards from "../../cards/Cards"
 
 const UsedCars = () => {
   const[number, setNumber] = useState(0)

@@ -1,0 +1,71 @@
+.horisontalFindPanel{
+    // height: 50px;
+    padding: 25px;
+    display: grid;
+    gap: 24px;
+    grid-template-areas: 
+    ' radio  radio  radio  radio  radio  radio  radio  radio  radio  radio  radio  radio'
+    'search search search search brand  brand brand brand model model model model'
+    'location location location range range range range range range button button button';
+    background: #071620;
+    transform: translate(0, -50%);
+    
+    .underline__radioContainer{
+        grid-area: radio;
+        justify-self: center;
+    }
+    .search__find{
+        grid-area: search;
+    }
+    .location__find{
+        grid-area: location;
+    }
+    .brand-find__container{
+        grid-area: brand;
+    }
+    .model-find__container{
+        grid-area: model;
+    }
+
+    .range-slider{
+        grid-area: range;
+        display: grid;
+        align-items: center;
+        gap: 10px 0px;
+        grid-template-columns: 150px 1fr;
+        grid-template-areas: 
+        'h range'
+        'p range';
+        *{
+            margin: 0;
+        }
+
+        h5{
+            grid-area: h;
+        }
+        p{
+            grid-area: p;
+
+        }
+        .range__wrap{
+            grid-area: range;            
+
+        }
+    }
+
+    .horisontalFindPanel__button{
+        grid-area: button;
+        width: 100%;
+        background: #007CC7;
+        padding: 5px;
+        border-radius: 3px; 
+    }
+
+    .find__container{
+        position: relative;
+    }
+    .deploy{
+        position: absolute;
+        background-color: #152836;
+    }
+}

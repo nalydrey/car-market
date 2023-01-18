@@ -11,9 +11,9 @@ const FindPanel = (props) => {
     // console.log('Render FindPanel');
     // console.log(props);
     
-    const { data=[], isSearch = false, children, dataKey, createFindObj, sort=false, sortDescenfind=false } = props
+    const { data=[], isSearch = false, children, dataKey, createFindObj, sort=false, sortDescenfind=false, individualStyle='' } = props
 
-    const [isOpen, setOpen] = useState(data)
+    const [isOpen, setOpen] = useState(false)
     const [seeMore, setSee] = useState(data)
     const [search, setSearch] = useState(data)
 
@@ -38,9 +38,10 @@ const FindPanel = (props) => {
                         })
                         setSearch(newData)
     }
+    
 
   return (
-    <div className="find__container">
+    <div className={`find__container ${individualStyle}-find__container`} >
         <div className={`find__title  ${disable&&isOpen&&'find__title--active'}`}   onClick={openClose}>{children}</div>
         <div className={`deploy ${disable&&isOpen&&'deploy--activate'}`}>
             <div className={`find__opening `}>
@@ -48,7 +49,7 @@ const FindPanel = (props) => {
                 <ul className={`find__checkbox-container  ${seeMore&&'openAll'}` }>
                     {search&&<CheckBoxes sort sortDescenfind labelList={data} dataKey={dataKey} callOutFunction={createFindObj}/>}
                 </ul>
-                { search&&search.length>4&&<button className='find__button' onClick={toggleViev}>{seeMore ?'See Little':'See More'}</button>}
+                { search&&search.length>4&&<button className='find__button' onClick={toggleViev}>{seeMore ?'See Less':'See More'}</button>}
             </div>        
         </div>
     </div>

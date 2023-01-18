@@ -3,7 +3,7 @@ import './Pagination.scss'
 
 const Pagination = (props) => {
 
-console.log('pagination');
+// console.log('pagination');
 
 const { totalCards, showBy, callPage, currentPage } = props
 

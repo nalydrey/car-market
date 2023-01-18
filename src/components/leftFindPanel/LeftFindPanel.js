@@ -12,9 +12,10 @@ import RangeSlider from "../RangeSlider/RangeSlider"
 const LeftFindPanel = () => {
   // console.log('render LeftFindPanel');
 
-  const { reset, findObj, allCars, filteredCars } = useCommonContext()
+  const { reset, findObj, allCars, filteredCars, radioChose, radioActiveName } = useCommonContext()
   const data = collectData(filteredCars)
 
+  console.log(radioActiveName);
   // const folowYear = filteredCars.map((el)=>el.year).reduce((ak, el)=> ak+el)
 
   
@@ -34,7 +35,7 @@ const LeftFindPanel = () => {
         </div>
         <div className="filters__radio">
             <h5>Conditions</h5>
-            <RadioButtons labelList={['All', 'New', 'Used']} />
+            <RadioButtons buttonType='radio__button' labelList={['All', 'New', 'Used']} individualClass='radio__container' radioCallBack={radioChose} activeName={radioActiveName}/>
             {/* callOutFunction={refresh} */}
         </div>
         <FindPanel data={data.year} dataKey='year' sort sortDescending>Year</FindPanel>

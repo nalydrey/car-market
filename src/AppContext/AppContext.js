@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import cars from '../datas/cars'
 import filterData from '../functions/filterData'
+import regExpFilter from '../functions/regularExpFilter'
 
 const ContextApplication = React.createContext()
 
@@ -9,6 +10,8 @@ export const useCommonContext = () => {
 } 
 
 const AppContext = ({children}) => {
+
+    let radioActiveName = ''
     // console.log('render Context');
     //Все автомобили
     const allCars = [...cars]
@@ -18,14 +21,24 @@ const AppContext = ({children}) => {
 
     //Обьект поиска содержит свойтсва и массив к ним по которым работают фильтры
     const [findObj, setFindObj] = useState({isNew: []})
-    // console.log(findObj);
+    
+    
 
-    //отфильтрованные по цене автомобили
+
+    const [findWord, setFindWord] = useState('')
+
+    //отфильтрованные по новизне автомобили
     const filteredCars = findObj.isNew && findObj.isNew.length ? filterData(allCars, {isNew: findObj.isNew }) : allCars
  
-    const filterWorkCars = filterData(filteredCars, findObj)
-    const workCars = filterWorkCars.length ? filterWorkCars : allCars
+    let filterWorkCars = filterData(filteredCars, findObj)
 
+    //поиск автомобиля по запросу
+    filterWorkCars = findWord ? (regExpFilter(filterWorkCars, findWord)) : filterWorkCars
+
+    const workCars = filterWorkCars.length ? filterWorkCars : []
+
+    //Рекомендуемые автомобили
+    
     //Сброс фильтров меняестя на противоположное значение при нажатии на кнопку
         const [resetFilters, setResetFilters] = useState(false)
           
@@ -38,6 +51,10 @@ const AppContext = ({children}) => {
         // setWorkCars(filterData(filteredCars, findObj))  
     }
 
+
+
+
+
     const choseCars = (inData) => {
         if(findObj.isNew[0] !== inData.isNew[0]){
             findObj.isNew = inData.isNew
@@ -45,7 +62,13 @@ const AppContext = ({children}) => {
                 !(key === 'isNew') && delete findObj[key] 
             }
             setFindObj({...findObj, isNew: inData.isNew} )
+        setFindWord('')
+
         }      
+    }
+
+    const filterByQuery = (find) => {
+        setFindWord(find)
     }
 
     const reset = () => {
@@ -58,13 +81,46 @@ const AppContext = ({children}) => {
         // setFilteredCars(numberCars)
     }
 
+    //Вызывается по нажатию на радиокнопку
+    const radioChose = (buttonName) => {
+        if(choseCars){
+            switch(buttonName){
+                case 'All': choseCars({isNew: []})
+                break
+                case 'New': choseCars({isNew: [true]})
+                break
+                case 'Used': choseCars({isNew: [false]})
+                break
+            }
+        }
+    }
+
+    const activateRadioName = (data) => {
+        console.log(data);
+        if(data===undefined)
+        return 'All'
+        if(data)
+        return 'New'
+        if(!data)
+        return 'Used'
+    } 
+
+    useMemo(()=>{
+        radioActiveName = activateRadioName(findObj.isNew[0])       
+    },[findObj.isNew[0]])
+
+
+    //Выбрать рекомендуемые
+
 
 
 
   return (
     <ContextApplication.Provider value={{
+                                            filterByQuery,
                                             createFindObj,
-                                            choseCars,
+                                            radioChose,
+                                            radioActiveName,
                                             reset,
                                             filteredCars,
                                             findObj,

@@ -1,0 +1,128 @@
+@import '../../functions/functions';
+
+$sizeview: 400px;
+
+.viewport{
+    // position: relative;
+    // top: -50px;
+    // z-index: -1;
+    // border: 5px solid white;
+    // outline: 5px solid white;
+    width: 70%;
+    height: $sizeview;
+    margin: 0 auto;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.slider__bar{
+    z-index: -1;
+    transition: 1s;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    // top: -50px;
+
+    // div:nth-child(1){
+        // background: red;
+        // background-image: ;
+    // }
+    // div:nth-child(2){
+    //     background: blue ;
+    // }
+    // div:nth-child(3){
+    //     background: green;
+    // }
+    // div:nth-child(4){
+    //     background: orange;
+    // }
+   
+    
+}
+
+.bar__item{   
+    // border: 1px solid green;
+    padding-left: 50px;
+    width: 100%;
+    height:  100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    font-size: 40px;
+    background-size: cover;
+    background-position: center;
+    h1{
+        margin-top: 100px;
+        font-size: 48px;
+    }
+    h2{
+        font-size: 24px;
+        width: 400px;
+    }
+}
+
+.slider__buttons{
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+}
+
+.button__prev{
+    left: 0;
+}
+.button__next{
+    right: 0;
+}
+
+.slider__dots{
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+}
+
+.slider__dot{
+
+    background: #007bc796;
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+
+}
+.slider__dot--active{
+    background: darken(#007CC7, 30%)
+}
+
+
+
+
+
+
+
+@media(max-width: 1200px){
+    $sizeview: calcFluidFontSize(100, 400, 500, 1200);
+    .viewport{
+        border: 1px solid black;
+        // width: $sizeview;
+        // height: $sizeview;
+        margin: 0 auto;
+    }
+    .bar__item{   
+        // border: 1px solid green;
+        // width: $sizeview;
+        // height:  $sizeview;
+    }
+    .bar{
+
+    }
+}
+

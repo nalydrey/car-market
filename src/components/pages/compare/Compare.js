@@ -1,6 +1,6 @@
 import {  useState } from "react"
-import FindPanel from "../FindPanel/FindPanel"
-import Cards from "../cards/Cards"
+import FindPanel from "../../FindPanel/FindPanel"
+import Cards from "../../cards/Cards"
 
 const Compare = () => {
   // console.log('render compare');

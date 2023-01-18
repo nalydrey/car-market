@@ -46,12 +46,14 @@ const RangeSlider = () => {
     <div className='range-slider'>
         <h5>Price Range</h5>
         <p>${from} - ${to}</p>
-        <div className="slider">
-            <div className="progress" style={style}></div>
-        </div>
-        <div className="range-input" onMouseUp={sendData}>
-            <input type="range" className='range-min' min='0' max={MAXPRICE} value={from} onChange={min}/>
-            <input type="range" className='range-max' min='0' max={MAXPRICE} value={to} onChange={max}/>
+        <div className='range__wrap'>
+            <div className="slider">
+                <div className="progress" style={style}></div>
+            </div>
+            <div className="range-input" onMouseUp={sendData}>
+                <input type="range" className='range-min' min='0' max={MAXPRICE} value={from} onChange={min}/>
+                <input type="range" className='range-max' min='0' max={MAXPRICE} value={to} onChange={max}/>
+            </div>
         </div>
     </div>
   )

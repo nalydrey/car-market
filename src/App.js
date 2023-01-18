@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/home/Home';
-import NewCars from './components/newCars/NewCars';
-import UsedCars from './components/usedCars/UsedCars';
-import Compare from './components/compare/Compare';
+import Home from './components/pages/home/Home';
+import NewCars from './components/pages/newCars/NewCars';
+import UsedCars from './components/pages/usedCars/UsedCars';
+import Compare from './components/pages/compare/Compare';
 import Sell from './components/sell/Sell';
 import CarsLayout from './components/carsLayout/CarsLayout';
 import AppContext from './AppContext/AppContext';
@@ -12,10 +12,11 @@ import AppContext from './AppContext/AppContext';
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      {/* <div> */}
         <AppContext>
           <Routes>
               <Route path='/car-market/' element={<CarsLayout/>}>
@@ -27,7 +28,7 @@ function App() {
               </Route>
           </Routes>  
         </AppContext>
-      </div>
+      {/* </div> */}
     </BrowserRouter>
   );
 }
