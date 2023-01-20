@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car-market/static/css/main.a3763821.css",
-    "main.js": "/car-market/static/js/main.50eefb26.js",
+    "main.css": "/car-market/static/css/main.50b4545c.css",
+    "main.js": "/car-market/static/js/main.09ef102b.js",
     "static/media/foto3.jpg": "/car-market/static/media/foto3.6c84668788758d4a502f.jpg",
     "static/media/foto4.jpg": "/car-market/static/media/foto4.f47ef5edecae5d36329a.jpg",
     "static/media/foto2.jpg": "/car-market/static/media/foto2.66baa4675ef72114b8e3.jpg",
@@ -28,11 +28,11 @@
     "static/media/find.svg": "/car-market/static/media/find.1ec532effc1dc3b138c2.svg",
     "static/media/signIn.svg": "/car-market/static/media/signIn.5e9889a241e70de5cb55.svg",
     "static/media/subarrow.svg": "/car-market/static/media/subarrow.6d7fdcbd8b0de772bb5b.svg",
-    "main.a3763821.css.map": "/car-market/static/css/main.a3763821.css.map",
-    "main.50eefb26.js.map": "/car-market/static/js/main.50eefb26.js.map"
+    "main.50b4545c.css.map": "/car-market/static/css/main.50b4545c.css.map",
+    "main.09ef102b.js.map": "/car-market/static/js/main.09ef102b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3763821.css",
-    "static/js/main.50eefb26.js"
+    "static/css/main.50b4545c.css",
+    "static/js/main.09ef102b.js"
   ]
 }
