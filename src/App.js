@@ -5,9 +5,10 @@ import Home from './components/pages/home/Home';
 import NewCars from './components/pages/newCars/NewCars';
 import UsedCars from './components/pages/usedCars/UsedCars';
 import Compare from './components/pages/compare/Compare';
-import Sell from './components/sell/Sell';
+import Sell from './components/pages/sell/Sell';
 import CarsLayout from './components/carsLayout/CarsLayout';
 import AppContext from './AppContext/AppContext';
+import SearchResult from './components/pages/searchResult/SearchResult';
 
 
 
@@ -23,6 +24,7 @@ function App() {
                 <Route index element={<Home/>}/>
                 <Route path='new_cars' element={<NewCars/>}/>
                 <Route path='used_cars' element={<UsedCars/>}/>
+                <Route path='search_result' element={<SearchResult/>}/>
                 <Route path='compare' element={<Compare/>}/>
                 <Route path='sell' element={<Sell/>}/>
               </Route>

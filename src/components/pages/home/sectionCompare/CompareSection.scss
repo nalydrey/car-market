@@ -1,0 +1,39 @@
+.compare{
+  margin-top: 72px;
+  h2{
+    margin-bottom: 24px;
+  }
+
+}
+
+.compare__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.compare__button{
+  display: block;
+  text-align: center;
+  width: 604px;
+  padding: 15px;
+  background: none;
+  margin: 0 auto;
+  border: 1px solid white;
+  margin-top: 25px;
+  border-radius: 3px;
+  
+}
+
+.vs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  width: 106px;
+  height: 106px;
+  background: #4DA8DA;
+  border-radius: 50%;
+}

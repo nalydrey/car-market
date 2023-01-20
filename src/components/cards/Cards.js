@@ -1,7 +1,6 @@
 
 import { useState } from "react"
 import Card from "../card/Card"
-import { useCommonContext } from "../../AppContext/AppContext"
 import Pagination from "../pagination/Pagination"
 import './Cards.scss'
 
@@ -9,8 +8,7 @@ import './Cards.scss'
 
 const Cards = (props) => {
   
-const { styleClass, showBy, sortKey, cars }  = props 
-
+const {  styleClass, showBy, sortKey, cars }  = props 
 
 const [currentPage, setPage] = useState(1)
 

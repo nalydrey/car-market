@@ -6,6 +6,7 @@
 }
 
 .find__checkbox-container{
+    transition: .5s;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -27,7 +28,7 @@
 }
 
 .deploy{   
-    z-index: 1;
+    z-index: 10;
     width: 100%;
     transition: .5s ;
     max-height: 0px;
@@ -66,6 +67,10 @@
     }
     &--active::after{
         transform: rotate(180deg);
+    }
+    &.disable{
+        background: #45535b80;
+        color: #6d787f;
     }
 }
 

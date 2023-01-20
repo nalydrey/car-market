@@ -11,7 +11,7 @@ export const useCommonContext = () => {
 
 const AppContext = ({children}) => {
 
-    let radioActiveName = ''
+    let radioActiveName = 'All'
     // console.log('render Context');
     //Все автомобили
     const allCars = [...cars]
@@ -22,10 +22,12 @@ const AppContext = ({children}) => {
     //Обьект поиска содержит свойтсва и массив к ним по которым работают фильтры
     const [findObj, setFindObj] = useState({isNew: []})
     
-    
-
+    const [compareArr, setCompare] = useState([])
 
     const [findWord, setFindWord] = useState('')
+
+    const [reload, setReload] = useState(false)
+
 
     //отфильтрованные по новизне автомобили
     const filteredCars = findObj.isNew && findObj.isNew.length ? filterData(allCars, {isNew: findObj.isNew }) : allCars
@@ -47,7 +49,9 @@ const AppContext = ({children}) => {
           findObj[key] = inData[key]
           findObj[key].length === 0 &&delete findObj[key]
         }
+        console.log(findObj);
         setFindObj({...findObj, ...inData})
+
         // setWorkCars(filterData(filteredCars, findObj))  
     }
 
@@ -96,7 +100,6 @@ const AppContext = ({children}) => {
     }
 
     const activateRadioName = (data) => {
-        console.log(data);
         if(data===undefined)
         return 'All'
         if(data)
@@ -105,12 +108,19 @@ const AppContext = ({children}) => {
         return 'Used'
     } 
 
-    useMemo(()=>{
-        radioActiveName = activateRadioName(findObj.isNew[0])       
-    },[findObj.isNew[0]])
+    radioActiveName = activateRadioName(findObj.isNew[0])       
 
 
-    //Выбрать рекомендуемые
+    //Выбрать для сравнения
+
+    const addCar = (id) => {
+  
+        allCars.forEach((car)=>{
+        car.id === id && (car.compared = !car.compared)
+        setReload(!reload)
+    })
+    }
+
 
 
 
@@ -120,6 +130,8 @@ const AppContext = ({children}) => {
                                             filterByQuery,
                                             createFindObj,
                                             radioChose,
+                                            addCar,
+                                            compareArr,
                                             radioActiveName,
                                             reset,
                                             filteredCars,

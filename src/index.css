@@ -30,6 +30,12 @@ a {
   margin: 0 auto;
 }
 
+.larger__container{
+  max-width: 1290px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 h1{
   font-size: 48px;
 }

@@ -1,15 +1,15 @@
 .car{
-    min-width: 314px;
+    max-width: 314px;
     border: 2px solid #12232E;
     border-radius: 3px;
     padding: 16px;
     position: relative;
     overflow: hidden;
     flex-grow: 1;
-
 }
 
 .horisontal{
+    max-width: 100%;
     display: flex;
     gap: 20px;
 }
@@ -18,7 +18,15 @@
     // flex-grow: 1;
     border-radius: 3px;
     overflow: hidden; 
-}
+    // border: 1px solid wheat;
+    
+        img{
+            display: block;
+            width: 100%;
+        }
+
+    }
+
 
 .car__discription{
     border-bottom: 1px solid #989898;
@@ -139,5 +147,27 @@
         width: 58px;
         
     }
+}
+
+.statusPanel{
+    display: flex;
+    justify-content: space-between;
+}
+.toggleButton{
+    transition: .5s;
+    background: none;
+    border: 1px solid #007CC7;
+    color: #007CC7;
+    padding: 4px 12px;
+    border-radius: 3px;
+    &:hover{
+        background-color: #12232E;
+    }
+}
+
+.car__compared{
+    transition: 1s;
+    border: 1px solid coral;
+    color: coral;
 }
 

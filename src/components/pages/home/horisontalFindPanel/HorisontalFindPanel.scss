@@ -1,5 +1,7 @@
 .horisontalFindPanel{
     // height: 50px;
+    position: relative;
+    z-index: 2;
     padding: 25px;
     display: grid;
     gap: 24px;
@@ -7,10 +9,10 @@
     ' radio  radio  radio  radio  radio  radio  radio  radio  radio  radio  radio  radio'
     'search search search search brand  brand brand brand model model model model'
     'location location location range range range range range range button button button';
-    background: #071620;
+    background: #071620d4;
     transform: translate(0, -50%);
     
-    .underline__radioContainer{
+    .underline{
         grid-area: radio;
         justify-self: center;
     }
@@ -55,7 +57,11 @@
 
     .horisontalFindPanel__button{
         grid-area: button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        font-size: 20px;
         background: #007CC7;
         padding: 5px;
         border-radius: 3px; 

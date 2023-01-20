@@ -1,0 +1,23 @@
+.recomend{
+    position: relative;
+    z-index: 1;
+    h2{
+        margin-bottom: 24px;
+    }
+}
+
+.recomend__control{
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: #007CC7;
+        &:after{
+            transform: rotate(-90deg);
+            
+        }
+    }
+}
+
+.cars__container{
+    margin-top: 24px;
+}

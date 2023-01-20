@@ -1,21 +1,29 @@
 import Rating from "../rating/Rating";
+import { useState } from "react";
 import './Card.scss'
-
+import { useCommonContext } from "../../AppContext/AppContext";
 
 const Card = (props) => {
 
-    const { image, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
+    // console.log('render Card');
+
+    const { compared, id, image, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
+
+    const { addCar } = useCommonContext()
 
   return (
-    <div className={`car ${props.class}`}>
-
+    <div className={`car ${props.class}`} >
         <div className="car__img">
-            <img src={`./images/cars/${image}`} alt="foto" />
+            <img src={image} alt="foto" />
         </div>
         <div className="car__total">
             <div className="car__discription">
-                <div className="car__new">
-                    {isNew ? 'New' : 'Used'}
+                <div className="statusPanel">
+                    <div className="car__new">
+                        {isNew ? 'New' : 'Used'}
+                    </div>
+                    {!compared&&<button className="toggleButton" onClick={()=>{addCar&&addCar(id)}}>Add To Compare</button>}
+                    {compared&&<button className={`toggleButton ${compared ? 'car__compared':''}`} onClick={()=>{addCar&&addCar(id)}} >Delete from Compare</button>}
                 </div>
                 <h3>{title}</h3>
                 <h4>${price}</h4>

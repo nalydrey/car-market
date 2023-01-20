@@ -1,0 +1,76 @@
+.infoAccordion{
+    margin: 0 auto;
+    border-radius: 3px;
+    width: 100%;
+    max-height: 5000px;
+    background: #152836;
+    padding:0 24px;
+    margin-top: 56px;
+    
+}
+
+.info__title{
+    text-transform:capitalize;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    border-bottom: 1px solid #d7d7d700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    p{
+        flex-grow: 1;
+    }
+    &::after{
+        flex-grow: 0;
+        content: '';
+        display: block;
+        width: 22px;
+        height: 14px;
+        background-image: url;
+        background-image: url('../../../public/icons/subarrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .5s;
+    }
+    &--active{
+        border-bottom: 1px solid #D7D7D7;
+
+    }
+    &--active::after{
+        transform: rotate(180deg);
+    }
+    &.disable{
+        background: #45535b80;
+        color: #6d787f;
+    }
+}
+
+.info__deploy{
+    transition: .5s;
+    overflow: hidden;
+    width: 100%;
+    max-height: 1000px;
+    li{
+        margin-top: 12px;
+        font-size: 18px;
+        padding: 13px;
+    }
+    li:nth-child(odd){
+        text-transform:capitalize;
+        background: #12232E;
+        border-radius: 3px;
+        text-align: center;
+    }
+    li:nth-child(even){
+        display: flex;
+        justify-content: space-around;
+    }
+    li:last-child{
+        margin-bottom: 24px;
+    }
+    &--active{
+        max-height: 0px;
+    }
+}

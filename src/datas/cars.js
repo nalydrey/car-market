@@ -1,7 +1,18 @@
+import Tesla1 from '../assets/images/cars/Tesla1.jpg'
+import Ford1 from '../assets/images/cars/Ford1.jpg'
+import Honda1 from '../assets/images/cars/Honda1.jpg'
+import Chevrolet1 from '../assets/images/cars/Chevrolet1.jpg'
+import Kia1 from '../assets/images/cars/Kia1.jpg'
+import Mini1 from '../assets/images/cars/Mini1.jpg'
+import Jeep1 from '../assets/images/cars/Jeep1.jpg'
+import Audi1 from '../assets/images/cars/Audi1.jpg'
+import LandRover1 from '../assets/images/cars/LandRover1.jpg'
+import Toyota1 from '../assets/images/cars/Toyota1.jpg'
+
 const cars =[
     {
         id: 0,
-        image: 'Tesla1.jpg',
+        image: Tesla1,
         brand: 'Tesla',
         model: 'Model 3 Standard Range Plus',
         title: 'Tesla Model 3 Standard Range Plus',
@@ -15,12 +26,53 @@ const cars =[
         rating: 0,
         vievs: 11,
         ribbonStatus: 'Featured',
-        isNew: true
+        compared: false,
+        isNew: true,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
 
     },
     {
         id: 1,
-        image: 'Ford1.jpg',
+        image: Ford1,
         brand: 'Ford',
         model: 'F-250 Super Duty',
         title: 'Ford F-250 Super Duty' ,
@@ -34,12 +86,52 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: 'Featured',
-        isNew: true
-
+        compared: false,
+        isNew: true,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     },
     {
         id: 2,
-        image: 'Honda1.jpg',
+        image: Honda1,
         brand: 'Honda',
         model: 'Pilot Touring 7-Passenger',
         title: 'Honda Pilot Touring 7-Passenger',
@@ -53,12 +145,53 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: true
+        compared: false,
+        isNew: true,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
 
     },
     {
         id: 3,
-        image: 'Chevrolet1.jpg',
+        image: Chevrolet1,
         brand: 'Chevrolet',
         model: 'Equinox LS',
         title: 'Chevrolet Equinox LS',
@@ -72,12 +205,53 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: true
+        compared: false,
+        isNew: true,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     
     },
     {
         id: 4,
-        image: 'Kia1.jpg',
+        image: Kia1,
         brand: 'Kia',
         model: 'Sorento S',
         title: 'Kia Sorento S',
@@ -91,12 +265,52 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: true
+        compared: false,
+        isNew: true, characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     
     },
     {
         id: 5,
-        image: 'Mini1.jpg',
+        image: Mini1,
         brand: 'MINI',
         model: 'Clubman Cooper S',
         title: 'MINI Clubman Cooper S',
@@ -110,12 +324,53 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: true
+        compared: false,
+        isNew: true,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     
     },
     {
         id: 6,
-        image: 'Jeep1.jpg',
+        image: Jeep1,
         brand: 'Jeep',
         model: 'Wrangler Unlimited Islander',
         title: 'Jeep Wrangler Unlimited Islander',
@@ -129,12 +384,53 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: false
+        compared: false,
+        isNew: false,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     
     },
     {
         id: 7,
-        image: 'Audi1.jpg',
+        image: Audi1,
         brand: 'Audi',
         model: 'e-tron Premium',
         title: 'Audi e-tron Premium',
@@ -148,12 +444,53 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: false
+        compared: false,
+        isNew: false,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     
     },
     {
         id: 8,
-        image: 'LandRover1.jpg',
+        image: LandRover1,
         brand: 'Land Rover',
         model: 'Velar R-Dynamic S',
         title: 'Land Rover Velar R-Dynamic S',
@@ -167,12 +504,53 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: false
+        compared: false,
+        isNew: false,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }
     
     },
     {
         id: 9,
-        image: 'Toyota1.jpg',
+        image: Toyota1,
         brand: 'Toyota',
         model: 'Mirai',
         title: 'Toyota Mirai',
@@ -186,7 +564,48 @@ const cars =[
         rating: 0,
         vievs: 0,
         ribbonStatus: '',
-        isNew: false    
+        compared: false,
+        isNew: false,
+        characteristics: 
+        {
+            generalInfo: 
+            {
+                bodyType: 'SUV',
+                color: 'blue'
+            },
+            engineDetails:
+            {
+                fuelType: 'gasoline',
+                mileage: '120',
+                transmission: 'automatic',
+                engineCapacity: '3471 cc',
+                power: '314hp',
+            },
+            dimension:
+            {
+                length:'5700',
+                width:'1700',
+                height:'1800',
+                cargoVolume:'500',
+            },
+            features:
+            {
+                powerSteering: true,
+                heatedSeats: true,
+                usbPort: true,
+                ac: true,
+                bluetooth: true,
+                alarm: true,
+                wifi: true,
+                cruiseControl: true,
+                frontParkingSensor: true,
+                roofRack: true,
+                powerWindows: true,
+                sunroof: true,
+                soundSystem: true,
+                memorySeat: true,
+            }
+        }    
     }
 ];
 

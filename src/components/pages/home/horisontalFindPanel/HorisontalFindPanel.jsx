@@ -6,6 +6,7 @@ import RangeSlider from '../../../RangeSlider/RangeSlider'
 import { useCommonContext } from '../../../../AppContext/AppContext'
 import collectData from '../../../../functions/collectData'
 import './HorisontalFindPanel.scss'
+import { Link } from 'react-router-dom'
 
 const HorisontalFindPanel = () => {
 
@@ -32,7 +33,7 @@ const HorisontalFindPanel = () => {
         <FindPanel data={models} dataKey='model' individualStyle='model'>Model</FindPanel>
         <FindString individualStyle='location'/>
         <RangeSlider />
-        <button className="horisontalFindPanel__button">Search</button> 
+         <Link className="horisontalFindPanel__button" to="search_result">Search</Link>
     </section>
   )
 }

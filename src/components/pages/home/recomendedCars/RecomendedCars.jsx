@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useCommonContext } from '../../../../AppContext/AppContext'
 import filterData from '../../../../functions/filterData'
 import Cards from '../../../cards/Cards'
+import './RecomendedCars.scss'
 
 
 const RecomendedCars = () => {
@@ -31,7 +32,7 @@ const RecomendedCars = () => {
         <Link className='submenu'  to={goTo()}>See more</Link>
     </div>
     <div className='cars__container'>
-        <Cards showBy={3}  cars={[recomendedCars[0], recomendedCars[1], recomendedCars[2],]} />        
+        <Cards showBy={3}  cars={[recomendedCars[0], recomendedCars[1], recomendedCars[2]]} />
     </div>
 </section>
   )

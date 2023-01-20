@@ -9,13 +9,13 @@ import { useCommonContext } from "../../AppContext/AppContext"
 import RangeSlider from "../RangeSlider/RangeSlider"
 
 
-const LeftFindPanel = () => {
+const LeftFindPanel = (props) => {
   // console.log('render LeftFindPanel');
 
+  const { radio=false } = props
   const { reset, findObj, allCars, filteredCars, radioChose, radioActiveName } = useCommonContext()
   const data = collectData(filteredCars)
 
-  console.log(radioActiveName);
   // const folowYear = filteredCars.map((el)=>el.year).reduce((ak, el)=> ak+el)
 
   
@@ -26,20 +26,20 @@ const LeftFindPanel = () => {
   }) : []
 
   const models = filterByBrand.map((car) => {return car.model} )
-  
   return (
     <div className="filters">
         <h4>Filters</h4>  
         <div className="find">
             <input  type="text" placeholder="Search" />
         </div>
+        {radio&&
         <div className="filters__radio">
             <h5>Conditions</h5>
             <RadioButtons buttonType='radio__button' labelList={['All', 'New', 'Used']} individualClass='radio__container' radioCallBack={radioChose} activeName={radioActiveName}/>
             {/* callOutFunction={refresh} */}
-        </div>
+        </div>}
         <FindPanel data={data.year} dataKey='year' sort sortDescending>Year</FindPanel>
-        <FindPanel data={data.brand} isSearch dataKey='brand' >Brand</FindPanel>
+        <FindPanel data={data.brand} isSearch dataKey='brand' open>Brand</FindPanel>
         <FindPanel data={models} dataKey='model'>Model</FindPanel>
         <FindPanel data={data.drive} dataKey='drive'>Transmission</FindPanel>
         <FindPanel data={data.countPassanger} dataKey='countPassanger'>Passanger</FindPanel>

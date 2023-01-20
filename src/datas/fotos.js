@@ -1,7 +1,7 @@
-import foto1 from '../images/foto1.jpg'
-import foto2 from '../images/foto2.jpg'
-import foto3 from '../images/foto3.jpg'
-import foto4 from '../images/foto4.jpg'
+import foto1 from '../assets/images/slider/foto1.jpg'
+import foto2 from '../assets/images/slider/foto2.jpg'
+import foto3 from '../assets/images/slider/foto3.jpg'
+import foto4 from '../assets/images/slider/foto4.jpg'
 
 
 const headerFotos = [

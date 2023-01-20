@@ -12,7 +12,10 @@ const RadioButtons = (props) => {
             radioCallBack       //функция которая вызывается по нажанию кнопки
             } = props
 
+console.log(activeName);
+
   return (
+
         <ul className={`${individualClass}`}>
             {labelList.map((button)=>
             <li className='radio' key={button} onClick={()=>{radioCallBack(button)}}>

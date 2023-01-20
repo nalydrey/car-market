@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Cards from "../../cards/Cards"
 import LeftFindPanel from "../../leftFindPanel/LeftFindPanel"
@@ -11,7 +11,7 @@ import './NewCars.scss'
 
 const NewCars = () => {
     // console.log(useCommonContext());
-    const { filteredCars, workCars } = useCommonContext()
+    const { filteredCars, workCars, radioChose  } = useCommonContext()
 
     // console.log('render New Cars');
     const navigate = useNavigate()
@@ -26,19 +26,12 @@ const NewCars = () => {
     const choseMethodOfSort = (e) => {
         setSort(e.target.value)
     }
+  
 
+    useEffect(()=>{
+        radioChose('New')
+    },[])
 
-
-    // useEffect(()=>{
-    //     sortBy&&navigate(`?sort=${sortBy}`, {relative: 'path'})        
-    // },[sortBy, navigate])    
-    // useEffect(()=>{
-    //     searchBy?navigate(`?search=${searchBy}`, {relative: 'path'}):navigate(`.`, {relative: 'path'})
-    // },[searchBy, navigate])
-
-    
-
-    
     return(
         <section className="new__cars">
             <h1>New Cars</h1>
@@ -48,35 +41,37 @@ const NewCars = () => {
                 <LeftFindPanel/>
                 
                 <div className="cars__box">             
-                <div className="top-panel">
-                    
-                        <FindString/>
-
-                        <h2 className="results">{filteredCars.length} Results</h2>
+                    <div className="top-panel">
                         
-                        <select className="control__select" name="sort" id="sort" onChange={choseMethodOfSort}>
-                            <option value="Sort By" disabled>Sort By</option>
-                            <option value="brand">brand</option>
-                            <option value="year">year</option>
-                            <option value="fuel">fuel</option>
-                            <option value="price">price</option>
-                            <option value="countPassanger">passanger</option>
-                            <option value="location">location</option>
-                        </select>
+                            <FindString/>
 
-                        <div className="layout">
-                            <button className={horisontal?'layout__button--active':''} onClick={()=>lineUp(true)}>
-                                <Horisontal/>
-                            </button>
-                            <button className={horisontal?'':'layout__button--active'} onClick={()=>lineUp(false)}>
-                                 <Vertical/>
-                            </button>
-                        </div>
+                            <h2 className="results">{filteredCars.length} Results</h2>
+                            
+                            <select className="control__select" name="sort" id="sort" onChange={choseMethodOfSort}>
+                                <option value="Sort By" disabled>Sort By</option>
+                                <option value="brand">brand</option>
+                                <option value="year">year</option>
+                                <option value="fuel">fuel</option>
+                                <option value="price">price</option>
+                                <option value="countPassanger">passanger</option>
+                                <option value="location">location</option>
+                            </select>
 
-                </div>
+                            <div className="layout">
+                                <button className={horisontal?'layout__button--active':''} onClick={()=>lineUp(true)}>
+                                    <Horisontal/>
+                                </button>
+                                <button className={horisontal?'':'layout__button--active'} onClick={()=>lineUp(false)}>
+                                    <Vertical/>
+                                </button>
+                            </div>
+
+                    </div>
+
                     <div className="">                            
                         <Cards showBy={4} styleClass={horisontal&&'horisontal'} sortKey={sortBy} cars={workCars} />
                     </div>
+
                 </div>
 
             </div>

@@ -1,39 +1,61 @@
-import {  useState } from "react"
-import FindPanel from "../../FindPanel/FindPanel"
-import Cards from "../../cards/Cards"
+import { useCommonContext } from "../../../AppContext/AppContext"
+import { ReactComponent as AddCar } from '../../../assets/icons/add-car.svg'
+import Card from "../../card/Card"
+import { Link } from "react-router-dom"
+import './Compare.scss'
+import InfoAccordion from "../../infoAccordion/InfoAccordion"
+import React from "react"
 
-const Compare = () => {
+
+
+const Compare = (props) => {
   // console.log('render compare');
 
-  const [data, setData] = useState('')
-  const [findObj, setObj] = useState({})
+  const {} = props
+  
+  const {allCars} = useCommonContext()
 
-  const getData = (data) => {
-    setData(data)
-  }
+  const comparedCar = allCars.filter((car) => car.compared)
+  const c = comparedCar.length
+  comparedCar.length = 3
+  comparedCar.fill(undefined, c)  
 
-  const createFindObj = (inData) => {
-    for(const key in inData){
-      findObj[key] = inData[key]
-      findObj[key].length === 0 &&delete findObj[key]
+  // console.log(comparedCar);
+
+  comparedCar.sort((a,b)=> a < b ? 1 : -1)
+
+  const keyObj = []
+  if(comparedCar[0]){
+    for(const key in comparedCar[0].characteristics){
+      // console.log(key);
+      keyObj.push(key)
     }
-    setObj({...findObj})
   }
 
-
+  // console.log(keyObj);
 
   return (
-    <>
-      {/* <RadioButtons labelList={['All', 'New', 'Used']} callOutFunction={refresh}/> */}
+    <div className="larger__container">
+      <h1>Compare</h1>
+      <div className="compared">
+        {comparedCar.map((el,i)=>{
+          return <React.Fragment key={i}>
+                    {el ? 
+                      <Card {...el}/>
+                      :
+                      <div className="compare__box">
+                          <AddCar/>
+                          <p><Link to={'../search_result'}>Add car to compare</Link></p>
+                      </div>}
+                    
+                  </React.Fragment>
+          })}
+      </div>
+          {keyObj.map((key)=>{
+           return <InfoAccordion data={comparedCar} objName={key} key={key}/>
+          })}
+      </div>
 
-      <FindPanel data={data.year} dataKey='year' createFindObj={createFindObj}>Year</FindPanel>
-      <FindPanel data={data.brand} isSearch dataKey='brand' createFindObj={createFindObj}>Brand</FindPanel>
-      <FindPanel data={data.model} >Model</FindPanel>
-      <FindPanel data={data.drive} >Transmission</FindPanel>
-      <FindPanel data={data.countPassanger} >Passanger</FindPanel>
-      <FindPanel data={data.fuel}  dataKey='fuel' createFindObj={createFindObj}>Fuel</FindPanel>
-      <Cards findObj={findObj} showFrom={0} showTo={7} isNew getData={getData} class={true?'horisontal': ''} sortBy={'fuel'}/>
-    </>
   )
 }
 
