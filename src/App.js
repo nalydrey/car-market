@@ -12,7 +12,8 @@ import { LoginForm, RegisterForm } from './components/pages/Register/Forms/Forms
 import Car from './components/pages/car/Car';
 
 
-export const url = 'http://localhost:3002/'
+// export const url = 'http://localhost:3002/'
+export const url = ''
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
   return (
     <BrowserRouter>
           <Routes>
-              <Route path='/car-market/' element={<CarsLayout/>}>
+              <Route path='/' element={<CarsLayout/>}>
                 <Route index element={<Home/>}/>
                 <Route path='new_cars' element={<SearchResult filterNovelty='New'/>}/>
                 <Route path='used_cars' element={<SearchResult filterNovelty='Used'/>}/>

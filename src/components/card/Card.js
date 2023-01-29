@@ -24,7 +24,7 @@ const Card = (props) => {
    },[])
 
    const goToDiscription = () => {
-        navigate(`/car-market/car/${id}`)
+        navigate(`/car/${id}`)
    }
 
    const addToCompare = (e) => {

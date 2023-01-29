@@ -207,8 +207,8 @@
       "fuel": "Gasoline",
       "drive": "All-wheel Drive",
       "countPassanger": 7,
-      "rating": 0.38461538461538464,
-      "vievs": 13,
+      "rating": 1,
+      "vievs": 16,
       "ribbonStatus": "Featured",
       "compared": false,
       "isNew": true,
@@ -250,7 +250,7 @@
           "Other": false
         }
       },
-      "totalRat": 5
+      "totalRat": 16
     },
     {
       "id": 4,
@@ -562,6 +562,6 @@
           "Other": false
         }
       }
-    }        
+    }
   ]
 }
