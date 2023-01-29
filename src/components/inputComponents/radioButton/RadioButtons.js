@@ -12,7 +12,7 @@ const RadioButtons = (props) => {
             radioCallBack       //функция которая вызывается по нажанию кнопки
             } = props
 
-console.log(activeName);
+// console.log(activeName);
 
   return (
 

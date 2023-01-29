@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { useCommonContext } from '../../AppContext/AppContext'
 import './RangeSlider.scss'
+import {useSelector} from "react-redux";
+import {changeFindObj} from "../../store/actionCreators/actionCreate";
 
 const RangeSlider = () => {
 
     // console.log('render RangeSlider');
-    
+
+    const findObj = useSelector((state)=>state.findObj)
+
     const MAXPRICE = 100000
 
     const startArr = [0, MAXPRICE]
     
-    const {createFindObj, resetFilters, findObj} = useCommonContext()
 
     let [ from, setFrom ] = useState(findObj.price ? findObj.price[0] : startArr[0])
     let [ to, setTo ] = useState(findObj.price ? findObj.price[1] : startArr[1])
@@ -20,7 +22,7 @@ const RangeSlider = () => {
             setFrom(findObj.price ? findObj.price[0] : startArr[0])
             setTo(findObj.price ? findObj.price[1] : startArr[1])
         }
-    }, [resetFilters, findObj.isNew[0]])
+    }, [findObj.isNew[0]])
 
 
     const minLevel = from/MAXPRICE*100
@@ -39,7 +41,8 @@ const RangeSlider = () => {
     }
 
     const sendData = () => {
-        createFindObj({price: [+from, +to]})
+        // createFindObj({price: [+from, +to]})
+        changeFindObj({price: [+from, +to]})
     }
 
   return (
