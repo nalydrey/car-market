@@ -1,0 +1,45 @@
+@import '/src/styles/variables.scss';
+
+.popup{
+    transition: .5s;
+    pointer-events: none;
+    z-index: 3;
+    background-color: rgba(12, 47, 72, 0.845);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    opacity: 0;
+
+    p{
+        font-size: 38px;
+    }
+
+    
+}
+.popup--show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popup--succes{
+    background-color: rgba(19, 92, 19, 0.511);
+}
+
+.popup__button-box{
+    display: flex;
+    gap: 20px;
+    button{
+        background: $buttonColor;
+        width: 100px;
+        padding: 15px;
+    }
+}

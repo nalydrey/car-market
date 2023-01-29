@@ -1,16 +1,15 @@
 import React, { useMemo, useState } from 'react'
-import RadioButtons from '../../../radioButton/RadioButtons'
+import RadioButtons from '../../../inputComponents/radioButton/RadioButtons'
 import { Link } from 'react-router-dom'
-import { useCommonContext } from '../../../../AppContext/AppContext'
 import filterData from '../../../../functions/filterData'
 import Cards from '../../../cards/Cards'
 import './RecomendedCars.scss'
+import {useSelector} from "react-redux";
 
 
 const RecomendedCars = () => {
 
-    const { allCars } = useCommonContext()
-
+    const allCars = useSelector(state => state.cars)
     const [recomendedState, setRecomendState] = useState('New')
 
     const goTo = () => {

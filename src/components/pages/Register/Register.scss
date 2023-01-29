@@ -1,0 +1,93 @@
+@import '/src/styles/variables.scss';
+
+$mainColor: #12232E;
+main{
+ //flex-grow: 1;
+  //height: 200px;
+  //background: white;
+}
+.registration{
+  margin-top: 100px;
+  //border: 1px solid red;
+  height: 100%;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+  }
+  form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    input{
+      font-size: 15px;
+      width: 100%;
+    }
+    label{
+      //border: 1px solid white;
+      width: 100%;
+      position: relative;
+      span{
+      transition: .5s;
+        position: absolute;
+        top: 12px;
+        left: 15px;
+      }
+    }
+
+    input:focus+span,
+    input:valid+span
+    {
+      top: -30px;
+      left: 0px;
+    }
+  }
+}
+
+.login{
+  align-self: center;
+}
+
+.form__wrap{
+  flex-grow: 1;
+  p{
+    margin-top: 24px;
+    text-align: center;
+  }
+  a{
+    color: $buttonColor;
+  }
+}
+
+
+.welcome{
+  padding: 42px;
+  width: 472px;
+  height: 451px;
+  background: $mainColor;
+  border-radius: 3px;
+}
+
+.welcome__box{
+  padding: 40px;
+  height: 100%;
+  border: 3px solid #007CC7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .social__list{
+    //display: flex;
+    gap: 20px;
+  }
+  h2{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 36px;
+  }
+  p{
+    text-align: center;
+    font-size: 24px;
+  }
+}

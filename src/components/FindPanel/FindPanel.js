@@ -1,5 +1,5 @@
 import { useEffect, useRef, useMemo, useState } from 'react';
-import CheckBoxes from '../checkBox/CheckBoxes';
+import CheckBoxes from '../inputComponents/checkBox/CheckBoxes';
 import './FindPanel.scss'
 
 const FindPanel = (props) => {

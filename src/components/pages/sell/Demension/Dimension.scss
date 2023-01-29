@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+
+
+
+
+.dimension-box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+    'name name '
+    'length width'
+    'height cargo' ;
+}

@@ -1,1 +1,55 @@
-@import 'src/styles/variables'
+@import "src/styles/variables";
+
+.number{
+  display: flex;
+  justify-content: space-between;
+  //border: 1px solid white;
+  background: $inputBackground;
+  border-radius: 3px;
+  //overflow: hidden;
+  position: relative;
+  button{
+    transition: .3s;
+    padding: 10px 20px;
+    border: none;
+    background: $colorBorder;
+    font-size: 20px;
+    &:hover{
+      background: lighten($colorBorder, 10%);
+    }
+
+  }
+  span{
+    position: absolute;
+    top: -25px;
+    left: 0;
+  }
+
+  input{
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+  }
+}
+
+.dimension{
+  padding: 0 20px;
+  border-radius: 3px;
+  background: $colorBorder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

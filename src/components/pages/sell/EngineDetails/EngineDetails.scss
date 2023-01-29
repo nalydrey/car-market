@@ -1,0 +1,10 @@
+@import 'src/styles/variables';
+
+.engineDetail{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas:
+    'name name name'
+    'fuel milage transmision'
+    'drive engine power';
+}

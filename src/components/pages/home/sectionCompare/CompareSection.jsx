@@ -1,14 +1,15 @@
 import React from "react"
 import Card from "../../../card/Card";
-import {useCommonContext} from "../../../../AppContext/AppContext";
 // import vs from '../../../../assets/icons/Ellipse 6.jpg'
 import './CompareSection.scss'
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux";
 
 
 const CompareSection = () => {
 
-    const {allCars} = useCommonContext()
+    const allCars = useSelector(state => state.cars)
+
 
     return (
         <section className='compare'>

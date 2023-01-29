@@ -2,7 +2,7 @@ import React, { Children, useEffect, useMemo, useRef, useState } from 'react'
 import './Slider.scss'
 
 const Slider = (props) => {
-console.log('render Slider');
+// console.log('render Slider');
     const { data, start=0, fromEnd=0, repeat=true, timeOut=2000, play=false, dots=false, buttons=false } = props
     
     const end = data.length - fromEnd-1
@@ -17,9 +17,7 @@ console.log('render Slider');
         transform: `translate(0px)`
     }
 
-    useEffect(()=>{
-        console.log('Effect');        
-    },[])
+
 
     useEffect(()=>{
         if(play){

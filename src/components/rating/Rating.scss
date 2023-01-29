@@ -1,4 +1,6 @@
 .rating{
+    align-self: flex-start;
+    z-index: 1;
     position: relative;
     display: inline-block;
     img{
@@ -21,6 +23,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
     transition: .5s;
 }

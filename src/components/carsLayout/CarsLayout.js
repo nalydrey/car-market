@@ -1,11 +1,22 @@
 import Nav from '../nav/Nav'
-import {Outlet} from 'react-router-dom'
+import {Outlet, useParams} from 'react-router-dom'
+import Footer from "../Footer/Footer";
+
 
 const CarsLayout = () => {
-  return (
+
+
+
+
+
+
+    return (
     <>
         <Nav/>
-        <Outlet/>
+        <main>
+            <Outlet/>
+        </main>
+        <Footer/>
     </>
   )
 }

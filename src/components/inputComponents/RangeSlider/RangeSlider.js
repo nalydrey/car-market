@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './RangeSlider.scss'
 import {useSelector} from "react-redux";
-import {changeFindObj} from "../../store/actionCreators/actionCreate";
+import {changeFindObj} from "../../../store/actionCreators/actionCreate";
 
 const RangeSlider = () => {
 

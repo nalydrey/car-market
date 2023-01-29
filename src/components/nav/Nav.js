@@ -1,9 +1,13 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 import './Nav.scss'
 import logo from './logo.png';
 
 
+
 const Nav = () => {
+
+
+
     return(
         <div className='container nav__container'>
             <div>
@@ -17,7 +21,7 @@ const Nav = () => {
                 <NavLink className='submenu' to='article'>Article</NavLink>
             </div>
             <div className='nav__control'>
-                <Link className='pre'>Sign in</Link>
+                <Link className='pre' to='user/login'>Sign in</Link>
                 <button className='pre submenu'>En</button>
             </div>
         </div>            

@@ -1,33 +1,68 @@
 import Rating from "../rating/Rating";
-import { useState } from "react";
 import './Card.scss'
-import { useCommonContext } from "../../AppContext/AppContext";
+import Slider from "react-slick";
+import { addDelCompare } from "../../store/actionCreators/actionCreate";
+import { useState } from "react";
+import { useEffect } from "react";
+import Preloader from "../preloader/Preloader";
+import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
-
     // console.log('render Card');
+    const { compared, id, image=[], year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
 
-    const { compared, id, image, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
+   const [foto, setFoto] = useState(false)
 
-    const { addCar } = useCommonContext()
+   const navigate = useNavigate()
+
+   useEffect(()=>{
+    image.forEach((img)=>{
+        const picture = new Image()
+        picture.src = img
+        picture.onload= () => {setFoto(img)}
+    })
+   },[])
+
+   const goToDiscription = () => {
+        navigate(`/car-market/car/${id}`)
+   }
+
+   const addToCompare = (e) => {
+        e.stopPropagation()
+        addDelCompare(id)
+   }
+    
 
   return (
-    <div className={`car ${props.class}`} >
-        <div className="car__img">
-            <img src={image} alt="foto" />
-        </div>
+    <div className={`car ${props.class}`} onClick={()=>goToDiscription(id)}>      
+                <div className="car__img">  
+                <Slider>
+                    {foto ?
+                    image.map((img, ind)=> {
+                        return (
+                            <div className="car__img" key={ind}>
+                                <img src={foto} alt="foto" />
+                            </div>
+                            )
+                    })
+                :
+                <Preloader/>
+                }
+                    
+                </Slider>
+                </div>        
         <div className="car__total">
             <div className="car__discription">
                 <div className="statusPanel">
                     <div className="car__new">
                         {isNew ? 'New' : 'Used'}
                     </div>
-                    {!compared&&<button className="toggleButton" onClick={()=>{addCar&&addCar(id)}}>Add To Compare</button>}
-                    {compared&&<button className={`toggleButton ${compared ? 'car__compared':''}`} onClick={()=>{addCar&&addCar(id)}} >Delete from Compare</button>}
+                    {!compared&&<button className="toggleButton" onClick={addToCompare}>Add To Compare</button>}
+                    {compared&&<button className={`toggleButton ${compared ? 'car__compared':''}`} onClick={addToCompare}>Delete from Compare</button>}
                 </div>
                 <h3>{title}</h3>
                 <h4>${price}</h4>
-                <h5>{location}</h5>
+                {location&&<h5>{location.country}, {location.town}</h5>}
 
                 <div className="car__short">
                     <div className="car__label car__date">{year}</div>
@@ -37,7 +72,7 @@ const Card = (props) => {
                 </div>
             </div>
             <div className="car__bottom">
-                <Rating/>
+                {(id || id===0) && <Rating id={id}/>}
                 <div>
                     {!!props.vievs&&<p>({vievs} Reviews)</p>}
                 </div>

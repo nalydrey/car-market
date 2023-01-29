@@ -3,11 +3,13 @@ import { useState } from "react"
 import Card from "../card/Card"
 import Pagination from "../pagination/Pagination"
 import './Cards.scss'
+import {useSelector} from "react-redux";
 
 
 
 const Cards = (props) => {
-  
+
+
 const {  styleClass, showBy, sortKey, cars }  = props 
 
 const [currentPage, setPage] = useState(1)
@@ -23,9 +25,12 @@ const showCars = (page) => {
  
   return (
     <div className="cars-box">
-        {showCars(currentPage).map((el)=>{
-           return <Card {...el} key={el.id} class={styleClass}/>
-        })}
+        {showCars(currentPage)[0] ?
+            showCars(currentPage).map((el, i)=>{
+                return <Card {...el} key={el.id} class={styleClass}/>})
+            :
+            <p>Loading...</p>
+        }
         <Pagination callPage={(page)=>{setPage(page)}} showBy={showBy} currentPage={currentPage} totalCards={cars.length}  />
     </div>
   )

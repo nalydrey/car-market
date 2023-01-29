@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './FindString.scss'
-import { useCommonContext } from '../../AppContext/AppContext'
 
 
 const FindString = (props) => {
 
     const { button, individualStyle } = props
 
-    const { filteredCars, filterByQuery } = useCommonContext()
 
 
 
@@ -27,7 +25,7 @@ const FindString = (props) => {
     }    
     
     const search = () => {
-        filterByQuery(queryString)
+        // filterByQuery(queryString)
         setQuety(input.current.value) 
     }
 

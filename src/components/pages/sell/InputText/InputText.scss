@@ -1,0 +1,18 @@
+@import '/src/styles/variables.scss';
+
+.label__input{
+    background: $inputBackground;
+    display: block;
+    position: relative;
+    width: 100%;
+    input{
+      background: $inputBackground;
+      width: 100%;
+    }
+    span{
+      text-transform: capitalize;
+      position: absolute;
+      top: -25px;
+      left: 0;
+    }
+  }

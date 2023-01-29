@@ -1,18 +1,22 @@
 import React from 'react'
-import RadioButtons from '../../../radioButton/RadioButtons'
+import RadioButtons from '../../../inputComponents/radioButton/RadioButtons'
 import FindString from '../../../findString/FindString'
 import FindPanel from '../../../FindPanel/FindPanel'
-import RangeSlider from '../../../RangeSlider/RangeSlider'
-import { useCommonContext } from '../../../../AppContext/AppContext'
+import RangeSlider from '../../../inputComponents/RangeSlider/RangeSlider'
 import collectData from '../../../../functions/collectData'
 import './HorisontalFindPanel.scss'
 import { Link } from 'react-router-dom'
+import {useSelector} from "react-redux";
 
 const HorisontalFindPanel = () => {
 
-    const { radioChose, radioActiveName, filteredCars, findObj, allCars} = useCommonContext()
 
-    const data = collectData(filteredCars)
+    const allCars = useSelector(state => state.cars)
+    const findObj = useSelector(state => state.findObj)
+
+
+
+    const data = collectData(allCars)
 
     const filterByBrand =findObj.brand ? allCars.filter((car)=>{
         return findObj.brand.some(el => {
@@ -27,13 +31,13 @@ const HorisontalFindPanel = () => {
 
   return (
     <section className="horisontalFindPanel">
-        <RadioButtons labelList={['All', 'New', 'Used']} individualClass='underline' asButton radioCallBack={radioChose} activeName={radioActiveName}/>
+        {/*<RadioButtons labelList={['All', 'New', 'Used']} individualClass='underline' asButton radioCallBack={radioChose} activeName={radioActiveName}/>*/}
         <FindString individualStyle='search'/>
         <FindPanel data={data.brand} isSearch dataKey='brand' individualStyle='brand'>Brand</FindPanel>
         <FindPanel data={models} dataKey='model' individualStyle='model'>Model</FindPanel>
         <FindString individualStyle='location'/>
         <RangeSlider />
-         <Link className="horisontalFindPanel__button" to="search_result">Search</Link>
+         <Link className="submit__button" to="search_result">Search</Link>
     </section>
   )
 }

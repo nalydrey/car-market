@@ -5,7 +5,7 @@ import changeInscription from '../../functions/changeInscription'
 const InfoAccordion = (props) => {
     const {data, objName} = props
     const [isOpen, setOpen] = useState(false)
-    // console.log(data);
+    console.log(objName);
 
     const keysArr = []    
 //    console.log(objName);
@@ -21,14 +21,14 @@ const InfoAccordion = (props) => {
   return (
         <div className='infoAccordion'>
             <div className={`info__title ${isOpen ?'info__title--active':''}`} onClick={()=>{setOpen(!isOpen)}}>
-            <p>{changeInscription(objName)}</p> 
+            <p>{objName}</p> 
             </div>  
             <ul className={`info__deploy ${!isOpen ?'info__deploy--active':''}`}>
                 {keysArr.map((el)=>{
                     return(
                     <>
                         {/* {console.log(} */}
-                        <li>{changeInscription(el)}</li>
+                        <li>{el}</li>
                         <li>
                             {data.map((car,i)=>{
                                 return car&&<p key={i}>{car.characteristics[objName][el]===true ? 'yes' : car.characteristics[objName][el]===false ? 'no' : car.characteristics[objName][el]}</p>

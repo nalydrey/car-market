@@ -1,0 +1,54 @@
+@import "src/styles/variables";
+
+.change-block{
+  background: $blockBackground;
+  margin-bottom: 40px;
+  padding: 25px;
+  gap: 50px;
+  h2{
+    text-transform: capitalize;
+    font-size: 28px;
+    text-decoration: underline;
+    grid-area: name;
+  }
+}
+
+.sell__container{
+  border: 1px solid white;
+  padding: 24px;
+
+}
+
+.label__input{
+  background: $inputBackground;
+  display: block;
+  //border: 1px solid white;
+  position: relative;
+  width: 100%;
+  input{
+    background: $inputBackground;
+    width: 100%;
+  }
+  span{
+    position: absolute;
+    top: -25px;
+    left: 0;
+  }
+}
+
+.submit{
+  transition: .3s;
+  margin: 0 auto;
+  min-width: 300px;
+  display: block;
+  padding: 10px;
+  background: $colorBorder;
+  &:hover{
+    background: $buttonColor;
+  }
+}
+
+
+
+
+

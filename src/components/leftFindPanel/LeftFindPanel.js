@@ -1,25 +1,35 @@
-import {  useMemo, useState, useEffect } from "react"
 import FindPanel from "../FindPanel/FindPanel"
-import RadioButtons from '../radioButton/RadioButtons'
-import './LeftFindPanel.scss'
-
-import cars from "../../datas/cars"
+import RadioButtons from '../inputComponents/radioButton/RadioButtons'
 import collectData from "../../functions/collectData"
-import { useCommonContext } from "../../AppContext/AppContext"
-import RangeSlider from "../RangeSlider/RangeSlider"
+import RangeSlider from "../inputComponents/RangeSlider/RangeSlider"
+import {changeNewOrUsed, resetAllFilters} from "../../store/actionCreators/actionCreate";
+import {useSelector} from "react-redux";
+import './LeftFindPanel.scss'
 
 
 const LeftFindPanel = (props) => {
   // console.log('render LeftFindPanel');
 
   const { radio=false } = props
-  const { reset, findObj, allCars, filteredCars, radioChose, radioActiveName } = useCommonContext()
-  const data = collectData(filteredCars)
 
-  // const folowYear = filteredCars.map((el)=>el.year).reduce((ak, el)=> ak+el)
+    const allCars = useSelector((state)=>state.cars)
+    const findObj = useSelector((state)=>state.findObj)
+    const newOrUsed = useSelector((state)=>state.findObj.isNew[0])
+    let data = []
+
+    if (allCars.length>0)
+    {data = collectData(allCars)}
+    const activateRadioName = (data) => {
+    if(data===undefined)
+        return 'All'
+    if(data)
+        return 'New'
+    if(!data)
+        return 'Used'
+}
 
   
-  const filterByBrand =findObj.brand ? allCars.filter((car)=>{
+  const filterByBrand = findObj.brand ? allCars.filter((car)=>{
       return findObj.brand.some(el => {
         return el === car.brand
       })
@@ -35,8 +45,7 @@ const LeftFindPanel = (props) => {
         {radio&&
         <div className="filters__radio">
             <h5>Conditions</h5>
-            <RadioButtons buttonType='radio__button' labelList={['All', 'New', 'Used']} individualClass='radio__container' radioCallBack={radioChose} activeName={radioActiveName}/>
-            {/* callOutFunction={refresh} */}
+            <RadioButtons buttonType='radio__button' labelList={['All', 'New', 'Used']} individualClass='radio__container' radioCallBack={changeNewOrUsed} activeName={activateRadioName(newOrUsed)}/>
         </div>}
         <FindPanel data={data.year} dataKey='year' sort sortDescending>Year</FindPanel>
         <FindPanel data={data.brand} isSearch dataKey='brand' open>Brand</FindPanel>
@@ -45,9 +54,9 @@ const LeftFindPanel = (props) => {
         <FindPanel data={data.countPassanger} dataKey='countPassanger'>Passanger</FindPanel>
         <FindPanel data={data.fuel}  dataKey='fuel' >Fuel</FindPanel>
         <div className="chosePrise">
-          <RangeSlider/>
+          {/*<RangeSlider/>*/}
         </div>
-        <button className="resetButton" onClick={reset}>Reset Filter</button>
+        <button className="resetButton" onClick={resetAllFilters}>Reset Filter</button>
     </div>
   )
 }

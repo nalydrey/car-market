@@ -1,10 +1,10 @@
-import { useCommonContext } from "../../../AppContext/AppContext"
 import { ReactComponent as AddCar } from '../../../assets/icons/add-car.svg'
 import Card from "../../card/Card"
 import { Link } from "react-router-dom"
 import './Compare.scss'
 import InfoAccordion from "../../infoAccordion/InfoAccordion"
 import React from "react"
+import {useSelector} from "react-redux";
 
 
 
@@ -12,8 +12,8 @@ const Compare = (props) => {
   // console.log('render compare');
 
   const {} = props
-  
-  const {allCars} = useCommonContext()
+
+    const allCars = useSelector((state)=>state.cars)
 
   const comparedCar = allCars.filter((car) => car.compared)
   const c = comparedCar.length

@@ -1,0 +1,567 @@
+{
+  "cars": [
+    {
+      "id": 0,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1zXU96Wd56fcvj3DreUUyA6DccNYYeSjS"
+      ],
+      "brand": "Audi",
+      "model": "e-tron Premium",
+      "title": "Audi e-tron Premium",
+      "price": 72655,
+      "oldPrice": null,
+      "location": {
+        "country": "South Korea",
+        "town": "Suwon"
+      },
+      "year": 2021,
+      "fuel": "Electric",
+      "drive": "Rear-wheel Drive",
+      "countPassanger": 5,
+      "rating": 3,
+      "vievs": 4,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": false,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Audi",
+          "bodyType": "SUV",
+          "color": "blue"
+        },
+        "engineDetails": {
+          "fuelType": "Electric",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "totalRat": 12
+    },
+    {
+      "id": 1,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1W0AUSnlmVpTa0wRZ5ZKAmTtWoykFoxVx"
+      ],
+      "brand": "Tesla",
+      "model": "Model 3 Standard Range Plus",
+      "title": "Tesla Model 3 Standard Range Plus",
+      "price": 57148,
+      "oldPrice": null,
+      "location": {
+        "country": "USA",
+        "town": "Florida"
+      },
+      "year": 2020,
+      "fuel": "Electric",
+      "drive": "Rear-wheel Drive",
+      "countPassanger": 5,
+      "rating": 2.5483870967741935,
+      "vievs": 31,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": true,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Tesla",
+          "bodyType": "sedan",
+          "color": "red"
+        },
+        "engineDetails": {
+          "fuelType": "electric",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "totalRat": 79
+    },
+    {
+      "id": 2,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1zvQKL7qGE31PpGHw24CcNy2eQ6SONrjX"
+      ],
+      "brand": "Ford",
+      "model": "F-250 Super Duty",
+      "title": "Ford F-250 Super Duty",
+      "price": 82089,
+      "oldPrice": null,
+      "location": {
+        "country": "Italy",
+        "town": "Milan"
+      },
+      "year": 2021,
+      "fuel": "Diesel",
+      "drive": "Four-wheel Drive",
+      "countPassanger": 5,
+      "rating": 1.9090909090909092,
+      "vievs": 22,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": true,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Ford",
+          "bodyType": "PikUp",
+          "color": "grey"
+        },
+        "engineDetails": {
+          "fuelType": "Diesel",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "totalRat": 42
+    },
+    {
+      "id": 3,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1n6mRUl2N995Mgc8qubE_Xd8qwLM1auc2"
+      ],
+      "brand": "Honda",
+      "model": "Pilot Touring 7-Passenger",
+      "title": "Honda Pilot Touring 7-Passenger",
+      "price": 43735,
+      "oldPrice": null,
+      "location": {
+        "country": "Venezuela",
+        "town": "Caracas"
+      },
+      "year": 2021,
+      "fuel": "Gasoline",
+      "drive": "All-wheel Drive",
+      "countPassanger": 7,
+      "rating": 0.38461538461538464,
+      "vievs": 13,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": true,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Honda",
+          "bodyType": "SUV",
+          "color": "blue"
+        },
+        "engineDetails": {
+          "fuelType": "gasoline",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "totalRat": 5
+    },
+    {
+      "id": 4,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1jqKkFKa84XZPe5sC5kB0JPpUNQ74YLV8"
+      ],
+      "brand": "Jeep",
+      "model": "Wrangler Unlimited Islander",
+      "title": "Jeep Wrangler Unlimited Islander",
+      "price": 57148,
+      "oldPrice": null,
+      "location": {
+        "country": "USA",
+        "town": "Florida"
+      },
+      "year": 2021,
+      "fuel": "Hybrid",
+      "drive": "Four-wheel Drive",
+      "countPassanger": 5,
+      "rating": 0.5,
+      "vievs": 14,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": true,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Jeep",
+          "bodyType": "SUV",
+          "color": "white"
+        },
+        "engineDetails": {
+          "fuelType": "Hybrid",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "totalRat": 7
+    },
+    {
+      "id": 5,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1l52BV27v2WDlvBSUJDr8I3PhrAFw7yXG"
+      ],
+      "brand": "Kia",
+      "model": "Sorento S",
+      "title": "Kia Sorento S",
+      "price": 29791,
+      "oldPrice": null,
+      "location": {
+        "country": "USA",
+        "town": "Florida"
+      },
+      "year": 2021,
+      "fuel": "Gasoline",
+      "drive": "Rear-wheel Drive",
+      "countPassanger": 5,
+      "rating": 0,
+      "vievs": 11,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": true,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Kia",
+          "bodyType": "SUV",
+          "color": "blue"
+        },
+        "engineDetails": {
+          "fuelType": "gasoline",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      }
+    },
+    {
+      "id": 6,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1oOh3kjt2zSXtJ_TFmvDzReq_oTaCddc9"
+      ],
+      "brand": "MINI",
+      "model": "Clubman Cooper S",
+      "title": "MINI Clubman Cooper S",
+      "price": 35850,
+      "oldPrice": null,
+      "location": {
+        "country": "USA",
+        "town": "Florida"
+      },
+      "year": 2020,
+      "fuel": "Gasoline",
+      "drive": "Rear-wheel Drive",
+      "countPassanger": 5,
+      "rating": 0,
+      "vievs": 11,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": true,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "MINI",
+          "bodyType": "SUV",
+          "color": "blue"
+        },
+        "engineDetails": {
+          "fuelType": "gasoline",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      }
+    },
+    {
+      "id": 7,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1GDDBHOtBtL0N2Ki1MbRlKRvAD9lXQyTL"
+      ],
+      "brand": "Land Rover",
+      "model": "Range Rover Velar R-Dynamic S",
+      "title": "Land Rover Range Rover Velar R-Dynamic S",
+      "price": 75790,
+      "oldPrice": null,
+      "location": {
+        "country": "USA",
+        "town": "Florida"
+      },
+      "year": 2021,
+      "fuel": "Gasoline",
+      "drive": "All-wheel Drive",
+      "countPassanger": 5,
+      "rating": 0,
+      "vievs": 11,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": false,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Land Rover",
+          "bodyType": "SUV",
+          "color": "white"
+        },
+        "engineDetails": {
+          "fuelType": "gasoline",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      }
+    },
+    {
+      "id": 8,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1uH-jqA2KB4MIbiLd0GDiODF9J96mW6AA"
+      ],
+      "brand": "Toyota",
+      "model": "Mirai",
+      "title": "Toyota Mirai",
+      "price": 71415,
+      "oldPrice": null,
+      "location": {
+        "country": "Japan",
+        "town": "Kobe"
+      },
+      "year": 2020,
+      "fuel": "Electric",
+      "drive": "Rear-wheel Drive",
+      "countPassanger": 5,
+      "rating": 0,
+      "vievs": 11,
+      "ribbonStatus": "Featured",
+      "compared": false,
+      "isNew": false,
+      "characteristics": {
+        "generalInfo": {
+          "brand": "Toyota",
+          "bodyType": "SUV",
+          "color": "blue"
+        },
+        "engineDetails": {
+          "fuelType": "Electric",
+          "mileage": "120",
+          "transmission": "automatic",
+          "engineCapacity": "3471 cc",
+          "power": "314hp"
+        },
+        "dimension": {
+          "length": 5700,
+          "width": 1700,
+          "height": 1800,
+          "cargoVolume": 500
+        },
+        "features": {
+          "Power Steering": false,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": false,
+          "Power Window": false,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      }
+    }        
+  ]
+}

@@ -1,0 +1,65 @@
+@mixin list{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer{
+  margin-top: 70px;
+  font-size: 14px;
+  background: #12232E;
+}
+
+.gradient-border{
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, #C4C4C4 50%, transparent 100% );
+}
+
+.footer__logo{
+  text-align: center;
+  padding: 24px;
+}
+
+.footer__container{
+  padding: 38px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__nav{
+  text-transform: uppercase;
+}
+
+.footer__list{
+  @include list;
+}
+
+.footer__contacts{
+  @include  list;
+  li:first-child{
+    text-transform: uppercase;
+  }
+}
+
+.footer__social{
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.social__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+
+.copyright{
+  text-align: center;
+  padding: 15px;
+}

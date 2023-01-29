@@ -1,0 +1,32 @@
+.carusel{
+  //height: 00px;
+  margin-bottom: 50px;
+  h2{
+    margin-bottom: 60px;
+  }
+  .slick-list{
+    overflow: visible;
+  }
+  .slick-track{
+    display: flex;
+    gap: 70px
+  }
+  .slick-initialized .slick-slide{
+    display: flex;
+    justify-content: center;
+    gap:100px;
+    //margin: 50px;
+  }
+  .slick-center{
+    transition: .5s;
+    transform: scale(1.1);
+    & .personal{
+      transition: 2s;
+      background: #001d2e;
+      &:before{
+        background: #001d2e;
+      }
+    }
+  }
+}
+

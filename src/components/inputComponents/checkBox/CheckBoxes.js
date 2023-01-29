@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {useSelector} from "react-redux";
-import {changeFindObj} from "../../store/actionCreators/actionCreate";
+import {changeFindObj} from "../../../store/actionCreators/actionCreate";
 import './CheckBoxes.scss'
 
 

@@ -1,0 +1,15 @@
+@import 'src/styles/variables';
+
+.features{
+  input{
+    //border: 1px solid white;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+.features__checkboxes{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill,minmax(230px, 1fr));
+}

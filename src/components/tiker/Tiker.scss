@@ -1,0 +1,54 @@
+.tiker{
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.wrap{
+  width: 200%;
+  display: flex;
+  &:hover .tiker__container{
+    //animation-play-state: paused;
+  }
+}
+
+.tiker__container{
+  flex-grow: 1;
+  display: flex;
+  width: 200%;
+  justify-content: space-around;
+  animation: tiker 20s linear infinite;
+
+}
+
+
+
+.rect{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red{
+  background: red;
+}
+.blue{
+  background:blue;
+}
+.grey{
+  background: grey;
+}
+.green{
+  background: green;
+}
+
+@keyframes tiker {
+  0%{
+    transform: translate(0%);
+  }
+  100%{
+    transform: translate(-100%);
+  }
+}
+

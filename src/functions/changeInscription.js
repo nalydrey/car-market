@@ -1,5 +1,9 @@
 
 let incscr = [
+    {
+      title: 'brand',
+      replace: 'brand'
+    },
     { title: 'generalInfo',
       replace: 'general info'
     },

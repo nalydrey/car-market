@@ -1,59 +1,62 @@
 import React from 'react'
 import { useEffect, useRef, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import {useNavigate, useParams} from "react-router-dom"
 import Cards from "../../cards/Cards"
 import LeftFindPanel from "../../leftFindPanel/LeftFindPanel"
-import { useCommonContext } from "../../../AppContext/AppContext"
-import { ReactComponent as Horisontal} from '../../../icons/button-hor.svg' 
+import { ReactComponent as Horisontal} from '../../../icons/button-hor.svg'
 import { ReactComponent as Vertical} from '../../../icons/button-vert.svg' 
 import FindString from "../../findString/FindString"
-import '../newCars/NewCars.scss'
+// import '../newCars/NewCars.scss'
+import filterData from "../../../functions/filterData";
+import regExpFilter from "../../../functions/regularExpFilter";
+import {useSelector} from "react-redux";
+import {changeNewOrUsed} from "../../../store/actionCreators/actionCreate";
+import './SearchResult.scss'
 
 
-const SearchResult = () => {
+const SearchResult = (props) => {
 
-    // console.log(useCommonContext());
-    const { filteredCars, workCars } = useCommonContext()
+    const { radio=false,filterNovelty='All' } = props
 
-    // console.log('render New Cars');
-    const navigate = useNavigate()
+    useEffect(()=>{
+        changeNewOrUsed(filterNovelty)
+    },[filterNovelty])
+    // changeNewOrUsed(filterNovelty)
+
+    // отфильтрованные по новизне автомобили
+    const allCars = useSelector((state)=>state.cars)
+    const findObj = useSelector(state => state.findObj)
+    const filteredCars = findObj.isNew && findObj.isNew.length ? filterData(allCars, {isNew: findObj.isNew }) : allCars
+    let filterWorkCars = filterData(filteredCars, findObj)
+    const findWord = ""
+    // поиск автомобиля по запросу
+    filterWorkCars = findWord ? (regExpFilter(filterWorkCars, findWord)) : filterWorkCars
+    const workCars = filterWorkCars.length ? filterWorkCars : []
 
     const[horisontal, setHorisontal] = useState(true)
     
     const[sortBy, setSort] = useState('')
-
     const lineUp = (param) => {setHorisontal(param)}
-
-
     const choseMethodOfSort = (e) => {
         setSort(e.target.value)
     }
-
-
-
-    // useEffect(()=>{
-    //     sortBy&&navigate(`?sort=${sortBy}`, {relative: 'path'})        
-    // },[sortBy, navigate])    
-    // useEffect(()=>{
-    //     searchBy?navigate(`?search=${searchBy}`, {relative: 'path'}):navigate(`.`, {relative: 'path'})
-    // },[searchBy, navigate])
-
 
   return (
     <section className="searchResult">
     <h1>Search</h1>
     <h2> and other </h2>
-    <div className="new__cars-container">
+    <div className="new__cars-container larger__container">
 
-        <LeftFindPanel radio/>
+        <LeftFindPanel radio={radio}/>
         
         <div className="cars__box">             
             <div className="top-panel">
                 
-                    <FindString/>
+                <FindString/>
 
+                <div className='info-wrap'>
                     <h2 className="results">{filteredCars.length} Results</h2>
-                    
+
                     <select className="control__select" name="sort" id="sort" onChange={choseMethodOfSort}>
                         <option value="Sort By" disabled>Sort By</option>
                         <option value="brand">brand</option>
@@ -72,15 +75,14 @@ const SearchResult = () => {
                             <Vertical/>
                         </button>
                     </div>
+                </div>
 
             </div>
 
             <div className="">                            
                 <Cards showBy={4} styleClass={horisontal&&'horisontal'} sortKey={sortBy} cars={workCars} />
             </div>
-
         </div>
-
     </div>
 </section>  
   )

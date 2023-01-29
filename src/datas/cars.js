@@ -32,6 +32,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Tesla',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -92,6 +93,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Ford',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -151,6 +153,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Honda',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -211,6 +214,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Chevrolet',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -270,6 +274,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Kia',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -330,6 +335,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'MINI',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -390,6 +396,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Jeep',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -450,6 +457,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Audi',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -510,6 +518,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Land Rover',
                 bodyType: 'SUV',
                 color: 'blue'
             },
@@ -570,6 +579,7 @@ const cars =[
         {
             generalInfo: 
             {
+                brand: 'Toyota',
                 bodyType: 'SUV',
                 color: 'blue'
             },

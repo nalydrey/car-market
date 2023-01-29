@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+@import 'src/styles/variables';
+
+.carDetail{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'name name name'
+        'title title condition'
+        'body brand model'
+        'year passengers color'
+        'description description description';
+    .label__input{
+        grid-area: title;
+    }
+}
+
+.description{
+    grid-area: description;
+    position: relative;
+    textarea{
+        padding: 15px;
+        width: 100%;
+        border: none;
+        background: $inputBackground;
+    }
+    span{
+        position: absolute;
+        top: -25px;
+        left: 0
+    }
+}

@@ -1,0 +1,76 @@
+@import "src/styles/variables";
+
+
+.drop{
+  position: relative;
+}
+
+.select__button{
+  border: none;
+  background: $inputBackground;
+  transition: .3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  .after{
+    transition: .3s;
+  }
+  &--activate{
+    .after{
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.search__string{
+  margin: 15px;
+  margin-bottom: 0;
+  input{
+    width: 100%
+  }
+}
+
+.drop__list{
+
+  transition: .5s;
+  overflow: auto;
+  max-height: 0;
+  background: $backgroundAcrive;
+  border-radius: 3px;
+  width: 100%;
+  position: absolute;
+  top: 110%;
+  z-index: 2;
+  &--active{
+    max-height: 400px;
+  }
+}
+
+.drop__list-item{
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+  &:hover{
+    background: $blockBackground;
+  }
+}
+
+.disable{
+  background: #6d787f;
+}
+
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: rgba(34, 46, 59, 0.68);
+}
+::-webkit-scrollbar-thumb{
+  border: 3px solid rgba(34, 46, 59, 0.68);
+  background: rgba(21, 32, 40, 0.8);
+  border-radius: 10px;
+}

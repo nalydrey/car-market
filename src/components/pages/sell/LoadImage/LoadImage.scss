@@ -1,0 +1,85 @@
+@import "src/styles/variables";
+
+.loadIMG{
+  margin-top: 20px;
+  display: flex;
+  align-items: start;
+  gap: 15px;
+  label{
+    transition: .3s;
+    line-height: 72px;
+    border: 5px dashed $inputBackground;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-size: 72px;
+    font-weight: 700;
+    min-width: 150px;
+    height: 150px;
+    &:hover{
+      border: 5px dashed white;
+    }
+  }
+  input[type='file']{
+    pointer-events: none;
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.image-box{
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-around;
+  //align-items: start;
+  gap:  15px;
+  li{
+    position: relative;
+    width: 180px;
+    border: 3px solid $colorBorder;
+    &:hover .delete-foto{
+      opacity: 1;
+    }
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.delete-foto{
+  cursor: pointer;
+  border-radius: 7px;
+  background: #830b0b;
+  transition: .5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 1px solid $colorBorder;
+  line-height: 30px;
+  opacity: 0;
+  &::before,
+  &::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: $colorBorder;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+  }
+  &::before{
+    transform: rotate(45deg);
+
+  }
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
