@@ -1,12 +1,19 @@
+@import '/src/styles/variables.scss';
+
+header{
+    background: $backgroundAcrive;
+    ;
+}
+
 .nav__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 80px;
     width: 100%;
-    position: absolute;
+    // position: absolute;
      left: 50%;
-    transform: translate(-50%);
+    // transform: translate(-50%);
     z-index: 2;
 }
 

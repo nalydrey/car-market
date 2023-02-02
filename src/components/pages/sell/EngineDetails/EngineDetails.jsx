@@ -1,10 +1,7 @@
 import React from 'react';
 import InputSelect from "../../../inputComponents/InputSelect/InputSelect";
 import {
-    changeDrive, changeEngine,
-    changeFuel,
-    changeMilage, changePower,
-    changeTransmission
+    selectOption, changeEngine, changeMilage, changePower,
 } from "../../../../store/actionCreators/actionCreateAddCar";
 import InputNumber from "../../../inputComponents/InputNumber/InputNumber";
 import {useSelector} from "react-redux";
@@ -19,27 +16,25 @@ const EngineDetails = () => {
             <h2>engine details</h2>
             <InputSelect list={['gasoline', 'diesel','gas','electric','hibrid']}
                          gridName='fuel'
-                         title='fuel tipe'
+                         title='fuel type'
                          name='fuel'
                          value={value.fuel}
-                         execute={changeFuel}
+                         execute={selectOption}
 
             />
             <InputNumber gridName='milage' dimension='km' execute={changeMilage} value={value.characteristics.engineDetails.mileage} title='Mileage'/>
             <InputSelect list={['automat', 'manual', 'robot', 'variator']}
-                         gridName='transmision'
-                         title='Transmission'
-                         name='transmision'
+                         title='transmission'
                          value={value.characteristics.engineDetails.transmission}
-                         execute={changeTransmission}
+                         execute={selectOption}
 
             />
             <InputSelect list={['front-drive', 'back-drive', 'all-drive']}
                          gridName='drive'
-                         title='Drivetrain'
+                         title='drivetrain'
                          name='drive'
                          value={value.drive}
-                         execute={changeDrive}
+                         execute={selectOption}
 
             />
             <InputNumber gridName='engine' dimension='cc' execute={changeEngine} value={value.characteristics.engineDetails.engineCapacity} title='Engine Capacity'/>

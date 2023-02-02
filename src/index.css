@@ -19,6 +19,15 @@ body {
   justify-content: space-between;
 }
 
+h2{
+  text-transform: capitalize;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
 ul{
   list-style-type: none;
 }
@@ -76,3 +85,16 @@ input[type='tel']
 
 }
 
+::-webkit-scrollbar{
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: rgba(34, 46, 59, 0.68);
+}
+::-webkit-scrollbar-thumb{
+  border: 3px solid rgba(34, 46, 59, 0.68);
+  background: rgba(21, 32, 40, 0.8);
+  border-radius: 10px;
+}

@@ -1,0 +1,51 @@
+@import '/src/styles/variables.scss';
+
+.office{
+    .larger__container{
+        display: flex;
+        margin-top: 50px;
+        gap: 50px;
+    }
+    
+}
+
+.client{
+    padding: 25px;
+    background: $blockBackground;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    gap: 50px;
+    button{
+        width: 150px;
+        padding: 15px;
+        background: none;
+        border: 1px solid $buttonColor;
+        color: $buttonColor;
+        border-radius:  3px;
+    }
+}
+.client__foto{
+    border: 1px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+.client__avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    p{
+        font-size: 35px;        
+    }
+}
+
+
+
+
+

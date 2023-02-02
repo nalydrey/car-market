@@ -1,2 +1,48 @@
 @import '/src/styles/variables.scss';
 
+
+.info__container{
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.info__left{
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    flex-basis: 650px;
+    h2{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+.info__right{
+    flex-grow: 1;
+    flex-basis: 395px;
+    min-width: 320px;
+   
+}
+
+.info__button{
+    border-radius: 3px;
+    width: 100%;
+    padding: 15px;
+    background: none;
+    border: 1px solid $buttonColor;
+    color: $buttonColor;
+    margin-bottom: 70px;
+    font-size: 24px;
+}
+
+.seeMore__button{
+    background: none;
+    border: none;
+    display: block;
+    margin-top: 25px;
+    color: $buttonColor;
+}

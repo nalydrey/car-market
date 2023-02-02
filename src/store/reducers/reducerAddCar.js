@@ -15,14 +15,14 @@ const defaultState =
         year: '',
         fuel: '',
         drive: '',
-        countPassanger: 0,
+        countPassenger: '',
         rating: 0,
         totalRat: 0,
-        vievs: 0,
+        views: 0,
         ribbonStatus: '',
         compared: false,
         isNew: null,
-        discription: '',
+        description: '',
         characteristics:
             {
                 generalInfo:
@@ -34,10 +34,10 @@ const defaultState =
                 engineDetails:
                     {
                         fuelType: '',
-                        mileage: '0',
+                        mileage: '',
                         transmission: '',
-                        engineCapacity: '0',
-                        power:'0',
+                        engineCapacity: '',
+                        power:'',
                     },
                 dimension:
                     {
@@ -72,35 +72,71 @@ const defaultState =
 const reducerAddCar = (state=defaultState, action) => {
     switch(action.type){
 
+        case 'SELECT_OPTIONS':
+            {
+                switch (action.name){
+                    case 'body type': {
+                        (state.characteristics.generalInfo.bodyType = action.payload)
+                        return {...state}
+                    }  
+                    case 'brand': {
+                        (state.characteristics.generalInfo.brand = action.payload)
+                        return {...state, brand: action.payload }
+                    }
+                    case 'model': return {...state, model: action.payload }
+                    case 'year':  return {...state, year: action.payload }
+                    case 'color':{
+                        (state.characteristics.generalInfo.color = action.payload)
+                        return {...state }
+                    } 
+                    case 'fuel':{
+                        state.characteristics.engineDetails.fuelType = action.payload
+                        return {...state, fuel: action.payload}
+                    } 
+                    case 'transmission':{
+                        state.characteristics.engineDetails.transmission = action.payload
+                        return {...state}
+                    } 
+                    case 'drive': return {...state, drive: action.payload}  
+                    case 'title': return {...state, title: action.payload }
+                    case 'country': {
+                        state.location.country = action.payload
+                        return {...state}
+                    }
+                    case 'town': {
+                        state.location.town = action.payload
+                        return {...state}
+                    }
+                }
+            }
+
+        case 'ADD_DESCRIPTION':    
+            {
+                switch(action.name){
+                    case 'description': return {...state, description: action.payload } 
+                }
+            }
+
+
+
+            
+        case 'ADD_USER_ID':         return {...state, userId: action.payload}
         case 'SELECT_PASSANGER':    return {...state, countPassanger: action.payload}
-        case 'CHANGE_TITLE':        return {...state, title: action.payload }
-        case 'CHANGE_BODY_TYPE':    (state.characteristics.generalInfo.bodyType = action.payload)
-                                    return {...state}
 
-        case 'CHANGE_BRAND':        (state.characteristics.generalInfo.brand = action.payload)
-                                    return {...state, brand: action.payload }
+        case 'CHANGE_TITLE':        
 
-        case 'CHANGE_MODEL':        return {...state, model: action.payload }
+
         case 'CHANGE_CONDITION':    {
                                     switch (action.payload){
-                                            case 'New': return {...state, isNew: true }
-                                            case 'Used': return {...state, isNew: false }
+                                            case 'New': return {...state, isNew: true}
+                                            case 'Used': return {...state, isNew: false}
                                     }
             }
-        case 'CHANGE_YEAR':         return {...state, year: action.payload }
-        case 'CHANGE_COLOR':        (state.characteristics.generalInfo.color = action.payload)
-                                    return {...state }
-        case 'ADD_DISCRIPTION':     return {...state, discription: action.payload }
         case 'ADD_IMAGE':           state.image.push(action.payload)
                                     return {...state}
         case 'DELETE_IMAGE':        state.image.splice(action.payload,1)
                                     return {...state}
-        case 'CHANGE_FUEL':         state.characteristics.engineDetails.fuelType = action.payload
-                                    return {...state, fuel: action.payload}
-        case 'CHANGE_DRIVE':        return {...state, drive: action.payload}
         case 'CHANGE_MILAGE':       state.characteristics.engineDetails.mileage = action.payload
-                                    return {...state}
-        case 'CHANGE_TRANSMISSION': state.characteristics.engineDetails.transmission = action.payload
                                     return {...state}
         case 'CHANGE_ENGINE':       state.characteristics.engineDetails.engineCapacity = action.payload
                                     return {...state}
@@ -112,7 +148,8 @@ const reducerAddCar = (state=defaultState, action) => {
                                     return {...state}
         case 'CHANGE_WIDTH':        state.characteristics.dimension.width = action.payload
                                     return {...state}
-        case 'CHANGE_LENGTH':       state.characteristics.dimension.length = action.payload
+        case 'CHANGE_LENGTH':       console.log(action.payload);
+        state.characteristics.dimension.length = action.payload
                                     return {...state}
         case 'CHECK_FEATURES':      const features = state.characteristics.features
                                     for (const key in features) {
@@ -120,10 +157,7 @@ const reducerAddCar = (state=defaultState, action) => {
                                     }
                                         return {...state}
         case 'CHENGE_PRICE':        {  return{...state, price: action.payload}}
-        case 'SET_COUNTRY':         state.location.country = action.payload
-                                    return {...state}
-        case 'SET_TOWN':            state.location.town = action.payload
-                                    return {...state}
+                  
 
 
 

@@ -1,4 +1,4 @@
-@import "src/styles/variables";
+@import "/src/styles/variables";
 
 .change-block{
   background: $blockBackground;
@@ -48,7 +48,28 @@
   }
 }
 
+.offer{
+  h2{
+    text-transform: none;
+    text-decoration: none;
+    font-size: 35px;
+    text-align: center;
+  }
+}
 
-
+.offer__buttons{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  button{
+    color: $buttonColor;
+    border: 1px solid $buttonColor;
+    background: none;
+    padding: 15px;
+    width: 150px;
+    border-radius: 3px;
+  }
+}
 
 

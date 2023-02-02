@@ -1,0 +1,20 @@
+@import '/src/styles/variables.scss';
+
+.call-back-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+    grid-template-areas: 
+    'title title'
+    'name email'
+    'phone subject'
+    'comment comment'
+    'btn btn';
+    h2{
+        grid-area: title;
+    }
+    .submit{
+        grid-area: btn;
+        width: 100%;
+    }
+}

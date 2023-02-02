@@ -19,7 +19,7 @@
       "drive": "Rear-wheel Drive",
       "countPassanger": 5,
       "rating": 3,
-      "vievs": 4,
+      "vievs": 8,
       "ribbonStatus": "Featured",
       "compared": false,
       "isNew": false,
@@ -61,7 +61,7 @@
           "Other": false
         }
       },
-      "totalRat": 12
+      "totalRat": 24
     },
     {
       "id": 1,
@@ -81,8 +81,8 @@
       "fuel": "Electric",
       "drive": "Rear-wheel Drive",
       "countPassanger": 5,
-      "rating": 2.5483870967741935,
-      "vievs": 31,
+      "rating": 2.6666666666666665,
+      "vievs": 33,
       "ribbonStatus": "Featured",
       "compared": false,
       "isNew": true,
@@ -124,7 +124,7 @@
           "Other": false
         }
       },
-      "totalRat": 79
+      "totalRat": 88
     },
     {
       "id": 2,
@@ -144,8 +144,8 @@
       "fuel": "Diesel",
       "drive": "Four-wheel Drive",
       "countPassanger": 5,
-      "rating": 1.9090909090909092,
-      "vievs": 22,
+      "rating": 2,
+      "vievs": 23,
       "ribbonStatus": "Featured",
       "compared": false,
       "isNew": true,
@@ -187,7 +187,7 @@
           "Other": false
         }
       },
-      "totalRat": 42
+      "totalRat": 46
     },
     {
       "id": 3,
@@ -207,8 +207,8 @@
       "fuel": "Gasoline",
       "drive": "All-wheel Drive",
       "countPassanger": 7,
-      "rating": 1,
-      "vievs": 16,
+      "rating": 2.6296296296296298,
+      "vievs": 27,
       "ribbonStatus": "Featured",
       "compared": false,
       "isNew": true,
@@ -250,7 +250,7 @@
           "Other": false
         }
       },
-      "totalRat": 16
+      "totalRat": 71
     },
     {
       "id": 4,
@@ -525,7 +525,7 @@
       "compared": false,
       "isNew": false,
       "characteristics": {
-        "generalInfo": {
+        "General Info": {
           "brand": "Toyota",
           "bodyType": "SUV",
           "color": "blue"
@@ -562,6 +562,92 @@
           "Other": false
         }
       }
+    },
+    {
+      "id": 9,
+      "userId": 1,
+      "image": [],
+      "brand": "mercedes",
+      "model": 3,
+      "title": "Car",
+      "price": "54390",
+      "oldPrice": null,
+      "location": {
+        "country": "aaa",
+        "town": "bbb"
+      },
+      "year": 1983,
+      "fuel": "diesel",
+      "drive": "back-drive",
+      "countPassanger": 5,
+      "rating": 0,
+      "totalRat": 0,
+      "vievs": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": false,
+      "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem",
+      "characteristics": {
+        "General Info": {
+          "brand": "mercedes",
+          "bodyType": "sedan",
+          "color": "blue"
+        },
+        "engineDetails": {
+          "fuelType": "diesel",
+          "mileage": 123,
+          "transmission": "manual",
+          "engineCapacity": 222,
+          "power": 333
+        },
+        "dimension": {
+          "length": 1111,
+          "width": 2222,
+          "height": 2222,
+          "cargoVolume": 2222
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": false,
+          "USB Port": false,
+          "AC": false,
+          "Bluetooth": false,
+          "Alarm": true,
+          "Wifi": false,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": false,
+          "Power Window": true,
+          "Sunroof": false,
+          "Sound System": true,
+          "Memory Seat": false,
+          "Roof Rack": true,
+          "Other": false
+        }
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": {
+        "firstName": "Alex",
+        "lastName": "",
+        "organization": "seller",
+        "password": "aaa"
+      },
+      "type": "",
+      "contacts": {
+        "tel": "123-45-67",
+        "email": "nik@nik",
+        "instagram": "",
+        "facebook": ""
+      },
+      "advertCounter": 0,
+      "viewedCars": [],
+      "addedCars": [],
+      "comments": [],
+      "massages": []
     }
   ]
 }

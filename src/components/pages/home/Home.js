@@ -6,6 +6,7 @@ import RecomendedCars from "./recomendedCars/RecomendedCars";
 import CompareSection from "./sectionCompare/CompareSection";
 import Carusel from "../../Carusel";
 import Tiker from "../../tiker/Tiker";
+import './Home.scss'
 
 
 

@@ -1,9 +1,6 @@
 .carusel{
   //height: 00px;
-  margin-bottom: 50px;
-  h2{
-    margin-bottom: 60px;
-  }
+  margin-bottom: 50px;  
   .slick-list{
     overflow: visible;
   }
@@ -30,3 +27,8 @@
   }
 }
 
+.personal__box{
+  overflow: auto;
+  display: flex;
+  gap: 25px;
+}

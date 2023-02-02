@@ -12,7 +12,7 @@ const FindPanel = (props) => {
     // console.log(props);
     
     const { data=[], isSearch = false, children, dataKey, createFindObj, sort=false, sortDescenfind=false, individualStyle='', open=false } = props
-    // console.log(data);
+    console.log(createFindObj);
     const [isOpen, setOpen] = useState(open)
     const [seeMore, setSee] = useState(data)
     const [search, setSearch] = useState(data)
@@ -65,7 +65,7 @@ const FindPanel = (props) => {
             <div className={`find__opening `}>
                 {isSearch&&<input type="text" placeholder='search here' onChange={findInList}/>}
                 <ul className={`find__checkbox-container  ${!seeMore&&'openAll'}` }>
-                    {search&&<CheckBoxes sort sortDescenfind labelList={search} dataKey={dataKey} callOutFunction={createFindObj}/>}
+                    {search&&<CheckBoxes sort sortDescenfind labelList={search} dataKey={dataKey}/>}
                 </ul>
                 { search&&search.length>4&&<button className='find__button' onClick={toggleViev}>{seeMore ? 'See More':'See Less'}</button>}
             </div>        

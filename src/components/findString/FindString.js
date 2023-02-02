@@ -4,7 +4,7 @@ import './FindString.scss'
 
 const FindString = (props) => {
 
-    const { button, individualStyle } = props
+    const {findWord, button, individualStyle } = props
 
 
 
@@ -22,11 +22,13 @@ const FindString = (props) => {
     const searchQuery = () => {
         setQuety(input.current.value) 
 
+
     }    
     
     const search = () => {
         // filterByQuery(queryString)
         setQuety(input.current.value) 
+        findWord(queryString)
     }
 
 

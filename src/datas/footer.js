@@ -33,7 +33,7 @@ const footer = {
             }
         }
     },
-    copyright: '2021 Autohunt. All Rights reserved',
+    copyright: '2023 Autohunt. All Rights reserved',
 }
 
 export default footer

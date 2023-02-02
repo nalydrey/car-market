@@ -1,0 +1,32 @@
+@import '/src/styles/variables.scss';
+
+.features-list__box{
+    transition: .5s;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+    max-height: 195px; 
+    overflow: hidden; 
+    &--active{
+        max-height: 500px;
+    }
+}
+
+.features__item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    background: $blockBackground;
+    padding: 15px;
+    border-radius: 3px;
+    &::before{
+        content: '';
+        display: block;
+        width: 17px;
+        height: 17px;
+        border-radius: 3px;
+        background-image: url(/assets/icons/check.png) ;
+
+    }
+}

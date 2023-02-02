@@ -1,12 +1,21 @@
 import React, {useState} from 'react';
 import {addImages, deleteFoto} from "../../../../store/actionCreators/actionCreateAddCar";
+import InputText from '../../../inputComponents/InputText/InputText';
 import {useSelector} from "react-redux";
+ 
 import './LoadImage.scss'
 
 const LoadImage = () => {
 
     const value = useSelector((state)=>state.newCar)
 
+    const [formText, setFormText] = useState('')
+
+
+
+    const addReference = () => {
+        addImages(formText)
+    }
 
     const loadFiles = (e) => {
         const files = Array.from(e.target.files)
@@ -32,11 +41,16 @@ const LoadImage = () => {
                 <ul className='image-box'>
                     {value.image.map((car,i) => {
                         return <li key={i}><
-                            img src={car} alt="foto"/>
+                            img src={car} alt='foto'/>
                             <button className='delete-foto' onClick={()=>deleteFoto(i)}></button>
                         </li>
                     })}
                 </ul>
+            </div>
+            <div className='ref'>
+                <InputText title='Add image reference' value={formText} execute={(_,val)=>setFormText(val)} />
+                <button onClick={addReference}>Add image</button>
+                
             </div>
         </div>
 

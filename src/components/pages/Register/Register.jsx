@@ -1,11 +1,7 @@
 import React from 'react';
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
-import {useState} from "react";
 import footer from "../../../datas/footer";
 import './Register.scss'
-import store from "../../../store/store";
-import { RegisterForm } from './Forms/Forms';
-import Preloader from '../../preloader/Preloader';
 
 const Register = (props) => {
 
@@ -22,7 +18,6 @@ const Register = (props) => {
                 {pageName==='login' && <p>Don't have an account? <Link to='register'>Login here</Link> </p>}    
                 {pageName==='register' && <p>Already have an account? <Link to='login'>Login here</Link> </p>}    
                </div>
-
                 <div className='welcome'>
                     <div className='welcome__box'>
                         <div className='welcome__logo'>
@@ -41,10 +36,6 @@ const Register = (props) => {
                     </div>
                 </div>
             </div>
-                {/* <button className="submit__button" onClick={show}>Show Data</button> */}
-                {/* <button className="submit__button" onClick={getSt}>get store</button> */}
-
-                <Preloader/>
         </section>
     );
 };

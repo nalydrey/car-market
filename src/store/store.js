@@ -3,13 +3,15 @@ import reducerCar from "./reducers/reducerCar";
 import reducerFind from "./reducers/reducerFind";
 import reducerAddCar from "./reducers/reducerAddCar";
 import reducerPagesElements from "./reducers/reduserPagesElements";
+import reducerAddSeller from "./reducers/reducerAddSeller";
 
 
 const rootReducer = combineReducers({
     cars: reducerCar,
     findObj: reducerFind,
     newCar: reducerAddCar,
-    pageElements: reducerPagesElements
+    pageElements: reducerPagesElements,
+    newUser: reducerAddSeller
 })
 
     // , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

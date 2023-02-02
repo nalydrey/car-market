@@ -6,11 +6,12 @@
 }
 
 .find__checkbox-container{
+
     transition: .5s;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden;
+    overflow: auto;
     max-height: 125px;
 }
 

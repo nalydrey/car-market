@@ -5,7 +5,7 @@ import './InputSelect.scss'
 
 const InputSelect = (props) => {
 
-    const {list=[], title='Title', searchPanel=false, gridName='', execute, value, from=null, to=null } = props
+    const {list=[], title='', searchPanel=false, name=title, gridName=title, execute, value, from=null, to=null } = props
     const [isOpen, setOpen] = useState(false)
     let fromTo = false
     const activate = () => {
@@ -22,9 +22,11 @@ const InputSelect = (props) => {
 
 
     const changeValue = (newVal) => {
-        execute(newVal)
+        execute(name, newVal)
         setOpen(!isOpen)
     }
+
+
 
     return (
         <div className='drop' style={{gridArea: gridName}}>

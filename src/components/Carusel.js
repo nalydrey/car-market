@@ -1,8 +1,5 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React from "react";
 import './Carusel.scss'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Personal from "./personal/Personal";
 
 
@@ -24,12 +21,12 @@ const Carusel = (props) => {
         return (
             <div className='carusel'>
                 <h2>Testimonial</h2>
-                <Slider {...settings}>
+                <div className="personal__box">
                     <Personal/>
                     <Personal/>
                     <Personal/>
                     <Personal/>
-                </Slider>
+                </div>
             </div>
         );
 

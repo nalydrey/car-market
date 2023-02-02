@@ -1,31 +1,55 @@
+@import '../../functions/functions';
+
 .car{
+    
     min-width: 300px;
-    max-width: 410px;
+    max-width: 400px;
     border: 2px solid #12232E;
     border-radius: 3px;
     padding: 16px;
     position: relative;
     overflow: hidden;
     flex-grow: 1;
+    flex-basis: 320px;
+    &.horisontal{
+        min-width: 760px;
+    }
+}
+
+.car__total{
+    .horisontal{
+        min-width: 410px;
+    }
+}
+
+
+.slider__wrap{
+
+    // border: 1px solid red;
+   flex-basis: 330px;
+   min-width: 280px;
+//    max-height: 250px;
+    
 }
 
 .horisontal{
+    flex-basis: 270px;
     max-width: 100%;
     display: flex;
     gap: 20px;
 }
 
+
+
 .car__img{
-    // flex-grow: 1;
+    // border: 1px solid green;
     width: 100%;
-    max-height: 100%;
-    border-radius: 3px;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 250px;
     overflow: hidden; 
-    // border: 1px solid wheat;
         img{
-            display: block;
-            width: 100%;
-            //height: 100%;
+            height: 100%;
             object-fit: cover;
             object-position: center;
 
@@ -176,7 +200,7 @@
 
 .car__compared{
     transition: 1s;
-    border: 1px solid coral;
-    color: coral;
+    border: 1px solid green;
+    color: green;
 }
 

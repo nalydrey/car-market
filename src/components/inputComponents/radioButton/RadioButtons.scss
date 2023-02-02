@@ -4,7 +4,6 @@ $sizeDot: 59%;
 
 .radio__container{
     list-style-type: none;
-    // margin-left: 7px;
     width: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -70,8 +69,10 @@ $sizeDot: 59%;
 .radioWrap{
     position: relative;
     .radio__title{
+        text-transform: capitalize;
         position: absolute;
         top: -25px;
         left: 0px;
     }
+
 }

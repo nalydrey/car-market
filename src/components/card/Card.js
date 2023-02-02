@@ -6,21 +6,30 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Preloader from "../preloader/Preloader";
 import { useNavigate } from "react-router-dom";
+import noFoto from '../../assets/images/NoImage.jpg'
+
+
+
+
 
 const Card = (props) => {
     // console.log('render Card');
-    const { compared, id, image=[], year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
+    const { compared, id, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
+    let { image=[] } = props
+
+    !image.length && (image = [noFoto])
 
    const [foto, setFoto] = useState(false)
 
-   const navigate = useNavigate()
+    
+    const navigate = useNavigate()
 
    useEffect(()=>{
-    image.forEach((img)=>{
-        const picture = new Image()
-        picture.src = img
-        picture.onload= () => {setFoto(img)}
-    })
+        image.forEach((img)=>{
+            const picture = new Image()
+            picture.src = img
+            picture.onload= () => {setFoto(img)}
+        })
    },[])
 
    const goToDiscription = () => {
@@ -31,34 +40,37 @@ const Card = (props) => {
         e.stopPropagation()
         addDelCompare(id)
    }
+
+   const stop = (e) => {
+       e.stopPropagation()
+   }
     
 
   return (
     <div className={`car ${props.class}`} onClick={()=>goToDiscription(id)}>      
-                <div className="car__img">  
-                <Slider>
-                    {foto ?
-                    image.map((img, ind)=> {
-                        return (
-                            <div className="car__img" key={ind}>
-                                <img src={foto} alt="foto" />
-                            </div>
-                            )
-                    })
+        <div className="slider__wrap" onClick={stop}>  
+            {/* <Slider> */}
+                {foto ?
+                image.map((img, ind)=> {
+                    return (
+                        <div className="car__img" key={ind}>
+                            <img src={foto} alt="foto" />
+                        </div>
+                        )
+                })
                 :
                 <Preloader/>
-                }
-                    
-                </Slider>
-                </div>        
+            }
+            {/* </Slider> */}
+                
+        </div>        
         <div className="car__total">
             <div className="car__discription">
                 <div className="statusPanel">
                     <div className="car__new">
                         {isNew ? 'New' : 'Used'}
                     </div>
-                    {!compared&&<button className="toggleButton" onClick={addToCompare}>Add To Compare</button>}
-                    {compared&&<button className={`toggleButton ${compared ? 'car__compared':''}`} onClick={addToCompare}>Delete from Compare</button>}
+                    {<button className={`toggleButton ${compared ? 'car__compared':''}`} onClick={addToCompare}>{!compared ? 'Add To Compare' : 'Added To Compare'}</button>}
                 </div>
                 <h3>{title}</h3>
                 <h4>${price}</h4>

@@ -12,7 +12,6 @@ const Rating = (props) => {
     
 
     const obj = useSelector((state) => state.cars.find(el=>{return el.id===id}))
-    console.log(id);
     const [curentStatus, setStatus] = useState(obj.rating)
 
     let rating =  curentStatus*20;
@@ -37,7 +36,6 @@ const Rating = (props) => {
                         fetch(url+'cars')
                         .then(req => req.json())
                         .then(json => {
-                            console.log(json)
                             store.dispatch({type: 'LOAD_DATA', payload: json})
                         })
                     })

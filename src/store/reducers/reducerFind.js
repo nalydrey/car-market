@@ -9,7 +9,7 @@ const reducerFind = (state = defaultState, action) => {
     switch(action.type){
 
         case 'CHANGE_OBJ': {
-            console.log('!!!')
+            console.log(action.payload)
             for(const key in action.payload){
             state[key] = action.payload[key]
             state[key].length === 0 &&delete state[key]
@@ -36,6 +36,8 @@ const reducerFind = (state = defaultState, action) => {
                 return {...state}
 
         }
+
+
 
 
         default:  return state

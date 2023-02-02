@@ -3,7 +3,6 @@ import { useState } from "react"
 import Card from "../card/Card"
 import Pagination from "../pagination/Pagination"
 import './Cards.scss'
-import {useSelector} from "react-redux";
 
 
 
@@ -24,15 +23,17 @@ const showCars = (page) => {
 
  
   return (
-    <div className="cars-box">
-        {showCars(currentPage)[0] ?
-            showCars(currentPage).map((el, i)=>{
-                return <Card {...el} key={el.id} class={styleClass}/>})
-            :
-            <p>Loading...</p>
-        }
-        <Pagination callPage={(page)=>{setPage(page)}} showBy={showBy} currentPage={currentPage} totalCards={cars.length}  />
-    </div>
+    <>
+      <div className="cars-box">
+          {showCars(currentPage)[0] ?
+              showCars(currentPage).map((el, i)=>{
+                  return <Card {...el} key={el.id} class={styleClass}/>})
+              :
+              <p>Loading...</p>
+          }
+      </div>
+          <Pagination callPage={(page)=>{setPage(page)}} showBy={showBy} currentPage={currentPage} totalCards={cars.length}  />
+    </>
   )
 }
 

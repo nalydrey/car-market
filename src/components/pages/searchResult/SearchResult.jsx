@@ -28,11 +28,13 @@ const SearchResult = (props) => {
     const findObj = useSelector(state => state.findObj)
     const filteredCars = findObj.isNew && findObj.isNew.length ? filterData(allCars, {isNew: findObj.isNew }) : allCars
     let filterWorkCars = filterData(filteredCars, findObj)
-    const findWord = ""
+
+    const [findWord, setFindWord] = useState('')
+    console.log(findWord)
     // поиск автомобиля по запросу
     filterWorkCars = findWord ? (regExpFilter(filterWorkCars, findWord)) : filterWorkCars
     const workCars = filterWorkCars.length ? filterWorkCars : []
-
+    console.log(filterWorkCars);
     const[horisontal, setHorisontal] = useState(true)
     
     const[sortBy, setSort] = useState('')
@@ -52,7 +54,7 @@ const SearchResult = (props) => {
         <div className="cars__box">             
             <div className="top-panel">
                 
-                <FindString/>
+                <FindString findWord={setFindWord}/>
 
                 <div className='info-wrap'>
                     <h2 className="results">{filteredCars.length} Results</h2>

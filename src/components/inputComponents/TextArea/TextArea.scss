@@ -1,0 +1,19 @@
+@import '/src/styles/variables.scss';
+
+.description{
+    grid-area: description;
+    position: relative;
+    textarea{
+        resize: none;
+        padding: 15px;
+        width: 100%;
+        border: none;
+        background: $inputBackground;
+    }
+    span{
+        text-transform: capitalize;
+        position: absolute;
+        top: -25px;
+        left: 0
+    }
+}

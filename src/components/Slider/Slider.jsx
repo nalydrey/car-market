@@ -4,7 +4,6 @@ import './Slider.scss'
 const Slider = (props) => {
 // console.log('render Slider');
     const { data, start=0, fromEnd=0, repeat=true, timeOut=2000, play=false, dots=false, buttons=false } = props
-    
     const end = data.length - fromEnd-1
     // console.log(props);
     const ref = useRef()
@@ -17,6 +16,7 @@ const Slider = (props) => {
         transform: `translate(0px)`
     }
 
+   
 
 
     useEffect(()=>{
@@ -29,6 +29,9 @@ const Slider = (props) => {
                  clearTimeout(timer)
              }
         }
+        const firstWidth = parseInt(getComputedStyle(viewport.current, null).width)
+        viewport.current.style.height = `${firstWidth*0.4}px`
+    
 
     }, [slideNumber])
 
@@ -57,6 +60,8 @@ const Slider = (props) => {
         const a = parseInt(getComputedStyle(viewport.current, null).width)
         ref.current.style.transform = `translate(${-a*slideNumber}px)`
         ref.current.style.transition = 'none'
+
+        viewport.current.style.height = `${a*0.4}px`
     })
 
   return (    
