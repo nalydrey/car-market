@@ -21,7 +21,7 @@ import {useSelector} from "react-redux";
 
 
 // export const url = 'http://localhost:3002/'
-export const url = '/'
+export const url = '/';
 
 
 function App() {
