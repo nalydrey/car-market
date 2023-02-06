@@ -42,7 +42,7 @@ export const PopUpSucces = () => {
 
  return (
    <div className={`popup popup--succes ${popUpStatus ? 'popup--show':''}`}>
-       <p>Succes</p> 
+       <h2>Succes</h2>
        <div className='popup__button-box'>
        </div>
    </div>
@@ -67,3 +67,4 @@ return (
   </div>
 )
 }
+

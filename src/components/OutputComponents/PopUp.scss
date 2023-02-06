@@ -22,9 +22,17 @@
     p{
         font-size: 38px;
     }
-
-    
+    input{
+        width: 100%;
+        margin-bottom: 20px;
+        background: rgba(10, 64, 88, 0.75);
+    }
 }
+
+.input-block{
+    width: 300px;
+}
+
 .popup--show{
     opacity: 1;
     pointer-events: all;
@@ -39,10 +47,11 @@
 
 .popup__button-box{
     display: flex;
+    justify-content: center;
     gap: 20px;
     button{
         background: $buttonColor;
         width: 100px;
-        padding: 15px;
+        padding: 10px;
     }
 }

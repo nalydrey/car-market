@@ -3,8 +3,20 @@ import './Slider.scss'
 
 const Slider = (props) => {
 // console.log('render Slider');
-    const { data, start=0, fromEnd=0, repeat=true, timeOut=2000, play=false, dots=false, buttons=false } = props
-    const end = data.length - fromEnd-1
+    const { children=[],
+        start=0,
+        fromEnd=0,
+        repeat=true,
+        timeOut=7000,
+        play=false,
+        dots=false,
+        buttons=false,
+        preview=false,
+        proportion=0.5,
+        prevInner=null,
+        nextInner=null,
+        } = props
+    const end = children.length - fromEnd-1
     // console.log(props);
     const ref = useRef()
     const prev = useRef()
@@ -30,7 +42,7 @@ const Slider = (props) => {
              }
         }
         const firstWidth = parseInt(getComputedStyle(viewport.current, null).width)
-        viewport.current.style.height = `${firstWidth*0.4}px`
+        viewport.current.style.height = `${firstWidth*proportion}px`
     
 
     }, [slideNumber])
@@ -40,7 +52,7 @@ const Slider = (props) => {
         ref.current.removeAttribute('style')
         ref.current.style.transform = `translate(${-a*slideNumber}px)`;
         ref.current.style.transition = '1s'       
-        ref.current.style.width =`${100*data.length}%`
+        ref.current.style.width =`${100*children.length}%`
     }
 
     const prevSlide = ()=>
@@ -61,36 +73,38 @@ const Slider = (props) => {
         ref.current.style.transform = `translate(${-a*slideNumber}px)`
         ref.current.style.transition = 'none'
 
-        viewport.current.style.height = `${a*0.4}px`
+        viewport.current.style.height = `${a*proportion}px`
     })
 
-  return (    
-
+  return  (
+      <>
         <div className='viewport' ref={viewport}>
-            <div className='slider__bar' ref={ref} style={{...style, width: `${100*data.length}%`}}>
-                {data.map((elem, i)=> {     
-                    return (
-                        <div className='bar__item' key={i} style={{backgroundImage: `url(${elem.foto})`}}>
-                            <h1>{elem.h1}</h1>
-                            <h2>{elem.h2}</h2>
-                        </div>
 
-                    )
-                })}
-            </div>
-             {dots &&   <div className='slider__dots'>
-                            {data.map(( elem, i)=>{
+                        <div className='slider__bar' ref={ref} style={{...style, width: `${100*children.length}%`}}>
+                            {children.map((child)=>{return child})}
+                        </div>
+             {(children.length>1 && dots) &&
+                        <div className='slider__dots'>
+                            {children.map(( elem, i)=>{
                             return <button className={`slider__dot ${i===slideNumber && 'slider__dot--active'}`} key={i}  onClick={()=>{setSlide(i)}}></button>
                             })}
                         </div>
             }
-            {buttons&&  <>
-                            <button className='slider__buttons button__prev' ref={prev} onClick={prevSlide}>prev</button>
-                            <button className='slider__buttons button__next' ref={next} onClick={nextSlide}>next</button>
-                        </>           
+            {(children.length>1 && buttons) &&
+                        <>
+                            <button className='slider__buttons button__prev' ref={prev} onClick={prevSlide}>{prevInner}</button>
+                            <button className='slider__buttons button__next' ref={next} onClick={nextSlide}>{nextInner}</button>
+                        </>
             }
-        </div>
 
+        </div>
+          {(children.length>1 && preview) &&
+                      <div className="preview">
+                        {children.map((child, ind)=>{return <div className={`preview__item ${ind===slideNumber ? 'preview__item--active':''}`}
+                                                                 key={ind}
+                                                                 onClick={()=>{setSlide(ind)}}>{child}</div>})}
+                      </div>}
+      </>
   )
 }
 

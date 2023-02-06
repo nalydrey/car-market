@@ -1,3 +1,9 @@
+.searchResult{
+  .header__wrap{
+    margin-bottom: 110px;
+  }
+}
+
 .new__cars-container{
   display: flex;
   gap: 50px;
@@ -38,3 +44,5 @@
     fill: black;
   }
 }
+
+

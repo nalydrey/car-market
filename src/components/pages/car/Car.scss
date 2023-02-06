@@ -1,5 +1,12 @@
 @import '/src/styles/variables.scss';
 
+.info{
+    .header__wrap{
+        background: transparent;
+    }
+    h1{
+    }
+}
 
 .info__container{
     margin-top: 72px;

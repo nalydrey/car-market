@@ -6,39 +6,59 @@ import {
 import InputNumber from "../../../inputComponents/InputNumber/InputNumber";
 import {useSelector} from "react-redux";
 import './EngineDetails.scss'
+import {showHideInputPopUp} from "../../../../store/actionCreators/actionCreatePageElements";
 
-const EngineDetails = () => {
+const EngineDetails = (props) => {
 
     const value = useSelector((state)=>state.newCar)
+    const {transmission, fuel, drive} = props
 
     return (
         <div className='change-block engineDetail'>
             <h2>engine details</h2>
-            <InputSelect list={['gasoline', 'diesel','gas','electric','hibrid']}
+            <InputSelect list={fuel}
                          gridName='fuel'
                          title='fuel type'
                          name='fuel'
                          value={value.fuel}
                          execute={selectOption}
+                         buttonClick={showHideInputPopUp}
 
             />
-            <InputNumber gridName='milage' dimension='km' execute={changeMilage} value={value.characteristics.engineDetails.mileage} title='Mileage'/>
-            <InputSelect list={['automat', 'manual', 'robot', 'variator']}
+            <InputNumber gridName='milage'
+                         max={1000000}
+                         dimension='km'
+                         title='Mileage'
+                         execute={changeMilage}
+                         value={value.characteristics['engine details'].mileage}
+            />
+            <InputSelect list={transmission}
                          title='transmission'
-                         value={value.characteristics.engineDetails.transmission}
+                         value={value.characteristics['engine details'].transmission}
                          execute={selectOption}
+                         buttonClick={showHideInputPopUp}
 
             />
-            <InputSelect list={['front-drive', 'back-drive', 'all-drive']}
+            <InputSelect list={drive}
                          gridName='drive'
                          title='drivetrain'
                          name='drive'
                          value={value.drive}
                          execute={selectOption}
-
+                         buttonClick={showHideInputPopUp}
             />
-            <InputNumber gridName='engine' dimension='cc' execute={changeEngine} value={value.characteristics.engineDetails.engineCapacity} title='Engine Capacity'/>
-            <InputNumber gridName='power' dimension='hp' execute={changePower} value={value.characteristics.engineDetails.power} title='Power'/>
+            <InputNumber gridName='engine'
+                         dimension='cc'
+                         title='Engine Capacity'
+                         execute={changeEngine}
+                         value={value.characteristics['engine details']['engine capacity']}
+            />
+            <InputNumber gridName='power'
+                         dimension='hp'
+                         title='Power'
+                         execute={changePower}
+                         value={value.characteristics['engine details'].power}
+             />
 
         </div>
     );

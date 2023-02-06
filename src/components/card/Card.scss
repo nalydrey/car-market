@@ -1,7 +1,8 @@
 @import '../../functions/functions';
+@import '/src/styles/variables';
 
 .car{
-    
+    position: relative;
     min-width: 300px;
     max-width: 400px;
     border: 2px solid #12232E;
@@ -14,6 +15,33 @@
     &.horisontal{
         min-width: 760px;
     }
+    &:before{
+        z-index: -3;
+        content: '';
+        display: block;
+        //border: 1px solid white;
+        height: 100%;
+        width: 40%;
+        min-width: 250px;
+        transform: translate(-150%) skew(-25deg);
+        background: linear-gradient(to right, transparent 0% , rgba(255, 255, 255, 0.04) 50%, transparent 100% );
+        position: absolute;
+        top: 0;
+        left: -25%;
+        filter: blur(5px);
+
+    }
+    &:hover:before{
+        animation: blick linear .7s 1 ;
+    }
+}
+@keyframes blick {
+    0%{
+        left: -25%;
+    }
+    100%{
+        left: 200%
+    }
 }
 
 .car__total{
@@ -25,11 +53,39 @@
 
 .slider__wrap{
 
-    // border: 1px solid red;
+     //border: 1px solid red;
    flex-basis: 330px;
    min-width: 280px;
-//    max-height: 250px;
-    
+    .slider__dots{
+        top: 10px;
+        gap: 10px;
+    }
+    .slider__buttons{
+        border: none;
+        padding: 0px;
+        bottom: 10px;
+        width: 30px;
+        height: 30px;
+        svg{
+            width: 100%;
+            height: 100%;
+            transition: .5s;
+            stroke: white;
+        }
+        &:hover svg{
+            stroke: $colorBorder
+        }
+    }
+    .slider__dot{
+        width: 10px;
+        height: 10px;
+
+    }
+
+
+
+
+
 }
 
 .horisontal{
@@ -203,4 +259,6 @@
     border: 1px solid green;
     color: green;
 }
+
+
 

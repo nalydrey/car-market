@@ -2,6 +2,7 @@ import React from 'react'
 import './Article.scss'
 import Card from '../../card/Card'
 import { useSelector } from 'react-redux'
+import Button from "../../UI elements/Button";
 
 
 const Article = () => {
@@ -12,7 +13,14 @@ const Article = () => {
     <section className='article'>
         <div className='container article__container'>
 
-        <Card {...car[0]} class='horisontal'/>
+        <Card {...car[0]} />
+
+        {/*<Button/>*/}
+
+
+
+
+
         </div>
     </section>
   )

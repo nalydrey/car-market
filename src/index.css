@@ -95,6 +95,21 @@ input[type='tel']
 }
 ::-webkit-scrollbar-thumb{
   border: 3px solid rgba(34, 46, 59, 0.68);
-  background: rgba(21, 32, 40, 0.8);
+  background: rgba(44, 63, 73, 0.8);
   border-radius: 10px;
 }
+
+::-webkit-scrollbar-thumb:hover{
+  border: 3px solid #004A77;
+}
+
+.header__wrap{
+  background: #1D384C;
+  padding: 45px 0;
+
+}
+
+.header__wrap h1{
+  text-transform: capitalize;
+}
+

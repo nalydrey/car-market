@@ -7,6 +7,7 @@ import CompareSection from "./sectionCompare/CompareSection";
 import Carusel from "../../Carusel";
 import Tiker from "../../tiker/Tiker";
 import './Home.scss'
+import React from "react";
 
 
 
@@ -17,7 +18,17 @@ const Home = () => {
     
       return(
         <>
-                <Slider data={headerFotos} dots/>
+                <Slider play dots>
+                    {headerFotos.map((elem, i)=> {
+                        return (
+                            <div className='bar__item' key={i} style={{backgroundImage: `url(${elem.foto})`}}>
+                                <h1>{elem.h1}</h1>
+                                <h2>{elem.h2}</h2>
+                            </div>
+
+                        )
+                    })}
+                </Slider>
             <div className="container">
                 <HorisontalFindPanel/>
                 <RecomendedCars/>

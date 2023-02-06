@@ -25,7 +25,7 @@ const Features = (props) => {
                 })
             }
         </div>
-        <button className='seeMore__button' onClick={()=>{setOpen(!isOpen)}}>{isOpen ? 'hide' : 'Show more'}</button>
+        {features.length > 10 && <button className='seeMore__button' onClick={()=>{setOpen(!isOpen)}}>{isOpen ? 'hide' : 'Show more'}</button>}
     </div>
   )
 }

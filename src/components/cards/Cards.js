@@ -1,18 +1,22 @@
 
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import Card from "../card/Card"
 import Pagination from "../pagination/Pagination"
 import './Cards.scss'
+import {logDOM} from "@testing-library/react";
+import {useLocation} from "react-router-dom";
 
 
 
 const Cards = (props) => {
 
 
+const {pathname} = useLocation()
+
 const {  styleClass, showBy, sortKey, cars }  = props 
 
 const [currentPage, setPage] = useState(1)
-
+    console.log('current page', currentPage)
 sortKey&&cars.sort((a,b)=>a[sortKey] > b[sortKey] ? 1 : -1)
 
 const showCars = (page) => {
@@ -21,13 +25,17 @@ const showCars = (page) => {
     return cars.slice(first,end)
 }
 
+useEffect(()=>{
+    setPage(1)
+}, [pathname])
+
  
   return (
     <>
       <div className="cars-box">
           {showCars(currentPage)[0] ?
               showCars(currentPage).map((el, i)=>{
-                  return <Card {...el} key={el.id} class={styleClass}/>})
+                  return <Card {...el} countPassanger={el['count passenger']} key={i} class={styleClass}/>})
               :
               <p>Loading...</p>
           }

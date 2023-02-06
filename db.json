@@ -1,635 +1,426 @@
 {
   "cars": [
     {
-      "id": 0,
+      "id": 1,
+      "userId": 1,
       "image": [
-        "https://drive.google.com/uc?export=view&id=1zXU96Wd56fcvj3DreUUyA6DccNYYeSjS"
+        "https://drive.google.com/uc?export=view&id=1NHFg3l91Lk0ywf9nHZIsLYJ86XVRq0YC",
+        "https://drive.google.com/uc?export=view&id=15Cb1OR4Iz3Ei3f0wU5sjxMOK9Dycn1Yq",
+        "https://drive.google.com/uc?export=view&id=1Y1gF7Kh3i8iQOF6-bY4gxdqOSqnLiUeE",
+        "https://drive.google.com/uc?export=view&id=1c6o4opw4fhB3hOQkHPJOK2bdoT7SMG-5",
+        "https://drive.google.com/uc?export=view&id=1p4zRO19D9OUv3S9K5vDVideuMrSnAVHS"
+      ],
+      "brand": "Tesla",
+      "model": "Model 3",
+      "title": "Tesla Model 3 Standard Range Plus",
+      "price": 32000,
+      "oldPrice": null,
+      "date addition": "05.02.2023, 00:02:32",
+      "location": {
+        "country": "USA",
+        "town": "Florida"
+      },
+      "year": "2019",
+      "fuel": "electric",
+      "drive": "all",
+      "count passenger": 5,
+      "rating": 3.98,
+      "totalRat": 175,
+      "views": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": false,
+      "description": "The Tesla Model 3 is like the Apple iPhone of the motoring world – it’s made high-tech electric cars cool and popular for the mainstream. In part by making them more affordable and user-friendly, while also providing sensational performance.\n\nHow popular? Well, the Model 3 was the second bestselling car of any kind in 2021 – not just those powered by batteries. This upwards trend in electric car sales has continued into 2023, with Tesla still leading the charge.\n\nSo though you might put an initial surge of popularity down to pent-up demand (bringing the Model 3 to the right-hand drive UK market was a long, drawn-out affair that saw pre-orders hovering around for years), it’s clear the smallest Tesla has real staying power. It remains a key part of the EV market even after newer rivals such as the Polestar 2, Hyundai Ioniq 5, Kia EV6 and BMW i4 have arrived on the scene.\n\nFor anyone shopping for a mid-size electric family car, it’s impossible to ignore. As this Tesla Model 3 review will explain, if you want fantastic performance, a long driving range and market-leading tech that includes a charging network that is second-to-none, few competitors even get close.",
+      "characteristics": {
+        "general info": {
+          "brand": "Tesla",
+          "body type": "sedan",
+          "color": "red"
+        },
+        "engine details": {
+          "fuel type": "electric",
+          "mileage": 9000,
+          "transmission": "automat",
+          "engine capacity": 208,
+          "power": 208
+        },
+        "dimension": {
+          "length": 4694,
+          "width": 1849,
+          "height": 1443,
+          "cargo volume": 561
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
+          "Alarm": true,
+          "Wifi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Power Window": true,
+          "Sunroof": false,
+          "Sound System": true,
+          "Memory Seat": true,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "vievs": 44
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "image": [
+        " https://drive.google.com/uc?export=view&id=1cKFPt_70DUc9uvOYGxL4ZagWi3Y1846_",
+        " https://drive.google.com/uc?export=view&id=1PYIEkSi-c8azZMqdddqb9eiA532IrtMY",
+        " https://drive.google.com/uc?export=view&id=1kQebNDUsbJJdmNh94XjkGCp8wLkebybO",
+        " https://drive.google.com/uc?export=view&id=1ZZOJhUhk-IK0fxHicq6S6wk0111DsCgI",
+        " https://drive.google.com/uc?export=view&id=1hSpstm2T6ibLFTWbwmpMJ3OhBZFjS3aN",
+        " https://drive.google.com/uc?export=view&id=1ekpYH8ClKBnHidshmuvtOhlx5P1Gl3w0"
       ],
       "brand": "Audi",
-      "model": "e-tron Premium",
+      "model": "Q5 e-tron",
       "title": "Audi e-tron Premium",
-      "price": 72655,
+      "price": 70000,
       "oldPrice": null,
+      "date addition": "05.02.2023, 14:59:46",
       "location": {
         "country": "South Korea",
         "town": "Suwon"
       },
-      "year": 2021,
-      "fuel": "Electric",
-      "drive": "Rear-wheel Drive",
-      "countPassanger": 5,
-      "rating": 3,
-      "vievs": 8,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": false,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Audi",
-          "bodyType": "SUV",
-          "color": "blue"
-        },
-        "engineDetails": {
-          "fuelType": "Electric",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      },
-      "totalRat": 24
-    },
-    {
-      "id": 1,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1W0AUSnlmVpTa0wRZ5ZKAmTtWoykFoxVx"
-      ],
-      "brand": "Tesla",
-      "model": "Model 3 Standard Range Plus",
-      "title": "Tesla Model 3 Standard Range Plus",
-      "price": 57148,
-      "oldPrice": null,
-      "location": {
-        "country": "USA",
-        "town": "Florida"
-      },
-      "year": 2020,
-      "fuel": "Electric",
-      "drive": "Rear-wheel Drive",
-      "countPassanger": 5,
-      "rating": 2.6666666666666665,
-      "vievs": 33,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": true,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Tesla",
-          "bodyType": "sedan",
-          "color": "red"
-        },
-        "engineDetails": {
-          "fuelType": "electric",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      },
-      "totalRat": 88
-    },
-    {
-      "id": 2,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1zvQKL7qGE31PpGHw24CcNy2eQ6SONrjX"
-      ],
-      "brand": "Ford",
-      "model": "F-250 Super Duty",
-      "title": "Ford F-250 Super Duty",
-      "price": 82089,
-      "oldPrice": null,
-      "location": {
-        "country": "Italy",
-        "town": "Milan"
-      },
-      "year": 2021,
-      "fuel": "Diesel",
-      "drive": "Four-wheel Drive",
-      "countPassanger": 5,
-      "rating": 2,
-      "vievs": 23,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": true,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Ford",
-          "bodyType": "PikUp",
-          "color": "grey"
-        },
-        "engineDetails": {
-          "fuelType": "Diesel",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      },
-      "totalRat": 46
-    },
-    {
-      "id": 3,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1n6mRUl2N995Mgc8qubE_Xd8qwLM1auc2"
-      ],
-      "brand": "Honda",
-      "model": "Pilot Touring 7-Passenger",
-      "title": "Honda Pilot Touring 7-Passenger",
-      "price": 43735,
-      "oldPrice": null,
-      "location": {
-        "country": "Venezuela",
-        "town": "Caracas"
-      },
-      "year": 2021,
-      "fuel": "Gasoline",
-      "drive": "All-wheel Drive",
-      "countPassanger": 7,
-      "rating": 2.6296296296296298,
-      "vievs": 27,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": true,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Honda",
-          "bodyType": "SUV",
-          "color": "blue"
-        },
-        "engineDetails": {
-          "fuelType": "gasoline",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      },
-      "totalRat": 71
-    },
-    {
-      "id": 4,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1jqKkFKa84XZPe5sC5kB0JPpUNQ74YLV8"
-      ],
-      "brand": "Jeep",
-      "model": "Wrangler Unlimited Islander",
-      "title": "Jeep Wrangler Unlimited Islander",
-      "price": 57148,
-      "oldPrice": null,
-      "location": {
-        "country": "USA",
-        "town": "Florida"
-      },
-      "year": 2021,
-      "fuel": "Hybrid",
-      "drive": "Four-wheel Drive",
-      "countPassanger": 5,
-      "rating": 0.5,
-      "vievs": 14,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": true,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Jeep",
-          "bodyType": "SUV",
-          "color": "white"
-        },
-        "engineDetails": {
-          "fuelType": "Hybrid",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      },
-      "totalRat": 7
-    },
-    {
-      "id": 5,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1l52BV27v2WDlvBSUJDr8I3PhrAFw7yXG"
-      ],
-      "brand": "Kia",
-      "model": "Sorento S",
-      "title": "Kia Sorento S",
-      "price": 29791,
-      "oldPrice": null,
-      "location": {
-        "country": "USA",
-        "town": "Florida"
-      },
-      "year": 2021,
-      "fuel": "Gasoline",
-      "drive": "Rear-wheel Drive",
-      "countPassanger": 5,
-      "rating": 0,
-      "vievs": 11,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": true,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Kia",
-          "bodyType": "SUV",
-          "color": "blue"
-        },
-        "engineDetails": {
-          "fuelType": "gasoline",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      }
-    },
-    {
-      "id": 6,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1oOh3kjt2zSXtJ_TFmvDzReq_oTaCddc9"
-      ],
-      "brand": "MINI",
-      "model": "Clubman Cooper S",
-      "title": "MINI Clubman Cooper S",
-      "price": 35850,
-      "oldPrice": null,
-      "location": {
-        "country": "USA",
-        "town": "Florida"
-      },
-      "year": 2020,
-      "fuel": "Gasoline",
-      "drive": "Rear-wheel Drive",
-      "countPassanger": 5,
-      "rating": 0,
-      "vievs": 11,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": true,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "MINI",
-          "bodyType": "SUV",
-          "color": "blue"
-        },
-        "engineDetails": {
-          "fuelType": "gasoline",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      }
-    },
-    {
-      "id": 7,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1GDDBHOtBtL0N2Ki1MbRlKRvAD9lXQyTL"
-      ],
-      "brand": "Land Rover",
-      "model": "Range Rover Velar R-Dynamic S",
-      "title": "Land Rover Range Rover Velar R-Dynamic S",
-      "price": 75790,
-      "oldPrice": null,
-      "location": {
-        "country": "USA",
-        "town": "Florida"
-      },
-      "year": 2021,
-      "fuel": "Gasoline",
-      "drive": "All-wheel Drive",
-      "countPassanger": 5,
-      "rating": 0,
-      "vievs": 11,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": false,
-      "characteristics": {
-        "generalInfo": {
-          "brand": "Land Rover",
-          "bodyType": "SUV",
-          "color": "white"
-        },
-        "engineDetails": {
-          "fuelType": "gasoline",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      }
-    },
-    {
-      "id": 8,
-      "image": [
-        "https://drive.google.com/uc?export=view&id=1uH-jqA2KB4MIbiLd0GDiODF9J96mW6AA"
-      ],
-      "brand": "Toyota",
-      "model": "Mirai",
-      "title": "Toyota Mirai",
-      "price": 71415,
-      "oldPrice": null,
-      "location": {
-        "country": "Japan",
-        "town": "Kobe"
-      },
-      "year": 2020,
-      "fuel": "Electric",
-      "drive": "Rear-wheel Drive",
-      "countPassanger": 5,
-      "rating": 0,
-      "vievs": 11,
-      "ribbonStatus": "Featured",
-      "compared": false,
-      "isNew": false,
-      "characteristics": {
-        "General Info": {
-          "brand": "Toyota",
-          "bodyType": "SUV",
-          "color": "blue"
-        },
-        "engineDetails": {
-          "fuelType": "Electric",
-          "mileage": "120",
-          "transmission": "automatic",
-          "engineCapacity": "3471 cc",
-          "power": "314hp"
-        },
-        "dimension": {
-          "length": 5700,
-          "width": 1700,
-          "height": 1800,
-          "cargoVolume": 500
-        },
-        "features": {
-          "Power Steering": false,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
-          "Alarm": false,
-          "Wifi": false,
-          "Cruise Control": false,
-          "Front Parking Sensor": false,
-          "Rear Parking Sensor": false,
-          "Power Window": false,
-          "Sunroof": false,
-          "Sound System": false,
-          "Memory Seat": false,
-          "Roof Rack": false,
-          "Other": false
-        }
-      }
-    },
-    {
-      "id": 9,
-      "userId": 1,
-      "image": [],
-      "brand": "mercedes",
-      "model": 3,
-      "title": "Car",
-      "price": "54390",
-      "oldPrice": null,
-      "location": {
-        "country": "aaa",
-        "town": "bbb"
-      },
-      "year": 1983,
-      "fuel": "diesel",
-      "drive": "back-drive",
-      "countPassanger": 5,
-      "rating": 0,
-      "totalRat": 0,
-      "vievs": 0,
+      "year": "2021",
+      "fuel": "electric",
+      "drive": "front",
+      "count passenger": 5,
+      "rating": 3.33,
+      "totalRat": 20,
+      "views": 0,
       "ribbonStatus": "",
       "compared": false,
-      "isNew": false,
-      "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem",
+      "isNew": true,
+      "description": "Audi took the wraps off the Q5 e-tron electric SUV at the Guangzhou motor show in China this week, welcoming the latest member of the MEB family—and one that could stay confined to the Middle Kingdom. It's slated to be produced by the SAIC Volkswagen joint venture in Anting, China, which has also been tasked with building the Volkswagen ID.6, to which it will be closely related.\n\nIntended to offer seating for six or seven, the Q5 e-tron will be offered with a choice of rear-wheel drive, badged somewhat opaquely as 40, or quattro all-wheel drive with a 50 badge on the back, both powered by the same 83.4-kWh (gross) battery. The single-motor version will serve up the now-familiar figure of 201 hp, while the dual-motor Q5 e-tron will dial that up to 302 hp. A third version with a smaller battery is also expected to land sometime later, likely with a 55-kWh battery underneath and a single motor out back.",
       "characteristics": {
-        "General Info": {
-          "brand": "mercedes",
-          "bodyType": "sedan",
+        "general info": {
+          "brand": "Audi",
+          "body type": "SUV",
           "color": "blue"
         },
-        "engineDetails": {
-          "fuelType": "diesel",
-          "mileage": 123,
-          "transmission": "manual",
-          "engineCapacity": 222,
-          "power": 333
+        "engine details": {
+          "fuel type": "electric",
+          "mileage": 50,
+          "transmission": "automat",
+          "engine capacity": 306,
+          "power": 306
         },
         "dimension": {
-          "length": 1111,
-          "width": 2222,
-          "height": 2222,
-          "cargoVolume": 2222
+          "length": 4876,
+          "width": 1860,
+          "height": 1675,
+          "cargo volume": 1825
         },
         "features": {
           "Power Steering": true,
-          "Heated Seats": false,
-          "USB Port": false,
-          "AC": false,
-          "Bluetooth": false,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
           "Alarm": true,
-          "Wifi": false,
+          "Wifi": true,
           "Cruise Control": true,
           "Front Parking Sensor": true,
-          "Rear Parking Sensor": false,
+          "Rear Parking Sensor": true,
           "Power Window": true,
-          "Sunroof": false,
+          "Sunroof": true,
           "Sound System": true,
-          "Memory Seat": false,
+          "Memory Seat": true,
           "Roof Rack": true,
           "Other": false
         }
-      }
+      },
+      "vievs": 6
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1x7DNZXtJdiaLdtHy54_ov95I655nJwX7",
+        "https://drive.google.com/uc?export=view&id=1hZI2HRMmqWEXoZPRhW3Wh14DTcueu1fE"
+      ],
+      "brand": "Audi",
+      "model": "A6",
+      "title": "Audi A6",
+      "price": 85000,
+      "oldPrice": null,
+      "date addition": "05.02.2023, 17:15:00",
+      "location": {
+        "country": "Germany",
+        "town": "Bavaria"
+      },
+      "year": "2018",
+      "fuel": "diesel",
+      "drive": "all",
+      "count passenger": 5,
+      "rating": 2.67,
+      "totalRat": 123,
+      "views": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": false,
+      "description": "The \"RS\" initials are taken from the German: RennSport – literally translated as \"racing sport\", and is Audi's ultimate 'top-tier' high-performance trim level, positioned a noticeable step above the \"S\" model specification level of Audi's regular model range line-up. Like all Audi \"RS\" models, the RS 6 pioneers some of Audi's newest and most advanced engineering and technology, and so could be described as a halo vehicle, with the latest RS 6 Performance having the equal most powerful internal combustion engine out of all Audi models, with the same horsepower and torque as the physically larger Audi S8 Plus. Unlike the A6 and S6, however, the RS 6's engines in the C5 and C6 iterations have not been shared with any other vehicle in Audi's lineup. However, for the C7 generation, the Audi RS 6 has the same 4.0L bi-turbo V8 engine as the Audi RS 7, with both being positioned at the top of the Audi S and RS range, and detuned variants of the same engines are found in the Audi S8, Audi A8, and Audi S6.\n\nBased on the A6 platform, the RS 6's engines are front-mounted and longitudinally oriented, while the transmission is mounted immediately at the rear of the engine in a longitudinal orientation, in the form of a transaxle. Like all S and RS models, the RS 6 is only available with Audi's 'trademark' Torsen-based quattro permanent four-wheel drive system.\n\nThe C5 RS 6 was the fourth model to come out of Audi's private subsidiary company, \"quattro GmbH\". The first was the Audi RS 2 Avant, from a joint venture between Porsche and Quattro GmbH for the Audi marque. The second was the Audi C4 S6 Plus, produced from April 1996 to July 1997. The third was the 2000 Audi B5 RS 4; the fifth was the 2005 Audi B7 A4 DTM Edition saloon, and the sixth was the 2006 Audi B7 RS 4. The seventh and current (as of January 2010) Quattro GmbH model is the latest Audi C6 RS 6.\n\nProduction of the original Audi C5 RS 6 began in June 2002 and ended in September 2004. The second Audi C6 RS 6 was introduced at the 2007 Frankfurt Motor Show. The original RS 6 (C5) was the first Audi RS variant exported to North America, while the C6 and C7 RS 6 were only sold in Europe, with the C8 RS 6 again being offering in North America.",
+      "characteristics": {
+        "general info": {
+          "brand": "Audi",
+          "body type": "universal",
+          "color": "blue"
+        },
+        "engine details": {
+          "fuel type": "diesel",
+          "mileage": 9000,
+          "transmission": "automat",
+          "engine capacity": 600,
+          "power": 600
+        },
+        "dimension": {
+          "length": 4991,
+          "width": 1986,
+          "height": 1461,
+          "cargo volume": 500
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
+          "Alarm": true,
+          "Wifi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Power Window": true,
+          "Sunroof": true,
+          "Sound System": true,
+          "Memory Seat": true,
+          "Roof Rack": true,
+          "Other": false
+        }
+      },
+      "vievs": 46
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "image": [
+        " https://drive.google.com/uc?export=view&id=1fljT0VyV-ONBxaKhwZ0c7jY7WSqcTZx8",
+        " https://drive.google.com/uc?export=view&id=1M9-64mtZWPn-5fVmStyOUOC78H6dmFOT"
+      ],
+      "brand": "BMW",
+      "model": "X5",
+      "title": "BMW X5",
+      "price": 32000,
+      "oldPrice": null,
+      "date addition": "05.02.2023, 17:23:34",
+      "location": {
+        "country": "Germany",
+        "town": "Bavaria"
+      },
+      "year": "2015",
+      "fuel": "diesel",
+      "drive": "all",
+      "count passenger": 5,
+      "rating": 4.72,
+      "totalRat": 151,
+      "views": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": false,
+      "description": "The BMW Concept X5 eDrive is a plug-in hybrid concept vehicle version of the X5 with kidney grille slats, air intake bars and the inlay in the rear bumper in the BMW i Blue colour; Silverflake metallic body colour, xDrive all-wheel-drive system, specially designed roof rails, a connector for the charging cable that lights up during charging, 21-inch light-alloy wheels in an exclusive aerodynamically optimised design, a four-cylinder BMW TwinPower Turbo combustion engine and a 70 kW (94 hp) electric motor developed by the BMW Group, a charging cable stored in the load area below the flat storage compartment and BMW ConnectedDrive with Remote app. The electric motor can be driven at top speed of 120 km/h (75 mph). The battery mode has an all-electric range of 30 km (19 mi).[",
+      "characteristics": {
+        "general info": {
+          "brand": "BMW",
+          "body type": "SUV",
+          "color": "white"
+        },
+        "engine details": {
+          "fuel type": "diesel",
+          "mileage": 8000,
+          "transmission": "automat",
+          "engine capacity": 306,
+          "power": 306
+        },
+        "dimension": {
+          "length": 4886,
+          "width": 1938,
+          "height": 1762,
+          "cargo volume": 649
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
+          "Alarm": true,
+          "Wifi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Power Window": true,
+          "Sunroof": false,
+          "Sound System": true,
+          "Memory Seat": true,
+          "Roof Rack": true,
+          "Other": false
+        }
+      },
+      "vievs": 32
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1VP7HKWQ51tOUTlTJf3_g9Dd_6ifL5v5s",
+        "https://drive.google.com/uc?export=view&id=1sKhFImoUPEcP0zdf4bY1u5v86C83EKM-",
+        "https://drive.google.com/uc?export=view&id=1Id5OLqtaKnb7HwgALtBVHxfBmYEXPtnC"
+      ],
+      "brand": "Chevrolet",
+      "model": "Trax",
+      "title": "Chevrolet Trax",
+      "price": 25000,
+      "oldPrice": null,
+      "date addition": "06.02.2023, 17:06:34",
+      "location": {
+        "country": "USA",
+        "town": "New York"
+      },
+      "year": "2023",
+      "fuel": "gasoline",
+      "drive": "front",
+      "count passenger": 5,
+      "rating": 4.33,
+      "totalRat": 13,
+      "views": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": true,
+      "description": "The Chevy Trax has until now been known for its snack-size proportions and affordable starting price. Just as quick as Chevy ended its production run, the Trax returns as an all-new model with a dazzling redesign, more space, and enhanced safety features. Every Trax is front-wheel driven and powered by a 137-hp turbocharged three-cylinder engine and six-speed automatic transmission. It borrows that powertrain from the smaller Trailblazer; its style inspiration comes from the mid-size Blazer. The new Trax will continue to be built in GM’s South Korea plant, and its low starting price should make it the third-cheapest crossover on the market, behind the subcompact Kia Soul and Hyundai Venue. The Trax is scheduled to arrive in the spring of 2023.",
+      "characteristics": {
+        "general info": {
+          "brand": "Chevrolet",
+          "body type": "SUV",
+          "color": "green"
+        },
+        "engine details": {
+          "fuel type": "gasoline",
+          "mileage": 50,
+          "transmission": "manual",
+          "engine capacity": 137,
+          "power": 137
+        },
+        "dimension": {
+          "length": 4537,
+          "width": 1823,
+          "height": 1564,
+          "cargo volume": 725
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
+          "Alarm": false,
+          "Wifi": false,
+          "Cruise Control": false,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": true,
+          "Power Window": true,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "vievs": 3
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "image": [
+        "https://drive.google.com/uc?export=view&id=1pp32VOaCU7oKgIzsqD4sY2bQbtq8zzBw",
+        "https://drive.google.com/uc?export=view&id=13T_rMwBHCYrd75ngkSP76bLqbDUJLNbV"
+      ],
+      "brand": "Smart",
+      "model": "#1",
+      "title": "Smart #1",
+      "price": 37000,
+      "oldPrice": null,
+      "date addition": "06.02.2023, 17:16:18",
+      "location": {
+        "country": "Italia",
+        "town": "Milan"
+      },
+      "year": "2023",
+      "fuel": "electric",
+      "drive": "front",
+      "count passenger": 5,
+      "rating": 6,
+      "totalRat": 6,
+      "views": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": true,
+      "description": "Smart left the U.S. market in 2019, having established the limits of our enthusiasm for its quirky, gawky city cars. Yet the company's American misadventure was only a small part of the brand's wider commercial failure, one that had led to the loss of a reported $3.6 billion before it was fully absorbed into the Daimler empire in 2006.\n\nSmart, therefore, is taking a radically new direction and is being relaunched as a joint venture between Mercedes-Benz and the Geely Group in China (which owns Volvo, Polestar, and Lotus, among other brands). Going forward, Smart will offer only EVs, and the first of these—the #1—uses Geely's SEA electric platform and will be built in Xi'an, Shaanxi Province. It will be sold in China and Europe, but there are no plans to bring the brand back to the U.S. But as we figured you’d like to know what you're missing out on, we drove one in Portugal.",
+      "characteristics": {
+        "general info": {
+          "brand": "Smart",
+          "body type": "hatchback",
+          "color": "orange"
+        },
+        "engine details": {
+          "fuel type": "electric",
+          "mileage": 20,
+          "transmission": "automat",
+          "engine capacity": 272,
+          "power": 80
+        },
+        "dimension": {
+          "length": 4537,
+          "width": 1823,
+          "height": 1564,
+          "cargo volume": 725
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
+          "Alarm": true,
+          "Wifi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": true,
+          "Rear Parking Sensor": true,
+          "Power Window": true,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      },
+      "vievs": 1
     }
   ],
   "users": [
     {
       "id": 1,
+      "avatar": "https://drive.google.com/uc?export=view&id=1xbIzwGZ-I5_ZpBrB5hIU5THyHIWPG_I5",
       "user": {
         "firstName": "Alex",
         "lastName": "",

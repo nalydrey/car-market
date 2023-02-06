@@ -8,6 +8,7 @@ const defaultState =
         title: '',
         price:  0,
         oldPrice: null,
+        'date addition': null,
         location: {
             country:'',
             town:''
@@ -15,7 +16,7 @@ const defaultState =
         year: '',
         fuel: '',
         drive: '',
-        countPassenger: '',
+        'count passenger': '',
         rating: 0,
         totalRat: 0,
         views: 0,
@@ -25,18 +26,18 @@ const defaultState =
         description: '',
         characteristics:
             {
-                generalInfo:
+                'general info':
                     {
                         brand: '',
-                        bodyType: '',
+                        'body type': '',
                         color: ''
                     },
-                engineDetails:
+                'engine details':
                     {
-                        fuelType: '',
+                        'fuel type': '',
                         mileage: '',
                         transmission: '',
-                        engineCapacity: '',
+                        'engine capacity': '',
                         power:'',
                     },
                 dimension:
@@ -44,7 +45,7 @@ const defaultState =
                         length:'',
                         width:'',
                         height:'',
-                        cargoVolume:'',
+                        'cargo volume':'',
                     },
                 features:
                     {
@@ -68,33 +69,34 @@ const defaultState =
             }
     }
 
-
 const reducerAddCar = (state=defaultState, action) => {
     switch(action.type){
 
         case 'SELECT_OPTIONS':
             {
+                console.log(action )
                 switch (action.name){
                     case 'body type': {
-                        (state.characteristics.generalInfo.bodyType = action.payload)
+                        (state.characteristics['general info']['body type'] = action.payload)
                         return {...state}
                     }  
                     case 'brand': {
-                        (state.characteristics.generalInfo.brand = action.payload)
+
+                        (state.characteristics['general info'].brand = action.payload)
                         return {...state, brand: action.payload }
                     }
                     case 'model': return {...state, model: action.payload }
                     case 'year':  return {...state, year: action.payload }
                     case 'color':{
-                        (state.characteristics.generalInfo.color = action.payload)
+                        (state.characteristics['general info'].color = action.payload)
                         return {...state }
                     } 
                     case 'fuel':{
-                        state.characteristics.engineDetails.fuelType = action.payload
+                        state.characteristics['engine details']['fuel type'] = action.payload
                         return {...state, fuel: action.payload}
                     } 
                     case 'transmission':{
-                        state.characteristics.engineDetails.transmission = action.payload
+                        state.characteristics['engine details'].transmission = action.payload
                         return {...state}
                     } 
                     case 'drive': return {...state, drive: action.payload}  
@@ -121,7 +123,7 @@ const reducerAddCar = (state=defaultState, action) => {
 
             
         case 'ADD_USER_ID':         return {...state, userId: action.payload}
-        case 'SELECT_PASSANGER':    return {...state, countPassanger: action.payload}
+        case 'SELECT_PASSANGER':    return {...state, "count passenger": action.payload}
 
         case 'CHANGE_TITLE':        
 
@@ -136,20 +138,19 @@ const reducerAddCar = (state=defaultState, action) => {
                                     return {...state}
         case 'DELETE_IMAGE':        state.image.splice(action.payload,1)
                                     return {...state}
-        case 'CHANGE_MILAGE':       state.characteristics.engineDetails.mileage = action.payload
+        case 'CHANGE_MILAGE':       state.characteristics['engine details'].mileage = action.payload
                                     return {...state}
-        case 'CHANGE_ENGINE':       state.characteristics.engineDetails.engineCapacity = action.payload
+        case 'CHANGE_ENGINE':       state.characteristics['engine details']['engine capacity'] = action.payload
                                     return {...state}
-        case 'CHANGE_POWER':        state.characteristics.engineDetails.power = action.payload
+        case 'CHANGE_POWER':        state.characteristics['engine details'].power = action.payload
                                     return {...state}
-        case 'CHANGE_CARGO':        state.characteristics.dimension.cargoVolume = action.payload
+        case 'CHANGE_CARGO':        state.characteristics.dimension['cargo volume'] = action.payload
                                     return {...state}
         case 'CHANGE_HEIGHT':       state.characteristics.dimension.height = action.payload
                                     return {...state}
         case 'CHANGE_WIDTH':        state.characteristics.dimension.width = action.payload
                                     return {...state}
-        case 'CHANGE_LENGTH':       console.log(action.payload);
-        state.characteristics.dimension.length = action.payload
+        case 'CHANGE_LENGTH':       state.characteristics.dimension.length = action.payload
                                     return {...state}
         case 'CHECK_FEATURES':      const features = state.characteristics.features
                                     for (const key in features) {
@@ -157,10 +158,6 @@ const reducerAddCar = (state=defaultState, action) => {
                                     }
                                         return {...state}
         case 'CHENGE_PRICE':        {  return{...state, price: action.payload}}
-                  
-
-
-
     }
     return state
 }

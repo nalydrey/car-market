@@ -5,6 +5,7 @@ import RangeSlider from "../inputComponents/RangeSlider/RangeSlider"
 import {changeNewOrUsed, resetAllFilters} from "../../store/actionCreators/actionCreate";
 import {useSelector} from "react-redux";
 import './LeftFindPanel.scss'
+import Button from "../UI elements/Button";
 
 
 const LeftFindPanel = (props) => {
@@ -15,10 +16,12 @@ const LeftFindPanel = (props) => {
     const allCars = useSelector((state)=>state.cars)
     const findObj = useSelector((state)=>state.findObj)
     const newOrUsed = useSelector((state)=>state.findObj.isNew[0])
-    let data = []
+    const data = useSelector((state)=>state.pageElements.collectObj)
+    // let data = []
 
-    if (allCars.length>0)
-    {data = collectData(allCars)}
+    // if (allCars.length>0)
+    // {data = collectData(allCars)}
+    // console.log(data)
     const activateRadioName = (data) => {
     if(data===undefined)
         return 'All'
@@ -51,12 +54,12 @@ const LeftFindPanel = (props) => {
         <FindPanel data={data.brand} isSearch dataKey='brand' open>Brand</FindPanel>
         <FindPanel data={models} dataKey='model'>Model</FindPanel>
         <FindPanel data={data.drive} dataKey='drive'>Transmission</FindPanel>
-        <FindPanel data={data.countPassanger} dataKey='countPassanger'>Passanger</FindPanel>
-        <FindPanel data={data.fuel}  dataKey='fuel' >Fuel</FindPanel>
+        <FindPanel data={data['count passenger']} dataKey='countPassanger'>Passanger</FindPanel>
+        <FindPanel data={data['fuel type']}  dataKey='fuel' >Fuel</FindPanel>
         <div className="chosePrise">
           {/*<RangeSlider/>*/}
         </div>
-        <button className="resetButton" onClick={resetAllFilters}>Reset Filter</button>
+        <Button onClick={resetAllFilters} text={'Reset Filters'}/>
     </div>
   )
 }

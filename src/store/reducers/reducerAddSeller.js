@@ -1,5 +1,7 @@
+
 const defaultState = {
     id: 0,
+    avatar: '',
     user: {
         firstName: '',
         lastName: '',
@@ -43,7 +45,8 @@ const reducerAddSeller = (state=defaultState, action ) => {
                     return {...state}
                 }
 
-            } 
+            }
+
         default: return state
     }
 }

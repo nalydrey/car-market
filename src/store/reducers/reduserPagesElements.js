@@ -1,16 +1,23 @@
 import axios from "axios"
 import { url } from "../../App"
+import {showHidePopUpSucces} from "../actionCreators/actionCreatePageElements";
+
 
 const defaultState= {
     callBackForm: {
+        carId: '',
         name: '',
         email: '',
         phone: '',
         comment: '',
         subject: '',
     },
+    collectObj: {},
+    currentModels: [],
+    currentSelect: '',
     currentOwner: null,
     currentUser: null,
+    popUpTextInput: false,
     popupInAddCar: false,
     PopUpInfoSucces: false,
     PopUpInfoFailed: false,
@@ -29,13 +36,7 @@ const reducerPagesElements = (state=defaultState, action) => {
             Object.keys(state.callBackForm).forEach((el)=>{
                 state.callBackForm[el] = ''
             })
-
-            // fetch(`${url}users/${state.currentOwner.id}`,{
-            //     method: 'PUT',
-            //     body: JSON.stringify(state.currentOwner),
-            //     headers: {'content-type': 'application/json;charset=UTF-8'}
-            // })
-            axios.put(`${url}users/${state.currentOwner.id}`, state.currentOwner)
+            axios.put(`${url}users/${state.currentOwner.id}`, state.currentOwner).then(resp=>showHidePopUpSucces(true))
             return {...state, currentOwner: state.currentOwner, callBackForm: {...state.callBackForm}}
         }
 
@@ -44,12 +45,25 @@ const reducerPagesElements = (state=defaultState, action) => {
             state.currentUser.massages = action.payload
             // axios.put(url)
             return {...state, currentUser: {...state.currentUser}} 
-        
+
+        case 'SET_CURRENT_SELECT': return {...state, currentSelect: action.payload}
         case 'ADD_CURRENT_OWNER': return {...state, currentOwner: action.payload}
-        case 'ALLOW_ACCESS': return {...state, currentUser:{...action.payload}}
+        case 'ALLOW_ACCESS':
+            const data = action.payload ? action.payload : null
+            return {...state,  currentUser: data}
         case 'SHOW/HIDE__POPUP': return {...state, popupInAddCar: action.payload}
         case 'SHOW/HIDE__POPUP_SUCCES': return {...state, PopUpInfoSucces: action.payload}
         case 'SHOW/HIDE__POPUP_FAILED': return {...state, PopUpInfoFailed: action.payload}
+        case 'SHOW/HIDE__POPUP_INPUT': return  {...state, popUpTextInput: action.payload}
+        case 'ADD_COLLECT_OBJECT': return {...state, collectObj: action.payload}
+        case 'DELETE_MESSAGE': {
+            state.currentUser.massages = state.currentUser.massages.filter((message,i)=>i!==action.payload)
+            console.log(action)
+            axios.put(url+`users/${action.id}`, state.currentUser)
+            return {...state, currentUser: {...state.currentUser}}
+
+
+        }
         default: return state
     }    
 }

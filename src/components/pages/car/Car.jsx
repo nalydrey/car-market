@@ -11,13 +11,17 @@ import { url } from "../../../App";
 import { addCurrentOwner } from "../../../store/actionCreators/actionCreatePageElements";
 import CallBackForm from "./CallBackForm/CallBackForm";
 import "./Car.scss";
+import Slider from "../../Slider/Slider";
+import {ReactComponent as Prev} from '../../../assets/icons/prev.svg';
+import {ReactComponent as Next} from '../../../assets/icons/next.svg';
+
+
 
 
 const Car = () => {
   const { id } = useParams();
   const car = useSelector((state) => state.cars).find((car) => car.id === +id);
   const owner = useSelector((state)=> state.pageElements.currentOwner)
-  console.log(owner);
 
   useEffect(()=>{
     fetch(url+ `users/${car.userId}`)
@@ -28,13 +32,29 @@ const Car = () => {
         })
   }, [car.userId])
 
-  console.log(owner);
+    console.log(car.image)
+
+
+
 
   return (
     <section className="info">
+        <div className='header__wrap'>
+            <div className='container'>
+                <h1>
+                    {car.title}
+                </h1>
+            </div>
+        </div>
+        {!!car.image.length  &&
+        <div className='container slider-car'>
+            <Slider preview buttons prevInner={<Prev/>} nextInner={<Next/>}>
+                {car.image.map((img, ind)=> <div className="bar__item" key={ind} style={{backgroundImage: `url(${img})`}}/>)}
+            </Slider>
+        </div> }
       <div className="container info__container">
         {car ?
-        <> 
+        <>
         <div className="info__left">
           <InfoDiscription discription={car.description}/>
           <Features objFeat={car.characteristics.features}/>
@@ -44,9 +64,10 @@ const Car = () => {
                   lastName={owner.user.lastName}
                   organization={owner.user.organization}
                   tel={owner.contacts.tel}
-                  email={owner.contacts.email}  
+                  email={owner.contacts.email}
+                  foto={owner.avatar}
           />}
-          <CallBackForm/>
+          <CallBackForm carId={car.id}/>
         </div>
 
         <div className="info__right">
@@ -58,8 +79,6 @@ const Car = () => {
               compared={car.compared}
               views={car.vievs}
             />
-          
-          
         </div>
         </>
         :
@@ -71,3 +90,4 @@ const Car = () => {
 };
 
 export default Car;
+

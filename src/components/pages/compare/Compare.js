@@ -2,11 +2,9 @@ import { ReactComponent as AddCar } from '../../../assets/icons/add-car.svg'
 import Card from "../../card/Card"
 import { Link } from "react-router-dom"
 import './Compare.scss'
-import InfoAccordion from "../../infoAccordion/InfoAccordion"
+import InfoAccordion, {InfoImages} from "../../infoAccordion/InfoAccordion"
 import React from "react"
 import {useSelector} from "react-redux";
-
-
 
 const Compare = (props) => {
   // console.log('render compare');
@@ -19,20 +17,14 @@ const Compare = (props) => {
   const c = comparedCar.length
   comparedCar.length = 3
   comparedCar.fill(undefined, c)  
-
-  // console.log(comparedCar);
-
   comparedCar.sort((a,b)=> a < b ? 1 : -1)
 
   const keyObj = []
   if(comparedCar[0]){
     for(const key in comparedCar[0].characteristics){
-      // console.log(key);
       keyObj.push(key)
     }
   }
-
-  // console.log(keyObj);
 
   return (
     <div className="larger__container">
@@ -54,6 +46,7 @@ const Compare = (props) => {
           {keyObj.map((key)=>{
            return <InfoAccordion data={comparedCar} objName={key} key={key}/>
           })}
+            <InfoImages data={comparedCar}/>
       </div>
 
   )

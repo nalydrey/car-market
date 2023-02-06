@@ -9,7 +9,6 @@ const Nav = () => {
 
     const location = useLocation()
     const user = useSelector((state)=>state.pageElements.currentUser)
-    console.log(user);
     let header
     const nameLink = user ? user.user.firstName : 'Sign in'
     const link = user ? '/office': 'user/login'

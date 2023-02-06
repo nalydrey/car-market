@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     selectOption, addDiscription, changeCondition, changeTitle, selectPassanger
 } from "../../../../store/actionCreators/actionCreateAddCar";
@@ -8,17 +8,26 @@ import RadioButtons from "../../../inputComponents/radioButton/RadioButtons";
 import {useSelector} from "react-redux";
 import InputText from '../../../inputComponents/InputText/InputText';
 import TextArea from '../../../inputComponents/TextArea/TextArea';
-
-
 import './CarDetail.scss'
+import {showHideInputPopUp} from "../../../../store/actionCreators/actionCreatePageElements";
 
-const CarDetail = () => {
-console.log('!!!');
+const CarDetail = (props) => {
+
+    const { color, brand, bodyType, year, model } = props
     const value = useSelector((state)=> state.newCar)
-
-    const activeName = () => {
+    const cars = useSelector(state => state.cars)
+    const activeNameButton = () => {
         if (value.isNew===null) return 'All'
         return value.isNew ? 'New':'Used'
+    }
+
+    const [models, setModels] = useState([])
+    const listModels = (brand) => {
+        console.log(cars)
+        console.log(brand)
+        const modelList = cars.filter(car =>car.brand === brand).map(el=>el.model)
+        console.log(modelList)
+        setModels(modelList)
     }
 
     return (
@@ -28,44 +37,52 @@ console.log('!!!');
                         execute={selectOption}
                         value={value.title}
             />
-            <InputSelect list={['sedan','SUV', 'hatchback', 'universal']}
+            <InputSelect list={bodyType}
                          gridName='body'
                          title='body type'
-                         value = {value.characteristics.generalInfo.bodyType}
+                         value = {value.characteristics['general info']['body type']}
                          execute={selectOption}
+                         buttonClick={showHideInputPopUp}
+
             />
-            <InputSelect list={['audi', 'vw', 'mercedes', 'toyota', 'ford', 'chevrolet', 'jeep', 'MINI', 'bmw', 'kia']}
+            <InputSelect list={brand}
                          title='brand'
                          value = {value.brand}
-                         execute={selectOption}
+                         execute={(name, val)=>{listModels(val); selectOption(name,val)}}
+                         buttonClick={showHideInputPopUp}
+
             />
-            <InputSelect list={[1,2,3,4]}
+            <InputSelect list={models}
                          title='model'
                          value = {value.model}
                          execute={selectOption}
+                         buttonClick={showHideInputPopUp}
             />
-            <InputSelect from={1980}
-                         to={2022}
+            <InputSelect list={year}
                          title='year'
                          value={value.year}
                          execute={selectOption}
+                         buttonClick={showHideInputPopUp}
+
                          
             />
-            <InputSelect list={['red', 'green', 'blue', 'white', 'black']}
+            <InputSelect list={color}
                          title='color'
-                         value={value.characteristics.generalInfo.color}
+                         value={value.characteristics['general info'].color}
                          execute={selectOption}
+                         buttonClick={showHideInputPopUp}
+
 
             />
             <InputNumber gridName='passengers'
                          execute={selectPassanger}
-                         value={value.countPassanger}
+                         value={value['count passenger']}
                          title='Passenger Capacity'/>
             <RadioButtons labelList={['New', 'Used']}
                           individualClass='radio__container'
                           title='conditions'
                           radioCallBack={changeCondition}
-                          activeName={activeName()}
+                          activeName={activeNameButton()}
             />
             <TextArea title='description'
                       execute={addDiscription}

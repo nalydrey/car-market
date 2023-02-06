@@ -1,15 +1,19 @@
 import{ReactComponent as Arrow} from "../../../assets/icons/arrow_down.svg";
-
+import {setCurrentSelect} from "../../../store/actionCreators/actionCreatePageElements";
 import React, {useState} from 'react';
 import './InputSelect.scss'
 
+
 const InputSelect = (props) => {
 
-    const {list=[], title='', searchPanel=false, name=title, gridName=title, execute, value, from=null, to=null } = props
+    const {list=[], title='', searchPanel=false, name=title, gridName=title, execute, value, from=null, to=null, buttonClick } = props
     const [isOpen, setOpen] = useState(false)
     let fromTo = false
+
+    console.log(list)
     const activate = () => {
         setOpen(!isOpen)
+        setCurrentSelect(name)
     }
 
     if(from && to) {
@@ -24,6 +28,11 @@ const InputSelect = (props) => {
     const changeValue = (newVal) => {
         execute(name, newVal)
         setOpen(!isOpen)
+    }
+
+    const clickButton = () =>{
+        buttonClick(true)
+        setOpen(false)
     }
 
 
@@ -48,7 +57,9 @@ const InputSelect = (props) => {
                         return <li className='drop__list-item' data-value={i} key={i} onClick={()=>{changeValue(listItem)}}>{listItem}</li>
                     })}
                 </ul>
+                <button onClick={clickButton}>Add New</button>
             </div>
+
         </div>
     );
 };

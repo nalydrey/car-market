@@ -4,6 +4,7 @@ import './InputNumber.scss'
 const InputNumber = (props) => {
 
     const {min=0, max=9999, dimension='', gridName='', execute, field='countPassanger', value='', title} = props
+    console.log(execute)
     const decrrement = (e) => {
         min<value && execute(+value-1)
 

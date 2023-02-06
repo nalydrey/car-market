@@ -6,7 +6,7 @@ import './Seller.scss'
 
 const Seller = (props) => {
 
-    const { firstName='', lastName='', organization='', tel='', email='' } = props
+    const { firstName='', lastName='', organization='', tel='', email='', foto=noFoto } = props
 
    
 
@@ -16,7 +16,7 @@ const Seller = (props) => {
         <ul className='seller__contacts'>
             <li className='seller__name'>
                 <div className='seller__avatar'>
-                    <img src={noFoto} alt="avatar" />
+                    <img src={foto} alt="avatar" />
                 </div>
                 <h4>{firstName} {lastName}</h4>
                 <p>{organization}</p>

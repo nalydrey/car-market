@@ -10,20 +10,27 @@ import Price from "./Price/Price";
 import Geolocation from "./Geolocation/Geolocation";
 import { PopUp, PopUpSucces } from '../../OutputComponents/PopUp';
 import { showHidePopUp, showHidePopUpSucces } from '../../../store/actionCreators/actionCreatePageElements';
+import { selectOption} from "../../../store/actionCreators/actionCreateAddCar";
 import store from '../../../store/store';
 import { useNavigate } from 'react-router-dom';
+import PopUpInput from "../../OutputComponents/PopUpInput";
 
 const Sell = () => {
 
 
 
-    const value = useSelector((state)=> state.newCar)
-    const isRegistered = useSelector((state)=>state.pageElements.currentUser)
+    const carTemplate = useSelector((state)=> state.newCar)
+    const pageState = useSelector((state)=>state.pageElements)
+    const collect = pageState.collectObj
+
     const toRegister = useNavigate()
     const toLogin = useNavigate()
-
+    const currentUser = pageState.currentUser
+    const popUpTextState = pageState.popUpTextInput
+    const currentModels = pageState.currentModels
     const sendToBase = () => {
-        console.log(value)
+        const date = new Date().toLocaleString()
+        const value = {...carTemplate, userId: currentUser.id, 'date addition': date}
         fetch(url+'cars',{
             method: 'POST',
             body: JSON.stringify(value),
@@ -45,10 +52,10 @@ const Sell = () => {
         <h1>Sell</h1>
         
         <div className='sell__container container'>
-        {isRegistered ?
+        {currentUser ?
         <>
-            <CarDetail/>
-            <EngineDetails/>
+            <CarDetail year={collect.year} brand={collect.brand} bodyType={collect['body type']} color={collect.color} model={currentModels}/>
+            <EngineDetails fuel={collect['fuel type']} drive={collect.drive} transmission={collect.transmission}/>
             <Dimension/>
             <LoadImage/>
             <Features/>
@@ -59,6 +66,10 @@ const Sell = () => {
             </button>
             <PopUp execute={sendToBase}/>
             <PopUpSucces/>
+            <PopUpInput state={popUpTextState}
+                        text={carTemplate.brand}
+                        execute={(val)=>selectOption(pageState.currentSelect, val)}
+            />
         </>
         :
           <div className='change-block offer'>

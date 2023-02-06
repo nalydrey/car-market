@@ -1,17 +1,17 @@
 import Rating from "../rating/Rating";
 import './Card.scss'
-import Slider from "react-slick";
 import { addDelCompare } from "../../store/actionCreators/actionCreate";
 import { useState } from "react";
 import { useEffect } from "react";
 import Preloader from "../preloader/Preloader";
 import { useNavigate } from "react-router-dom";
 import noFoto from '../../assets/images/NoImage.jpg'
+import Slider from "../Slider/Slider";
+import {ReactComponent as Prev} from '../../assets/icons/prev.svg';
+import {ReactComponent as Next} from '../../assets/icons/next.svg';
 
-
-
-
-
+const prev = <Prev/>
+const next = <Next/>
 const Card = (props) => {
     // console.log('render Card');
     const { compared, id, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
@@ -44,25 +44,21 @@ const Card = (props) => {
    const stop = (e) => {
        e.stopPropagation()
    }
-    
 
   return (
     <div className={`car ${props.class}`} onClick={()=>goToDiscription(id)}>      
-        <div className="slider__wrap" onClick={stop}>  
-            {/* <Slider> */}
+        <div className="slider__wrap" onClick={stop}>
+
                 {foto ?
-                image.map((img, ind)=> {
-                    return (
-                        <div className="car__img" key={ind}>
-                            <img src={foto} alt="foto" />
-                        </div>
-                        )
-                })
+                 <Slider dots buttons proportion={0.73} prevInner={prev} nextInner={next}>
+                     {image.map((img, ind)=> {
+                        return <div className="bar__item" key={ind} style={{backgroundImage: `url(${img})`}}/>
+                    })}
+
+                 </Slider>
                 :
-                <Preloader/>
-            }
-            {/* </Slider> */}
-                
+                <Preloader/>}
+
         </div>        
         <div className="car__total">
             <div className="car__discription">

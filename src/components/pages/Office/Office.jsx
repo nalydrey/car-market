@@ -1,75 +1,82 @@
-import React from "react";
+import React, {useRef} from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import {Outlet, Route, Routes, useNavigate} from "react-router-dom";
 import { allowAccess } from "../../../store/actionCreators/actionCreatePageElements";
 import MassageCard from "./massageCard/MassageCard";
 import { url } from "../../../App";
 import "./Office.scss";
 import axios from "axios";
+import Button from "../../UI elements/Button";
+import {logDOM} from "@testing-library/react";
+import Messages from "./Messages/Messages";
+import MyCars from "./MyCars/MyCars";
 
 const Office = () => {
 
+
   const navigate = useNavigate();
-
+  const inputButton = useRef()
   const user = useSelector((state)=> state.pageElements.currentUser)
-  console.log(user);
-
+  // user && navigate('/')
   const exitFromOffice = () => {
-    localStorage.removeItem("loginedUser");
     navigate("/");
+    localStorage.removeItem("loginedUser");
     allowAccess(null);
   };
-
   const refreshData = () => {
     axios.get(url+`users/${user.id}`)
         .then(resp => allowAccess(resp.data))
   }
 
-  const deleteMessage = (index) => {
-    const newMassages = user.massages.filter((_, ind) => ind !==index )
-    user.massages = newMassages
-    axios.put(url+`users/${user.id}`, user).then((resp)=> {allowAccess(resp.data)})
+  const loadAvatar = (e) => {
+    const files = Array.from(e.target.files)
+
+    files.forEach(file => {
+        console.log(file)
+        const reader = new FileReader()
+
+        reader.onload = (e) => {
+          user.avatar = e.target.result
+          console.log(user)
+          axios.put(url+`users/${user.id}`, user).then((resp)=>{allowAccess(resp.data)})
+        }
+
+        reader.readAsDataURL(file)
+    })
+}
+  const triggerButton = () => {
+    inputButton.current.click()
   }
 
-//   const loadFiles = (e) => {
-//     const files = Array.from(e.target.files)
-//
-//     files.forEach(file => {
-//         console.log(file)
-//         const reader = new FileReader()
-//
-//         reader.onload = (e) => {
-//             addImages(e.target.result)
-//         }
-//
-//         reader.readAsDataURL(file)
-//     })
-// }
-
   return (
-    <section className="office">
-      <div className="larger__container">
-      
-        <div className="client">
-          <div className="client__avatar">
-            <div className="client__foto">
-              <img src="" alt="foto" />
-            </div>
-            <p>Alex</p>
-            <input type="file"/>
-          </div>
-          <button>Massages</button>
-          <button onClick={exitFromOffice}>Exit</button>
-          <button onClick={refreshData}>Refresh</button>
-        </div>
+      user &&
+      <>
+        <section className="office">
+          <div className="larger__container">
 
-        <div className="route__container">
-          {user && user.massages.map((massage, i)=>{
-            return <MassageCard {...massage} deleteMessage={deleteMessage} index={i} key={i}/>
-          })}
-        </div>
-      </div>
-    </section>
+            <div className="client">
+              <div className="client__avatar" >
+                <div className="client__foto" onClick={triggerButton}>
+                  <img src={user.avatar} alt="foto" />
+                </div>
+                <p>Alex</p>
+                <input type="file" ref={inputButton} onChange={loadAvatar}/>
+              </div>
+              <Button onClick={()=>{refreshData(); navigate('messages')}} text='Massages'/>
+              <Button onClick={refreshData} text='Refresh'/>
+              <Button onClick={()=>{navigate(`my_cars/${user.id}`)}} text='My Cars'/>
+              <Button onClick={exitFromOffice} text='Exit'/>
+            </div>
+
+            <div className="route__container">
+              <Routes>
+                <Route path='messages' element={<Messages massages={user.massages} OwnerId={user.id}/>}/>
+                <Route path='my_cars/:userId' element={<MyCars/>}/>
+              </Routes>
+            </div>
+          </div>
+        </section>
+      </>
   );
 };
 

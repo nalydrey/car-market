@@ -21,6 +21,7 @@ const deleteFoto = (val) => {
 }
 
 const changeMilage = (val) => {
+   console.log(val)
    store.dispatch({type: 'CHANGE_MILAGE', payload: val})
 }
 
@@ -55,6 +56,8 @@ const addUserId = (val) => {
 const selectOption = (name, val) => {
    store.dispatch({type: 'SELECT_OPTIONS', name:name, payload: val})
 }
+
+
 
 
 export {selectPassanger,  deleteFoto, addImages, changeCondition, addDiscription,

@@ -21,11 +21,22 @@ const addCallBack = (name, val) => {
 const addCallBackToOwner = (name, val) => {
     store.dispatch({type:'ADD_CALL_BACK_TO_OWNER',name: name, payload: val})
 }
-const refreshMessages =  (val) => {
-    store.dispatch({type:'REFRESH_MESSAGES', payload: val})
+const showHideInputPopUp =  (val) => {
+    store.dispatch({type:'SHOW/HIDE__POPUP_INPUT', payload: val})
+}
+
+const setCurrentSelect = (val) => {
+    store.dispatch({type:'SET_CURRENT_SELECT', payload: val})
+}
+const addCollectObj = (val) => {
+    store.dispatch({type:'ADD_COLLECT_OBJECT', payload: val})
+}
+const deleteMessage = (val, id) => {
+    store.dispatch({type:'DELETE_MESSAGE',id: id, payload: val})
 }
 
 
 
 
-export {showHidePopUp,showHidePopUpSucces, showHidePopUpFailed, allowAccess, addCurrentOwner, addCallBack, addCallBackToOwner, refreshMessages}
+export {showHidePopUp,showHidePopUpSucces, showHidePopUpFailed, allowAccess, addCurrentOwner,
+    setCurrentSelect,addCollectObj, addCallBack, addCallBackToOwner, showHideInputPopUp, deleteMessage}

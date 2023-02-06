@@ -5,9 +5,12 @@ import TextArea from '../../../inputComponents/TextArea/TextArea'
 import './CallBackForm.scss'
 import { addCallBack, addCallBackToOwner } from '../../../../store/actionCreators/actionCreatePageElements'
 import { useSelector } from 'react-redux'
+import Button from "../../../UI elements/Button";
+import {PopUpSucces} from "../../../OutputComponents/PopUp";
 
-const CallBackForm = () => {
+const CallBackForm = (props) => {
 
+    const {carId} = props
   const callback = useSelector((state)=>state.pageElements.callBackForm)
 
  console.log(callback);
@@ -39,9 +42,9 @@ const CallBackForm = () => {
                     value={callback.comment}
 
         /> 
-        <button className='submit' onClick={addCallBackToOwner}
-                >Sell My Car
-        </button>
+
+        <Button className='call-back__button' text={'Sell My Car'} onClick={()=>{addCallBack('carId', carId); addCallBackToOwner()}}/>
+        <PopUpSucces/>
 
     </div>
   )

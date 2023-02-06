@@ -26,7 +26,7 @@ const Rating = (props) => {
             .then (json => {            
                 json.totalRat=json.totalRat+rat
                 json.vievs=json.vievs+1
-                json.rating = json.totalRat/json.vievs
+                json.rating = Math.round(json.totalRat/json.vievs*100)/100
                  fetch(url+`cars/${id}`,{
                     method: 'PUT',
                     body: JSON.stringify(json),

@@ -1,20 +1,29 @@
 import React from 'react'
-import { useEffect, useRef, useState } from "react"
-import {useNavigate, useParams} from "react-router-dom"
+import { useEffect, useState } from "react"
 import Cards from "../../cards/Cards"
 import LeftFindPanel from "../../leftFindPanel/LeftFindPanel"
 import { ReactComponent as Horisontal} from '../../../icons/button-hor.svg'
 import { ReactComponent as Vertical} from '../../../icons/button-vert.svg' 
 import FindString from "../../findString/FindString"
-// import '../newCars/NewCars.scss'
 import filterData from "../../../functions/filterData";
 import regExpFilter from "../../../functions/regularExpFilter";
 import {useSelector} from "react-redux";
 import {changeNewOrUsed} from "../../../store/actionCreators/actionCreate";
 import './SearchResult.scss'
+import {useLocation} from "react-router-dom";
 
 
 const SearchResult = (props) => {
+
+    const location = useLocation()
+    console.log(location)
+    const text = () => {
+        switch (location.pathname){
+            case '/search_result': return 'search result'
+            case '/used_cars': return 'used cars'
+            case '/new_cars': return 'new cars'
+        }
+    }
 
     const { radio=false,filterNovelty='All' } = props
 
@@ -30,11 +39,9 @@ const SearchResult = (props) => {
     let filterWorkCars = filterData(filteredCars, findObj)
 
     const [findWord, setFindWord] = useState('')
-    console.log(findWord)
     // поиск автомобиля по запросу
     filterWorkCars = findWord ? (regExpFilter(filterWorkCars, findWord)) : filterWorkCars
     const workCars = filterWorkCars.length ? filterWorkCars : []
-    console.log(filterWorkCars);
     const[horisontal, setHorisontal] = useState(true)
     
     const[sortBy, setSort] = useState('')
@@ -45,8 +52,12 @@ const SearchResult = (props) => {
 
   return (
     <section className="searchResult">
-    <h1>Search</h1>
-    <h2> and other </h2>
+        <div className='header__wrap'>
+            <div className='larger__container search__head'>
+                <h1>{text()}</h1>
+                {/*<h2> and other </h2>*/}
+            </div>
+        </div>
     <div className="new__cars-container larger__container">
 
         <LeftFindPanel radio={radio}/>

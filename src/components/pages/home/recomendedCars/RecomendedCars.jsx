@@ -20,7 +20,7 @@ const RecomendedCars = () => {
     }
 
     const find = recomendedState==='New' ? [true] : [false]
-    const recomendedCars = filterData(allCars, {isNew: find })
+    const recomendedCars = filterData(allCars, {isNew: find }).sort((a, b)=>a.rating < b.rating ? 1 : -1)
 
 
   return (

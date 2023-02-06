@@ -15,18 +15,13 @@
 
 .compare__button{
   display: block;
-  text-align: center;
   width: 604px;
-  padding: 15px;
-  background: none;
   margin: 0 auto;
-  border: 1px solid white;
   margin-top: 25px;
-  border-radius: 3px;
-  
 }
 
 .vs{
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;

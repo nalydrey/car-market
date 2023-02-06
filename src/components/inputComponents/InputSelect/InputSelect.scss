@@ -46,6 +46,22 @@
   &--active{
     max-height: 400px;
   }
+  button{
+    transition: .5s;
+    display: block;
+    margin: 10px auto;
+    background: none;
+    padding: 10px 30px;
+    border: 1px solid $buttonColor;
+    color: $buttonColor;
+    border-radius: 3px;
+    &:hover{
+      background: $buttonColor;
+      color: white;
+      border-color: $colorBorder;
+    }
+
+  }
 }
 
 .drop__list-item{

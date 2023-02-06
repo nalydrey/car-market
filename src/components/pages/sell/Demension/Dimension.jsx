@@ -13,27 +13,27 @@ const Dimension = () => {
             <h2>Dimension</h2>
             {/*<div className='dimension__box'>*/}
                 <InputNumber gridName='length'
-                                dimension='mm'
+                             dimension='mm'
                              execute={changeLength}
                              value={value.characteristics.dimension.length}
                              title='length'
                 />
                 <InputNumber gridName='width'
-                                dimension='mm'
+                             dimension='mm'
                              execute={changeWidth}
                              value={value.characteristics.dimension.width}
                              title='width'
                 />
                 <InputNumber gridName='height'
-                                dimension='mm'
+                             dimension='mm'
                              execute={changeHeight}
                              value={value.characteristics.dimension.height}
                              title='height'
                 />
                 <InputNumber gridName='cargo'
-                                dimension='L'
+                             dimension='L'
                              execute={changeCargo}
-                             value={value.characteristics.dimension.cargoVolume}
+                             value={value.characteristics.dimension['cargo volume']}
                              title='Cargo Volume'
                 />
             {/*</div>*/}

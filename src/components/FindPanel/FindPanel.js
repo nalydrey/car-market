@@ -12,7 +12,6 @@ const FindPanel = (props) => {
     // console.log(props);
     
     const { data=[], isSearch = false, children, dataKey, createFindObj, sort=false, sortDescenfind=false, individualStyle='', open=false } = props
-    console.log(createFindObj);
     const [isOpen, setOpen] = useState(open)
     const [seeMore, setSee] = useState(data)
     const [search, setSearch] = useState(data)
