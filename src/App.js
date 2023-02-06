@@ -36,7 +36,7 @@ function App() {
             store.dispatch({type: 'LOAD_DATA', payload: cars.data})
         })
 
-    const userId = localStorage.getItem('loginedUser')
+    const userId = localStorage.getItem('loginedUser') 
     
     userId && axios.get(url+`users/${userId}`).then((resp)=>allowAccess(resp.data))
     },[])
@@ -69,3 +69,4 @@ function App() {
 }
 
 export default App;
+
