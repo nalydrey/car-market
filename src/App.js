@@ -18,8 +18,8 @@ import Faq from "./components/pages/Faq/Faq";
 import {refreshFaq} from "./store/actionCreators/actionCreateFaq";
 import {loadAllCars} from "./store/actionCreators/actionCreate";
 
-export const url = 'http://localhost:3002/'
-// export const url = '/';
+// export const url = 'http://localhost:3002/'
+export const url = '/';
 
 
 export const firstLoad = () => {
