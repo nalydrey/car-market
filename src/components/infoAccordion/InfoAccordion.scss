@@ -12,6 +12,7 @@
 }
 
 .info__title{
+    position: relative;
     text-transform:capitalize;
     text-align: center;
     font-size: 28px;
@@ -104,4 +105,25 @@
     align-self: flex-start;
     border: 1px solid $colorBorder;
     width: 45%;
+}
+
+.remove-info{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    background: rgba(194, 44, 44, 0.53);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.edit-info{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-150%);
+    background: $colorBorder;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
 }

@@ -17,6 +17,7 @@ const defaultState= {
     currentSelect: '',
     currentOwner: null,
     currentUser: null,
+    editCard: false,
     popUpTextInput: false,
     popupInAddCar: false,
     PopUpInfoSucces: false,
@@ -61,9 +62,9 @@ const reducerPagesElements = (state=defaultState, action) => {
             console.log(action)
             axios.put(url+`users/${action.id}`, state.currentUser)
             return {...state, currentUser: {...state.currentUser}}
-
-
         }
+        case 'CHANGE_EDIT_STATUS': return {...state, editCard: action.payload}
+
         default: return state
     }    
 }

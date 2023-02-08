@@ -1,0 +1,43 @@
+@import '/src/styles/variables';
+
+.aboutUs__intro{
+  margin: 0 auto;
+  margin-top: 45px;
+  padding: 65px 0;
+  text-align: center;
+  max-width: 420px;
+  h1{
+    font-size: 36px;
+    font-weight: 700;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 25px 0;
+  }
+  .info-frame{
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 3px;
+  }
+}
+
+.aboutUs__image{
+  margin-bottom: 72px;
+}
+
+.service{
+  h2{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.service-buttons{
+  display: flex;
+  justify-content: space-between;
+}

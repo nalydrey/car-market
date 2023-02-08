@@ -5,7 +5,7 @@ import {ReactComponent as Youtube} from "../assets/icons/youtube.svg";
 
 const footer = {
     logo: logo,
-    links: ['About us', 'Fag', 'Contact'],
+    links: ['about us', 'faq', 'contact'],    
     autorization: {
         logIn: 'Login',
         register: 'Register',

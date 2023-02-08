@@ -1,0 +1,64 @@
+@import "/src/styles/variables";
+
+@mixin decor{
+  border-radius: 3px;
+  display: block;
+  background: $colorBorder;
+  height: 2px;
+}
+
+.aboutUs__description{
+  margin-top: 120px;
+  margin-bottom: 65px;
+  padding: 115px 0 65px 55px;
+  background: $blockBackground;
+  display: flex;
+  justify-content: space-between;
+  gap:70px;
+
+}
+
+.description__left{
+  flex-basis: 50%;
+  font-size: 20px;
+  h2{
+    margin-bottom: 24px;
+    font-size: 36px;
+  }
+  .aboutUs__text{
+    margin-bottom: 72px;
+  }
+}
+
+.aboutUs__foto{
+  //border: 1px solid white;
+  flex-grow: 1;
+}
+
+.statistic__wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.statistic__item{
+  padding: 11px 0;
+  //border: 1px solid white;
+  width: 144px;
+  text-align: center;
+  p{
+    font-size: 18px;
+  }
+  .statistic__number{
+    font-size: 48px;
+  }
+}
+
+.decor-top{
+  @include decor;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.decor-bottom{
+  @include decor;
+  width: 50%;
+  margin-bottom: 10px;
+}

@@ -1,3 +1,11 @@
+import axios from "axios";
+import {url} from "../../App";
+import {changeEditStatus, refreshForm, showHidePopUpSucces} from "../actionCreators/actionCreatePageElements";
+import {logDOM} from "@testing-library/react";
+import {cleanForm} from "../actionCreators/actionCreateAddCar";
+import store from "../store";
+import {loadAllCars} from "../actionCreators/actionCreate";
+
 const defaultState =
     {
         id: 0,
@@ -69,12 +77,14 @@ const defaultState =
             }
     }
 
+    const templateCar = JSON.parse(JSON.stringify(defaultState))
+
 const reducerAddCar = (state=defaultState, action) => {
+    // console.log(templateCar)
     switch(action.type){
 
         case 'SELECT_OPTIONS':
             {
-                console.log(action )
                 switch (action.name){
                     case 'body type': {
                         (state.characteristics['general info']['body type'] = action.payload)
@@ -158,6 +168,23 @@ const reducerAddCar = (state=defaultState, action) => {
                                     }
                                         return {...state}
         case 'CHENGE_PRICE':        {  return{...state, price: action.payload}}
+        case 'CLEAN_FORM': {
+            state = JSON.parse(JSON.stringify(templateCar))
+            return {...state}
+        }
+        case 'EDIT_CAR': {
+            axios.put(url+`cars/${state.id}`, state)
+                .then(resp=>axios.get(url+'cars'))
+                    .then(resp=> {loadAllCars(resp.data); changeEditStatus(false)})
+            state = JSON.parse(JSON.stringify(templateCar))
+            return {...state}
+        }
+
+        case 'REFRESH_FORM': {
+            return {...action.payload}
+        }
+
+
     }
     return state
 }

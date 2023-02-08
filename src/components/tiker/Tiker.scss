@@ -1,6 +1,6 @@
 .tiker{
   overflow: hidden;
-  padding: 40px 0;
+  //padding: 40px 0;
 }
 
 .wrap{
@@ -9,15 +9,16 @@
   &:hover .tiker__container{
     //animation-play-state: paused;
   }
+
 }
 
 .tiker__container{
+  position: relative;
   flex-grow: 1;
   display: flex;
   width: 200%;
   justify-content: space-around;
   animation: tiker 20s linear infinite;
-
 }
 
 

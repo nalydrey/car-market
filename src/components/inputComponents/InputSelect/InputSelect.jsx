@@ -10,7 +10,6 @@ const InputSelect = (props) => {
     const [isOpen, setOpen] = useState(false)
     let fromTo = false
 
-    console.log(list)
     const activate = () => {
         setOpen(!isOpen)
         setCurrentSelect(name)
@@ -26,6 +25,7 @@ const InputSelect = (props) => {
 
 
     const changeValue = (newVal) => {
+        // console.log(newVal)
         execute(name, newVal)
         setOpen(!isOpen)
     }

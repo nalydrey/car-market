@@ -15,7 +15,7 @@ const Register = (props) => {
                
                <div className={`form__wrap ${pageName}`}>
                 <Outlet/>
-                {pageName==='login' && <p>Don't have an account? <Link to='register'>Login here</Link> </p>}    
+                {pageName==='login' && <p>Don't have an account? <Link to='register'>Register here</Link> </p>}
                 {pageName==='register' && <p>Already have an account? <Link to='login'>Login here</Link> </p>}    
                </div>
                 <div className='welcome'>

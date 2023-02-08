@@ -6,6 +6,11 @@ const RESET = 'RESET'
 
 
 
+
+const loadAllCars = (data) => {
+store.dispatch({type: 'LOAD_DATA', payload: data})
+}
+
 const changeFindObj = (data) => {
 store.dispatch({type: CHANGE_OBJ, payload: data})
 }
@@ -21,4 +26,4 @@ const addDelCompare = (data) => {
 }
 
 
-export {changeFindObj, changeNewOrUsed, resetAllFilters, addDelCompare}
+export {changeFindObj, changeNewOrUsed, resetAllFilters, addDelCompare, loadAllCars}

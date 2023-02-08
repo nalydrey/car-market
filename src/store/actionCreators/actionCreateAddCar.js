@@ -56,6 +56,9 @@ const addUserId = (val) => {
 const selectOption = (name, val) => {
    store.dispatch({type: 'SELECT_OPTIONS', name:name, payload: val})
 }
+const cleanForm = () => {
+   store.dispatch({type: 'CLEAN_FORM'})
+}
 
 
 
@@ -63,5 +66,5 @@ const selectOption = (name, val) => {
 export {selectPassanger,  deleteFoto, addImages, changeCondition, addDiscription,
     changeMilage,  changeEngine, changePower,changeLength,
    changeWidth, changeHeight, changeCargo, checkFeatures, changePrice,
-    addUserId, selectOption
+    addUserId, selectOption, cleanForm
 }

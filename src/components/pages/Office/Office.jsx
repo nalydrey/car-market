@@ -10,6 +10,7 @@ import Button from "../../UI elements/Button";
 import {logDOM} from "@testing-library/react";
 import Messages from "./Messages/Messages";
 import MyCars from "./MyCars/MyCars";
+import AdminPanel from "./AdminPanel/AdminPanel"
 
 const Office = () => {
 
@@ -62,6 +63,7 @@ const Office = () => {
                 <p>Alex</p>
                 <input type="file" ref={inputButton} onChange={loadAvatar}/>
               </div>
+              {user.isAdmin && <Button onClick={()=>{refreshData(); navigate('admin_panel')}} text='Admin panel'/>}
               <Button onClick={()=>{refreshData(); navigate('messages')}} text='Massages'/>
               <Button onClick={refreshData} text='Refresh'/>
               <Button onClick={()=>{navigate(`my_cars/${user.id}`)}} text='My Cars'/>
@@ -70,6 +72,7 @@ const Office = () => {
 
             <div className="route__container">
               <Routes>
+                <Route path='admin_panel' element={<AdminPanel />}/>
                 <Route path='messages' element={<Messages massages={user.massages} OwnerId={user.id}/>}/>
                 <Route path='my_cars/:userId' element={<MyCars/>}/>
               </Routes>

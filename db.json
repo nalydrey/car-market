@@ -420,6 +420,7 @@
   "users": [
     {
       "id": 1,
+      "isAdmin": true,
       "avatar": "https://drive.google.com/uc?export=view&id=1xbIzwGZ-I5_ZpBrB5hIU5THyHIWPG_I5",
       "user": {
         "firstName": "Alex",
@@ -439,6 +440,79 @@
       "addedCars": [],
       "comments": [],
       "massages": []
+    },
+    {
+      "id": 2,
+      "isAdmin": false,
+      "avatar": "",
+      "user": {
+        "firstName": "Andrey",
+        "lastName": "",
+        "organization": "seller",
+        "password": "ccc"
+      },
+      "type": "",
+      "contacts": {
+        "tel": "3215476",
+        "email": "andr@andr",
+        "instagram": "",
+        "facebook": ""
+      },
+      "advertCounter": 0,
+      "viewedCars": [],
+      "addedCars": [],
+      "comments": [],
+      "massages": []
     }
-  ]
+  ],
+  "faq": {
+    "car": [
+      {
+        "title": "How to compare car?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      },
+      {
+        "title": "Where to find car review?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      },
+      {
+        "title": "What cause the web error?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      }
+    ],
+    "buy": [
+      {
+        "title": "How to compare car?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      },
+      {
+        "title": "Where to find car review?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      }
+    ],
+    "sell": [
+      {
+        "title": "How to compare car?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      },
+      {
+        "title": "Where to find car review?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      },
+      {
+        "title": "What cause the web error?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "How to compare car?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      },
+      {
+        "title": "Where to find car review?",
+        "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
+      }
+    ]
+  }
 }

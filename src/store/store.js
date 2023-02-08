@@ -4,6 +4,7 @@ import reducerFind from "./reducers/reducerFind";
 import reducerAddCar from "./reducers/reducerAddCar";
 import reducerPagesElements from "./reducers/reduserPagesElements";
 import reducerAddSeller from "./reducers/reducerAddSeller";
+import reducerFaq from "./reducers/reducerFaq";
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     findObj: reducerFind,
     newCar: reducerAddCar,
     pageElements: reducerPagesElements,
-    newUser: reducerAddSeller
+    newUser: reducerAddSeller,
+    faq: reducerFaq
 })
 
     // , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

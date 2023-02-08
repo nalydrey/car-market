@@ -1,6 +1,7 @@
 
 const defaultState = {
     id: 0,
+    isAdmin: false,
     avatar: '',
     user: {
         firstName: '',

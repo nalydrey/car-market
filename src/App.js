@@ -1,5 +1,4 @@
-
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/home/Home';
 import Compare from './components/pages/compare/Compare';
@@ -8,41 +7,41 @@ import CarsLayout from './components/carsLayout/CarsLayout';
 import SearchResult from './components/pages/searchResult/SearchResult';
 import Register from "./components/pages/Register/Register";
 import Office from './components/pages/Office/Office';
-import store from "./store/store";
 import { LoginForm, RegisterForm } from './components/pages/Register/Forms/Forms';
 import Car from './components/pages/car/Car';
 import Article from './components/pages/Article/Article';
 import { allowAccess, addCollectObj } from './store/actionCreators/actionCreatePageElements';
 import axios from 'axios';
-import MyCars from "./components/pages/Office/MyCars/MyCars";
 import collectData from "./functions/collectData";
-import Messages from "./components/pages/Office/Messages/Messages";
-import {useSelector} from "react-redux";
+import AboutUs from "./components/pages/aboutAs/AboutUs";
+import Faq from "./components/pages/Faq/Faq";
+import {refreshFaq} from "./store/actionCreators/actionCreateFaq";
+import {loadAllCars} from "./store/actionCreators/actionCreate";
+
+export const url = 'http://localhost:3002/'
+// export const url = '/';
 
 
-// export const url = 'http://localhost:3002/'
-export const url = '/';
-
+export const firstLoad = () => {
+    axios.get(url+'cars').then(cars=> {
+        const collect = collectData(cars.data, ['brand', 'model','year','drive', 'count passenger'])
+        const generalColect = collectData(cars.data.map((car)=>car.characteristics['general info']), ['body type', 'color'])
+        const engineCollect = collectData(cars.data.map((car)=>car.characteristics['engine details']), ['fuel type', 'transmission'])
+        addCollectObj({...collect, ...generalColect, ...engineCollect})
+        loadAllCars(cars.data)
+    })
+    axios.get(url+'faq').then(resp => refreshFaq(resp.data))
+}
 
 function App() {
     // console.log('render App')
-    
-    useEffect(()=>{
-        axios.get(url+'cars').then(cars=> {
-            const collect = collectData(cars.data, ['brand', 'model','year','drive', 'count passenger'])
-            const generalColect = collectData(cars.data.map((car)=>car.characteristics['general info']), ['body type', 'color'])
-            const engineCollect = collectData(cars.data.map((car)=>car.characteristics['engine details']), ['fuel type', 'transmission'])
-            addCollectObj({...collect, ...generalColect, ...engineCollect})
-            store.dispatch({type: 'LOAD_DATA', payload: cars.data})
-        })
 
-    const userId = localStorage.getItem('loginedUser') 
+    useEffect(()=>{
+        firstLoad()
+    const userId = localStorage.getItem('loginedUser')
     
     userId && axios.get(url+`users/${userId}`).then((resp)=>allowAccess(resp.data))
     },[])
-
-
-
 
 
   return (
@@ -61,7 +60,9 @@ function App() {
                 <Route path='user' element={<Register/>}>
                   <Route path='login' element={<LoginForm/>}/>
                   <Route path='register' element={<RegisterForm/>}/>
-                </Route> 
+                </Route>
+                <Route path='about us' element={<AboutUs/>} />
+                <Route path='faq' element={<Faq/>} />
               </Route>
           </Routes>  
     </BrowserRouter>

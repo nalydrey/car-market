@@ -35,8 +35,24 @@ const deleteMessage = (val, id) => {
     store.dispatch({type:'DELETE_MESSAGE',id: id, payload: val})
 }
 
+const changeEditStatus = (val) => {
+    store.dispatch({type:'CHANGE_EDIT_STATUS', payload: val})
+}
+const loadAuto = (val) => {
+    store.dispatch({type:'LOAD_AUTO', payload: val})
+}
+const refreshForm = (val) => {
+    store.dispatch({type:'REFRESH_FORM', payload: val})
+}
+const editCarAndSend = () => {
+    store.dispatch({type:'EDIT_CAR'})
+}
+
+
+
 
 
 
 export {showHidePopUp,showHidePopUpSucces, showHidePopUpFailed, allowAccess, addCurrentOwner,
-    setCurrentSelect,addCollectObj, addCallBack, addCallBackToOwner, showHideInputPopUp, deleteMessage}
+    setCurrentSelect,addCollectObj, addCallBack, addCallBackToOwner, showHideInputPopUp, deleteMessage, changeEditStatus,
+    loadAuto, refreshForm, editCarAndSend}

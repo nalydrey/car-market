@@ -9,25 +9,31 @@ import Features from "./Features/Features";
 import Price from "./Price/Price";
 import Geolocation from "./Geolocation/Geolocation";
 import { PopUp, PopUpSucces } from '../../OutputComponents/PopUp';
-import { showHidePopUp, showHidePopUpSucces } from '../../../store/actionCreators/actionCreatePageElements';
-import { selectOption} from "../../../store/actionCreators/actionCreateAddCar";
+import {
+    editCarAndSend,
+    showHidePopUp,
+    showHidePopUpSucces
+} from '../../../store/actionCreators/actionCreatePageElements';
+import {cleanForm, selectOption} from "../../../store/actionCreators/actionCreateAddCar";
 import store from '../../../store/store';
-import { useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import PopUpInput from "../../OutputComponents/PopUpInput";
+import Button from "../../UI elements/Button";
 
 const Sell = () => {
 
 
-
+    const carId = useLocation().state
     const carTemplate = useSelector((state)=> state.newCar)
     const pageState = useSelector((state)=>state.pageElements)
     const collect = pageState.collectObj
-
+    console.log(collect)
     const toRegister = useNavigate()
     const toLogin = useNavigate()
     const currentUser = pageState.currentUser
     const popUpTextState = pageState.popUpTextInput
     const currentModels = pageState.currentModels
+
     const sendToBase = () => {
         const date = new Date().toLocaleString()
         const value = {...carTemplate, userId: currentUser.id, 'date addition': date}
@@ -40,9 +46,13 @@ const Sell = () => {
             fetch(url+'cars')
             .then(req => req.json())
             .then(json => {
+
                 store.dispatch({type: 'LOAD_DATA', payload: json})
             })})
+        cleanForm()
     }
+
+
 
 
    
@@ -61,9 +71,8 @@ const Sell = () => {
             <Features/>
             <Price/>
             <Geolocation/>
-            <button className='submit'
-                    onClick={()=>showHidePopUp(true)}>Sell My Car
-            </button>
+            {!pageState.editCard &&<Button text={'Sell My Car'} onClick={()=>showHidePopUp(true)}/>}
+            {pageState.editCard && <Button text={'Edit'} onClick={editCarAndSend}/>}
             <PopUp execute={sendToBase}/>
             <PopUpSucces/>
             <PopUpInput state={popUpTextState}
