@@ -1,6 +1,6 @@
 
 import {useEffect, useState} from "react"
-import Card from "../card/Card"
+import Card from "../Templates/card/Card"
 import Pagination from "../pagination/Pagination"
 import './Cards.scss'
 import {logDOM} from "@testing-library/react";
@@ -13,10 +13,9 @@ const Cards = (props) => {
 
 const {pathname} = useLocation()
 
-const {  styleClass, showBy, sortKey, cars }  = props 
+const {  styleClass, showBy, sortKey, cars, deleteCar, deleteFromHist }  = props
 
 const [currentPage, setPage] = useState(1)
-    console.log('current page', currentPage)
 sortKey&&cars.sort((a,b)=>a[sortKey] > b[sortKey] ? 1 : -1)
 
 const showCars = (page) => {
@@ -35,7 +34,7 @@ useEffect(()=>{
       <div className="cars-box">
           {showCars(currentPage)[0] ?
               showCars(currentPage).map((el, i)=>{
-                  return <Card {...el} countPassanger={el['count passenger']} key={i} class={styleClass}/>})
+                  return <Card {...el} countPassanger={el['count passenger']} key={i} class={styleClass} deleteFromHist={deleteFromHist} deleteCard={deleteCar}/>})
               :
               <p>Loading...</p>
           }

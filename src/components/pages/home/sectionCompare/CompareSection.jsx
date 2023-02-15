@@ -1,9 +1,9 @@
 import React, {useEffect, useMemo, useState} from "react"
-import Card from "../../../card/Card";
+import Card from "../../../Templates/card/Card";
 import './CompareSection.scss'
 import {Link, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
-import Button from "../../../UI elements/Button";
+import Button from "../../../UI elements/Button/Button";
 import {addDelCompare} from "../../../../store/actionCreators/actionCreate";
 
 

@@ -3,17 +3,25 @@ import InputText from '../../../inputComponents/InputText/InputText'
 import InputSelect from '../../../inputComponents/InputSelect/InputSelect'
 import TextArea from '../../../inputComponents/TextArea/TextArea'
 import './CallBackForm.scss'
-import { addCallBack, addCallBackToOwner } from '../../../../store/actionCreators/actionCreatePageElements'
 import { useSelector } from 'react-redux'
-import Button from "../../../UI elements/Button";
+import Button from "../../../UI elements/Button/Button";
 import {PopUpSucces} from "../../../OutputComponents/PopUp";
+import {addCallBack, cleanCallBackForm} from "../../../../store/actionCreators/actionCreatorCallBackForm";
+import axios from "axios";
+import {url} from "../../../../App";
 
 const CallBackForm = (props) => {
 
-    const {carId} = props
-  const callback = useSelector((state)=>state.pageElements.callBackForm)
+    const { currentOwner} = props
+  const callback = useSelector((state)=>state.callBackForm)
 
  console.log(callback);
+
+    const sendLeter = () => {
+        axios.get(url+`users/${currentOwner}`)
+            .then(resp => axios.put(url+`users/${currentOwner}`, {...resp.data, massages: [...resp.data.massages, callback]}))
+            .then(resp => cleanCallBackForm())
+    }
 
   return (
     <div className='call-back-form' >
@@ -43,7 +51,7 @@ const CallBackForm = (props) => {
 
         /> 
 
-        <Button className='call-back__button' text={'Sell My Car'} onClick={()=>{addCallBack('carId', carId); addCallBackToOwner()}}/>
+        <Button className='call-back__button' text={'Sell My Car'} onClick={sendLeter}/>
         <PopUpSucces/>
 
     </div>

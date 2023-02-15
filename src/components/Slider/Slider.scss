@@ -3,17 +3,12 @@
 $sizeview: 400px;
 
 .viewport{
-    // position: relative;
-    // top: -50px;
-    // z-index: -1;
-    // border: 5px solid white;
-    // outline: 5px solid white;
     max-width: 1600px;
     width: 100%;
     height: $sizeview;
     margin: 0 auto;
     position: relative;
-    height: 700px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -26,38 +21,17 @@ $sizeview: 400px;
     align-items: center;
     height: 100%;
     position: absolute;
-    // top: -50px;
-
-    // div:nth-child(1){
-        // background: red;
-        // background-image: ;
-    // }
-    // div:nth-child(2){
-    //     background: blue ;
-    // }
-    // div:nth-child(3){
-    //     background: green;
-    // }
-    // div:nth-child(4){
-    //     background: orange;
-    // }
     img{
         width:100%;
         height: 100%;
         object-fit: cover;
     }
-   
-    
 }
 
 .bar__item{   
-    // border: 1px solid green;
     padding-left: 50px;
     width: 100%;
     height:  100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     font-size: 40px;
     background-size: cover;
     background-position: center;
@@ -69,7 +43,6 @@ $sizeview: 400px;
         font-size: 24px;
         width: 400px;
     }
-
 }
 
 .slider__buttons{
@@ -78,7 +51,6 @@ $sizeview: 400px;
     background: none;
     position: absolute;
     bottom: 0;
-    //padding: 10px 10px;
     svg{
         transition: 0.5s;
         stroke: white;
@@ -98,7 +70,6 @@ $sizeview: 400px;
 }
 
 .slider__dots{
-    // border: 1px solid black;
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -109,9 +80,7 @@ $sizeview: 400px;
 }
 
 .slider__dot{
-
     background: #007bc796;
-    
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -123,14 +92,12 @@ $sizeview: 400px;
 }
 
 .preview{
-    //overflow-y: auto;
     margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 25px;
     .preview__item{
         transition: .5s;
-        //border: 1px solid white;
         width: 170px;
         height: 100px;
     }
@@ -142,25 +109,11 @@ $sizeview: 400px;
     }
 }
 
-
-
-
-
 @media(max-width: 1200px){
     $sizeview: calcFluidFontSize(100, 400, 500, 1200);
     .viewport{
         border: 1px solid black;
-        // width: $sizeview;
-        // height: $sizeview;
         margin: 0 auto;
-    }
-    .bar__item{   
-        // border: 1px solid green;
-        // width: $sizeview;
-        // height:  $sizeview;
-    }
-    .bar{
-
     }
 }
 

@@ -1,4 +1,4 @@
-@import '../../../styles/variables';
+@import '/src/styles/variables';
 
 .infoAccordion{
     margin: 0 auto;
@@ -31,7 +31,7 @@
         display: block;
         width: 22px;
         height: 14px;
-        background-image: url('../../../../public/icons/subarrow.svg');
+        background-image: url('../../../public/icons/subarrow.svg');
         background-repeat: no-repeat;
         background-position: center;
         transition: .5s;

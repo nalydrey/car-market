@@ -11,7 +11,7 @@ import {ReactComponent as Label} from "../../../assets/icons/service/ic_outline-
 import {ReactComponent as ServiceCar} from "../../../assets/icons/service/Vector.svg";
 import './Home.scss'
 import React from "react";
-import ServiceButton from "../../PageElements/ServiceButton/ServiceButton";
+import ServiceButton from "../../UI elements/ServiceButton/ServiceButton";
 import StatisticDescr from "../aboutAs/statisticSection/StatisticDescr";
 import dataStatisticDescr from "../../../datas/dataStatisticDescr";
 import {useNavigate} from "react-router-dom";

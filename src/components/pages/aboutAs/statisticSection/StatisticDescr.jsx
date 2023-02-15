@@ -10,9 +10,9 @@ const StatisticDescr = (props) => {
                 {title && <h2>{title}</h2>}
                 {text && <p className='aboutUs__text'>{text}</p>}
                 <div className='statistic__wrap'>
-                    {statistic.map((data)=>{
+                    {statistic.map((data, ind)=>{
                         return (
-                            <div className='statistic__item'>
+                            <div className='statistic__item' key={ind}>
                                 <p className='statistic__number'>{data.counter}</p>
                                 <span className='decor decor-top'></span>
                                 <span className='decor decor-bottom'></span>

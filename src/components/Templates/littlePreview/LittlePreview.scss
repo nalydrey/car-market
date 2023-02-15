@@ -1,0 +1,36 @@
+@import '/src/styles/variables';
+
+.little-preview{
+  cursor: pointer;
+  background: $inputBackground;
+  display: flex;
+  gap: 10px;
+  //width: 100px;
+  h4{
+    font-size: 18px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .author__foto{
+    width: 30px;
+    height: 30px;
+  }
+}
+.little-preview__foto{
+  flex-basis: 120px;
+  min-width: 120px;
+  height: 80px;
+  //border: 1px solid white;
+  img{
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.short-discr{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 3;
+}

@@ -1,7 +1,7 @@
 import './Rating.scss'
 import { useState } from 'react'
-import { url } from '../../App'
-import store from '../../store/store'
+import { url } from '../../../App'
+import store from '../../../store/store'
 import { useSelector } from 'react-redux'
 
 

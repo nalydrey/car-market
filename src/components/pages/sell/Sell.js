@@ -18,21 +18,32 @@ import {cleanForm, selectOption} from "../../../store/actionCreators/actionCreat
 import store from '../../../store/store';
 import {useLocation, useNavigate} from 'react-router-dom';
 import PopUpInput from "../../OutputComponents/PopUpInput";
-import Button from "../../UI elements/Button";
+import Button from "../../UI elements/Button/Button";
+import {useEffect} from "react";
 
 const Sell = () => {
 
 
     const carId = useLocation().state
+
+    console.log(carId)
     const carTemplate = useSelector((state)=> state.newCar)
     const pageState = useSelector((state)=>state.pageElements)
     const collect = pageState.collectObj
     console.log(collect)
     const toRegister = useNavigate()
     const toLogin = useNavigate()
-    const currentUser = pageState.currentUser
+    const currentUser = useSelector((state)=>state.currentUser)
     const popUpTextState = pageState.popUpTextInput
     const currentModels = pageState.currentModels
+    console.log(currentUser)
+    useEffect(()=>{
+        console.log('effect')
+        !carId && cleanForm()
+    },[])
+
+
+
 
     const sendToBase = () => {
         const date = new Date().toLocaleString()
@@ -54,14 +65,13 @@ const Sell = () => {
 
 
 
-
    
 
   return (
       <section className='sell'>
-        <h1>Sell</h1>
-        
+
         <div className='sell__container container'>
+        <h1>{carId ? 'Edit':'Sell'}</h1>
         {currentUser ?
         <>
             <CarDetail year={collect.year} brand={collect.brand} bodyType={collect['body type']} color={collect.color} model={currentModels}/>
@@ -71,8 +81,10 @@ const Sell = () => {
             <Features/>
             <Price/>
             <Geolocation/>
-            {!pageState.editCard &&<Button text={'Sell My Car'} onClick={()=>showHidePopUp(true)}/>}
-            {pageState.editCard && <Button text={'Edit'} onClick={editCarAndSend}/>}
+            <div className='execute-buttons'>
+                {!carId &&<Button text={'Sell My Car'} onClick={()=>showHidePopUp(true)}/>}
+                {carId && <Button text={'Edit'} onClick={editCarAndSend}/>}
+            </div>
             <PopUp execute={sendToBase}/>
             <PopUpSucces/>
             <PopUpInput state={popUpTextState}

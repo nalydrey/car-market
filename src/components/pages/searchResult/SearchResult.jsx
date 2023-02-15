@@ -16,7 +16,6 @@ import {useLocation} from "react-router-dom";
 const SearchResult = (props) => {
 
     const location = useLocation()
-    console.log(location)
     const text = () => {
         switch (location.pathname){
             case '/search_result': return 'search result'

@@ -1,0 +1,15 @@
+@import '/src/styles/variables';
+
+.tag{
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  border: 1px solid $buttonColor;
+  border-radius: 3px;
+  background: $tagBackground;
+  &--active{
+    background: $buttonColor;
+
+  }
+}

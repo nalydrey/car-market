@@ -1,0 +1,32 @@
+
+
+@mixin grid {
+  display: grid;
+  gap: 35px 25px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+}
+
+.personal__data{
+  @include grid;
+  grid-template-areas:
+    'nameSect nameSect'
+    'first last'
+    'password select';
+  h2{
+    grid-area: nameSect;
+    margin-bottom: 20px;
+  }
+}
+
+.personal__contacts{
+  @include grid;
+  grid-template-areas:
+    'nameSect nameSect'
+    'telephone email'
+    'instagram facebook';
+  h2{
+    grid-area: nameSect;
+    margin-bottom: 20px;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import './Carusel.scss'
-import Personal from "./personal/Personal";
+import Personal from "./Templates/personal/Personal";
 
 
 

@@ -27,27 +27,12 @@ const reducerAddSeller = (state=defaultState, action ) => {
     switch(action.type){
         case 'CREATE_USER': 
             switch(action.field){
-                case 'FULL_NAME': {
-                    const name = action.payload.split(' ')
-                    state.user.firstName = name[0]
-                    state.user.lastName = name[1] ? name[1] : ''
-                    return {...state}
-                }
-                case 'EMAIL': {
-                    state.contacts.email = action.payload 
-                    return {...state}
-                }
-                case 'TEL': {
-                    state.contacts.tel = action.payload 
-                    return {...state}
-                }
-                case 'PASSWORD': {
-                    state.user.password = action.payload 
-                    return {...state}
-                }
-
+                case 'FULL_NAME': return {...state, user: {...state.user, firstName: action.payload}}
+                case 'EMAIL': return {...state, contacts: {...state.contacts, email: action.payload}}
+                case 'TEL': return {...state, contacts: {...state.contacts, tel: action.payload}}
+                case 'PASSWORD': return {...state, user: {...state.user, password: action.payload}}
             }
-
+        case 'CLEAN_REGISTER_FORM': return {...defaultState}
         default: return state
     }
 }

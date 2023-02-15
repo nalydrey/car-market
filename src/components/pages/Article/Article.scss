@@ -1,6 +1,87 @@
 @import '/src/styles/variables.scss';
 
-.article__container{
-    margin-top: 100px;
-    //border: 1px solid white;
+.article{
+    .larger__container{
+    }
+    h1{
+        margin: 45px 0px;
+        font-weight: 600;
+    }
+
+
 }
+
+.article__title-foto{
+    position: relative;
+
+    width: 100%;
+    height: 480px;
+    margin-bottom: 55px;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.date__adittion{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    padding: 8px 12px;
+    background: $dateColor;
+    border-radius: 5px;
+}
+
+.article__container{
+    margin: 0 auto;
+    max-width: 715px;
+    padding-bottom: 20px;
+
+    .sub-article__foto{
+        width: 100%;
+        height: 327px;
+        margin-bottom: 55px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    h2{
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .list__art{
+        margin-bottom: 56px;
+        font-size: 24px;
+        list-style-type: disc;
+        padding-left: 30px;
+    }
+
+
+
+}
+
+.articles{
+    border-bottom: 1px solid white;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    p{
+        margin-bottom: 36px;
+        font-size: 24px;
+    }
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+
+
+

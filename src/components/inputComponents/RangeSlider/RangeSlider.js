@@ -41,7 +41,7 @@ const RangeSlider = () => {
     }
 
     const sendData = () => {
-        // createFindObj({price: [+from, +to]})
+        console.log(from, to)
         changeFindObj({price: [+from, +to]})
     }
 

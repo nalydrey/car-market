@@ -6,7 +6,7 @@ import './InputSelect.scss'
 
 const InputSelect = (props) => {
 
-    const {list=[], title='', searchPanel=false, name=title, gridName=title, execute, value, from=null, to=null, buttonClick } = props
+    const {list=[], title='',button=true, searchPanel=false, name=title, gridName=title, execute, value='', from=null, to=null, buttonClick } = props
     const [isOpen, setOpen] = useState(false)
     let fromTo = false
 
@@ -57,7 +57,7 @@ const InputSelect = (props) => {
                         return <li className='drop__list-item' data-value={i} key={i} onClick={()=>{changeValue(listItem)}}>{listItem}</li>
                     })}
                 </ul>
-                <button onClick={clickButton}>Add New</button>
+                {button && <button onClick={clickButton}>Add New</button>}
             </div>
 
         </div>

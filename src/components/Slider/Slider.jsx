@@ -1,4 +1,4 @@
-import React, { Children, useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Slider.scss'
 
 const Slider = (props) => {
@@ -25,10 +25,9 @@ const Slider = (props) => {
 
     const [slideNumber, setSlide] = useState(0)
     let style = {
-        transform: `translate(0px)`
+        transform: `translate(0px)`,
     }
 
-   
 
 
     useEffect(()=>{
@@ -41,13 +40,21 @@ const Slider = (props) => {
                  clearTimeout(timer)
              }
         }
-        const firstWidth = parseInt(getComputedStyle(viewport.current, null).width)
-        viewport.current.style.height = `${firstWidth*proportion}px`
-    
-
     }, [slideNumber])
 
+    useEffect(()=>{
+        const firstWidth = parseInt(getComputedStyle(viewport.current, null).width)
+        viewport.current.style.height = `${firstWidth*proportion}px`
+        // ref.current.style.transition = '0s'
+
+        window.addEventListener('resize', resize)
+        return () => {
+            window.removeEventListener('resize', resize)
+        }
+    },[slideNumber])
+
     if(viewport.current){
+
         const a = parseInt(getComputedStyle(viewport.current, null).width)
         ref.current.removeAttribute('style')
         ref.current.style.transform = `translate(${-a*slideNumber}px)`;
@@ -68,21 +75,26 @@ const Slider = (props) => {
         repeat&&(slideNumber>=end ?  setSlide(start) : setSlide(slideNumber+1))
     }
 
-    window.addEventListener('resize', ()=>{
+    const resize = () => {
+        const firstWidth = parseInt(getComputedStyle(viewport.current, null).width)
+        viewport.current.style.height = `${firstWidth*proportion}px`
+        console.log(slideNumber)
         const a = parseInt(getComputedStyle(viewport.current, null).width)
         ref.current.style.transform = `translate(${-a*slideNumber}px)`
-        ref.current.style.transition = 'none'
-
+        ref.current.style.transition = '0s'
         viewport.current.style.height = `${a*proportion}px`
-    })
+    }
+
+
 
   return  (
       <>
-        <div className='viewport' ref={viewport}>
+        <div className='viewport' ref={viewport} >
 
-                        <div className='slider__bar' ref={ref} style={{...style, width: `${100*children.length}%`}}>
-                            {children.map((child)=>{return child})}
-                        </div>
+            <div className='slider__bar' ref={ref} style={{...style, width: `${100*children.length}%`}}>
+                {children.map((child)=>{return child})}
+            </div>
+
              {(children.length>1 && dots) &&
                         <div className='slider__dots'>
                             {children.map(( elem, i)=>{

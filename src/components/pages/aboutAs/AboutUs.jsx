@@ -1,7 +1,7 @@
 import React from 'react';
 import fotoDesk from '../../../assets/images/pages_picture/aboutUs.jpg'
 import './AboutUs.scss'
-import ServiceButton from "../../PageElements/ServiceButton/ServiceButton";
+import ServiceButton from "../../UI elements/ServiceButton/ServiceButton";
 import {ReactComponent as CarIcon} from "../../../assets/icons/service/ion_car-sport-outline.svg";
 import {ReactComponent as Label} from "../../../assets/icons/service/ic_outline-sell.svg";
 import {ReactComponent as ServiceCar} from "../../../assets/icons/service/Vector.svg";

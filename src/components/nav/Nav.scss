@@ -18,6 +18,7 @@ header{
 }
 
 .nav__navigation{
+    //height: 100%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -25,9 +26,13 @@ header{
     .active{
         color: #007CC7;
     }
+    li{
+        position: relative;
+    }
 }
 
 .submenu{
+    cursor: pointer;
     position: relative;
     margin-right: 30px;
     &::after{
@@ -60,7 +65,12 @@ header{
     button{
         cursor: pointer;
         color: white;
-        border: none;
+        border: 1px solid white;
+        padding: 7px;
+        border-radius: 50px;
+        color: green;
+        font-size: 16px;
+        font-weight: 800;
         background: none;
         position: relative;
         &::before{
@@ -78,5 +88,23 @@ header{
     top: 0;
     left: -25px;            
 }
+
+.nav__submenu{
+    overflow: hidden;
+    transition: .5s;
+    max-height: 0px;
+    //min-width: 100px;
+    background: $backgroundAcrive;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    li{
+        padding: 8px 15px;
+    }
+    &--active{
+        max-height: 200px;
+    }
+}
+
 
 

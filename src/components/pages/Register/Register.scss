@@ -15,33 +15,11 @@ main{
     justify-content: space-between;
     gap: 70px;
   }
-  form{
+  form {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 48px;
-    input{
-      font-size: 15px;
-      width: 100%;
-    }
-    label{
-      //border: 1px solid white;
-      width: 100%;
-      position: relative;
-      span{
-      transition: .5s;
-        position: absolute;
-        top: 12px;
-        left: 15px;
-      }
-    }
-
-    input:focus+span,
-    input:valid+span
-    {
-      top: -30px;
-      left: 0px;
-    }
   }
 }
 
@@ -65,7 +43,7 @@ main{
   padding: 42px;
   width: 472px;
   height: 451px;
-  background: $mainColor;
+  background: $inputBackground;
   border-radius: 3px;
 }
 

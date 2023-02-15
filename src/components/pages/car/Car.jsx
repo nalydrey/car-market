@@ -1,19 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import Preloader from "../../preloader/Preloader";
+import Preloader from "../../UI elements/preloader/Preloader";
 import Panel from "./panel/Panel";
 import { useSelector } from "react-redux";
 import InfoDiscription from "./infoDiscription/InfoDiscription";
 import Features from "./Features/Features";
-import Seller from "./Seller/Seller";
+import Seller from "../../Templates/Seller/Seller";
 import { url } from "../../../App";
-import { addCurrentOwner } from "../../../store/actionCreators/actionCreatePageElements";
 import CallBackForm from "./CallBackForm/CallBackForm";
 import "./Car.scss";
 import Slider from "../../Slider/Slider";
 import {ReactComponent as Prev} from '../../../assets/icons/prev.svg';
 import {ReactComponent as Next} from '../../../assets/icons/next.svg';
+import axios from "axios";
+import {addCallBack} from "../../../store/actionCreators/actionCreatorCallBackForm";
 
 
 
@@ -21,21 +22,13 @@ import {ReactComponent as Next} from '../../../assets/icons/next.svg';
 const Car = () => {
   const { id } = useParams();
   const car = useSelector((state) => state.cars).find((car) => car.id === +id);
-  const owner = useSelector((state)=> state.pageElements.currentOwner)
+  const [owner, setOwner] = useState(null)
 
   useEffect(()=>{
-    fetch(url+ `users/${car.userId}`)
-    .then(req=>req.json())
-    .then(json=>{
-          console.log(json);
-            addCurrentOwner(json)
-        })
+    axios.get(url+ `users/${car.userId}`).then(resp => setOwner(resp.data))
+      addCallBack('image', car.image[0])
+
   }, [car.userId])
-
-    console.log(car.image)
-
-
-
 
   return (
     <section className="info">
@@ -67,7 +60,7 @@ const Car = () => {
                   email={owner.contacts.email}
                   foto={owner.avatar}
           />}
-          <CallBackForm carId={car.id}/>
+          <CallBackForm  currentOwner={car.userId}/>
         </div>
 
         <div className="info__right">

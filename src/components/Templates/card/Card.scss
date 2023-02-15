@@ -1,5 +1,5 @@
-@import '../../functions/functions';
-@import '/src/styles/variables';
+@import '../../../functions/functions';
+@import '../../../styles/variables';
 
 .car{
     position: relative;
@@ -180,16 +180,16 @@
 }
 
 .car__drive::before{
-    background-image: url('../../../public/icons/steering.svg');
+    background-image: url('../../../../public/icons/steering.svg');
 }
 .car__date::before{
-    background-image: url('../../../public/icons/calendar.svg');
+    background-image: url('../../../../public/icons/calendar.svg');
 }
 .car__fuel::before{
-    background-image: url('../../../public/icons/fuel.svg');
+    background-image: url('../../../../public/icons/fuel.svg');
 }
 .car__passanger::before{
-    background-image: url('../../../public/icons/people.svg');
+    background-image: url('../../../../public/icons/people.svg');
 }
 
 .car__bottom{

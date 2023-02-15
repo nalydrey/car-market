@@ -8,12 +8,9 @@ import {useNavigate} from "react-router-dom";
 const Faq = () => {
 
     const navigate = useNavigate()
-    const currentUser = useSelector(state => state.pageElements.currentUser)
+    const currentUser = useSelector(state => state.currentUser)
     const faq = useSelector(state => state.faq)
     const [active, setActive] = useState('car')
-    console.log(currentUser)
-
-    console.log(active)
 
     return (
         <>
@@ -27,16 +24,14 @@ const Faq = () => {
                             return <li onClick={()=>setActive(key)}
                                        key={key}
                                        className={`${(key===active) ? 'link--active' : ''}`}
-                            >{key}
-                            </li>
+                            >{key}</li>
                         }) }
                     </ul>
                     <ul className='faq__thems'>
                         {faq[active].map((faq)=> {
-                           return <li><InfoDescr data={{title:faq.title, text:faq.text}}
-                                                 key={faq.title}
-                                                 isAdmin={currentUser?.isAdmin}
-                                                 deleteInfo={(title)=>{deleteFaq(active, title )}}
+                           return <li key={faq.title}><InfoDescr data={{title:faq.title, text:faq.text}}
+                                                                 isAdmin={currentUser?.isAdmin}
+                                                                 deleteInfo={(title)=>{deleteFaq(active, title )}}
                            /></li>
                         }) }
 

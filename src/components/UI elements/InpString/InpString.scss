@@ -1,0 +1,66 @@
+ @import 'src/styles/variables';
+
+   @mixin sign {
+     position: absolute;
+     width: 22px;
+     height: 22px;
+     background-repeat: no-repeat;
+     background-position: center;
+     display: block;
+   }
+
+  .input-string{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 15px;
+    position: relative;
+    input {
+      background: $inputBackground;
+      padding-left: 15px;
+      width: 100%;
+    }
+    .input-title{
+      text-transform: capitalize;
+      transition: .5s;
+      position: absolute;
+      top: 11px;
+      left: 15px;
+    }
+    .signOn{
+      left: 40px
+    }
+    input:focus+.input-title,
+    .full+.input-title
+    {
+      top: -30px;
+      left: 0px;
+    }
+  }
+  .input-sign {
+    left: 10px;
+    @include sign;
+    //border: 1px solid white;
+  }
+
+
+  .input-show-high{
+    @include sign;
+    //border: 1px solid white;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .signOn{
+    input{
+      padding-left: 45px;
+    }
+    .input-title{
+      left: 40px
+    }
+  }
+  .showOn{
+    input{
+      padding-right: 45px;
+    }
+  }

@@ -1,0 +1,69 @@
+@import "/src/styles/variables";
+
+.get{
+  margin-top: 64px;
+  .larger__container{
+    padding: 64px 0;
+  }
+  h1{
+    margin-bottom: 68px;
+  }
+}
+
+.get__wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+}
+
+.get__form{
+  //border: 1px solid white;
+  flex-basis: 535px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.get__board{
+  //border: 1px solid white;
+  flex-basis: 623px;
+  background: $inputBackground;
+  padding: 0px 74px;
+  ul{
+    li{
+      padding: 45px 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      p:first-child{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 24px;
+        span:first-child{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          //border: 1px solid white;
+          width: 24px;
+          height: 24px;
+        }
+      }
+      p:nth-child(2){
+        text-align: center;
+        color: $dateColor;
+        font-size: 24px;
+      }
+    }
+    li:not(:last-child){
+      max-width: 292px;
+      border-bottom: 2px solid $colorBorder;
+    }
+  }
+
+}
+

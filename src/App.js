@@ -10,13 +10,17 @@ import Office from './components/pages/Office/Office';
 import { LoginForm, RegisterForm } from './components/pages/Register/Forms/Forms';
 import Car from './components/pages/car/Car';
 import Article from './components/pages/Article/Article';
-import { allowAccess, addCollectObj } from './store/actionCreators/actionCreatePageElements';
+import { addCollectObj } from './store/actionCreators/actionCreatePageElements';
 import axios from 'axios';
 import collectData from "./functions/collectData";
 import AboutUs from "./components/pages/aboutAs/AboutUs";
 import Faq from "./components/pages/Faq/Faq";
 import {refreshFaq} from "./store/actionCreators/actionCreateFaq";
 import {loadAllCars} from "./store/actionCreators/actionCreate";
+import {allowAccess} from "./store/actionCreators/actionCreatorCurrentUser";
+import News from "./components/pages/News/News";
+import Contacts from "./components/pages/Contacts/Contacts";
+import {useSelector} from "react-redux";
 
 // export const url = 'http://localhost:3002/'
 export const url = '/';
@@ -35,11 +39,11 @@ export const firstLoad = () => {
 
 function App() {
     // console.log('render App')
+    const currentUser = useSelector(state => state.currentUser)
 
     useEffect(()=>{
         firstLoad()
     const userId = localStorage.getItem('loginedUser')
-    
     userId && axios.get(url+`users/${userId}`).then((resp)=>allowAccess(resp.data))
     },[])
 
@@ -54,7 +58,6 @@ function App() {
                 <Route path='search_result' element={<SearchResult radio/>}/>
                 <Route path='compare' element={<Compare/>}/>
                 <Route path='sell' element={<Sell/>}/>
-                <Route path='article' element={<Article/>}/>
                 <Route path='office/*' element={<Office/>}/>
                 <Route path='car/:id' element={<Car/>}/>
                 <Route path='user' element={<Register/>}>
@@ -63,6 +66,15 @@ function App() {
                 </Route>
                 <Route path='about us' element={<AboutUs/>} />
                 <Route path='faq' element={<Faq/>} />
+                <Route path='contact' element={<Contacts userId = {currentUser?.id}
+                                                         avatar = {currentUser?.avatar}
+                                                         name = {currentUser?.user.firstName}
+                                                         email = {currentUser?.contacts.email}
+                                                         phone = {currentUser?.contacts.tel}
+                                                />}
+                />
+                <Route path='news' element={<News/>} />
+                <Route path='news/:id' element={<Article/>}/>
               </Route>
           </Routes>  
     </BrowserRouter>
@@ -70,4 +82,6 @@ function App() {
 }
 
 export default App;
+
+
 

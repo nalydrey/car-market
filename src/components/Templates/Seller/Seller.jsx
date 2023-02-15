@@ -1,7 +1,7 @@
 import React from 'react'
-import noFoto from '../../../../assets/icons/avatardefault_92824.png'
-import {ReactComponent as Call} from '../../../../assets/icons/call.svg'
-import {ReactComponent as Envelope} from '../../../../assets/icons/envelope.svg'
+import noFoto from '../../../assets/icons/avatardefault_92824.png'
+import {ReactComponent as Call} from '../../../assets/icons/call.svg'
+import {ReactComponent as Envelope} from '../../../assets/icons/envelope.svg'
 import './Seller.scss'
 
 const Seller = (props) => {

@@ -4,7 +4,7 @@ import InputText from "../../../inputComponents/InputText/InputText";
 import './AdminPanel.scss'
 import TextArea from "../../../inputComponents/TextArea/TextArea";
 import {addNewFaq} from "../../../../store/actionCreators/actionCreateFaq";
-import Button from "../../../UI elements/Button";
+import Button from "../../../UI elements/Button/Button";
 import {PopUpSucces} from "../../../OutputComponents/PopUp";
 
 const AdminPanel = () => {

@@ -1,21 +1,24 @@
-import React, {useEffect, useState} from 'react'
-import {url} from "../../../../App";
-import axios from "axios";
-import {ReactComponent as Delete} from "../../../../assets/icons/delete-133.svg";
+import React from 'react'
+import {ReactComponent as Delete} from "../../../assets/icons/delete-133.svg";
 import './MassageCard.scss'
-import {deleteMessage} from "../../../../store/actionCreators/actionCreatorCurrentUser";
+import {deleteMessage} from "../../../store/actionCreators/actionCreatorCurrentUser";
 
 const MassageCard = (props) => {
 
-    const {OwnerId, image, index, name, email, phone, comment, subject} = props
+    const {OwnerId, image, index, name, email, phone, comment, subject, avatar=''} = props
 
 
   return (
     <div className="massage">
         <div className="massage__panel">
+            {image &&
             <div className='massage__foto'>
                 <img src={image} alt=""/>
-            </div>
+            </div>}
+            {avatar &&
+            <div className='massage__avatar'>
+                <img src={avatar} alt=""/>
+            </div>}
             <ul className="massage__contacts">
                 <li>{name}</li>
                 <li>{phone}</li>
@@ -24,7 +27,7 @@ const MassageCard = (props) => {
             <button onClick={() => {deleteMessage(index, OwnerId)}}><Delete/></button>
         </div>
         <div className="massage__text">
-            <h4>{subject}</h4>
+            {subject && <h4>{subject}</h4>}
             <p>{comment}</p>
         </div>
     </div>

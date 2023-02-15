@@ -1,0 +1,46 @@
+.comment{
+  position: relative;
+display: grid;
+  gap: 10px 20px;
+  grid-template-columns: auto 1fr;
+grid-template-areas:
+  'ava name'
+  'ava text';
+  h4{
+    grid-area: name;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  p{
+    grid-area: text;
+    font-size: 14px;
+  }
+}
+
+.comment__foto{
+  grid-area: ava;
+  //border: 1px solid white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.comment__delete{
+  transition: .5s;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  //transform: translate(0%, -50%);
+  background: rgba(194, 44, 44, 0.53);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  svg{
+    width: 80%;
+    height: 80%;
+  }
+  &:hover{
+    fill: white;
+  }
+}

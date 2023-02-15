@@ -1,0 +1,33 @@
+.comment__sign{
+  width: 20px;
+  height: 20px;
+}
+
+.comment__container{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.comment__counter{
+  display: flex;
+  align-items: flex-end;
+  font-size: 14px;
+  gap: 15px;
+  p{
+    font-size: 14px;
+  }
+}
+
+.comment__control{
+  margin-top: 20px;
+  .description{
+    margin-bottom: 25px;
+  }
+}
+.comment__list{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

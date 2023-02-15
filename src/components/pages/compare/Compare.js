@@ -1,5 +1,5 @@
 import { ReactComponent as AddCar } from '../../../assets/icons/add-car.svg'
-import Card from "../../card/Card"
+import Card from "../../Templates/card/Card"
 import { Link } from "react-router-dom"
 import './Compare.scss'
 import InfoAccordion, {InfoImages} from "../../infoAccordion/InfoAccordion"

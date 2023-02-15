@@ -15,7 +15,12 @@
 
 .sell__container{
   //border: 1px solid white;
-  padding: 24px;
+  padding: 0 24px 24px 24px ;
+  h1{
+    padding: 50px 0;
+    font-size: 48px;
+    font-weight: 600;
+  }
 
 }
 
@@ -69,6 +74,14 @@
     padding: 15px;
     width: 150px;
     border-radius: 3px;
+  }
+}
+
+.execute-buttons{
+  display: flex;
+  justify-content: center;
+  button{
+    width: 500px;
   }
 }
 

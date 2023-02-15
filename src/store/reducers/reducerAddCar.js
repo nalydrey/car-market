@@ -1,9 +1,7 @@
 import axios from "axios";
 import {url} from "../../App";
-import {changeEditStatus, refreshForm, showHidePopUpSucces} from "../actionCreators/actionCreatePageElements";
-import {logDOM} from "@testing-library/react";
-import {cleanForm} from "../actionCreators/actionCreateAddCar";
-import store from "../store";
+import {changeEditStatus} from "../actionCreators/actionCreatePageElements";
+
 import {loadAllCars} from "../actionCreators/actionCreate";
 
 const defaultState =
@@ -80,45 +78,22 @@ const defaultState =
     const templateCar = JSON.parse(JSON.stringify(defaultState))
 
 const reducerAddCar = (state=defaultState, action) => {
-    // console.log(templateCar)
     switch(action.type){
 
         case 'SELECT_OPTIONS':
             {
                 switch (action.name){
-                    case 'body type': {
-                        (state.characteristics['general info']['body type'] = action.payload)
-                        return {...state}
-                    }  
-                    case 'brand': {
-
-                        (state.characteristics['general info'].brand = action.payload)
-                        return {...state, brand: action.payload }
-                    }
+                    case 'body type': return {...state, characteristics: {...state.characteristics, 'general info': {...state.characteristics['general info'], 'body type': action.payload}}}
+                    case 'brand':     return {...state, brand: action.payload,   characteristics: {...state.characteristics, 'general info': {...state.characteristics['general info'], brand: action.payload}}}
                     case 'model': return {...state, model: action.payload }
                     case 'year':  return {...state, year: action.payload }
-                    case 'color':{
-                        (state.characteristics['general info'].color = action.payload)
-                        return {...state }
-                    } 
-                    case 'fuel':{
-                        state.characteristics['engine details']['fuel type'] = action.payload
-                        return {...state, fuel: action.payload}
-                    } 
-                    case 'transmission':{
-                        state.characteristics['engine details'].transmission = action.payload
-                        return {...state}
-                    } 
-                    case 'drive': return {...state, drive: action.payload}  
+                    case 'color': return {...state, characteristics: {...state.characteristics, 'general info': {...state.characteristics['general info'], color: action.payload}}}
+                    case 'fuel':  return {...state, fuel: action.payload, characteristics: {...state.characteristics, 'engine details': {...state.characteristics['engine details'], 'fuel type': action.payload}}}
+                    case 'transmission': return {...state, characteristics: {...state.characteristics, 'engine details': {...state.characteristics['engine details'], transmission: action.payload}}}
+                    case 'drive': return {...state, drive: action.payload}
                     case 'title': return {...state, title: action.payload }
-                    case 'country': {
-                        state.location.country = action.payload
-                        return {...state}
-                    }
-                    case 'town': {
-                        state.location.town = action.payload
-                        return {...state}
-                    }
+                    case 'country': return {...state, location: {...state.location, country: action.payload}}
+                    case 'town': return {...state, location: {...state.location, town: action.payload}}
                 }
             }
 

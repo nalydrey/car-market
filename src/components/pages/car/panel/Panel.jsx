@@ -1,6 +1,6 @@
 import React from 'react'
 import './Panel.scss'
-import Rating from '../../../rating/Rating'
+import Rating from '../../../UI elements/rating/Rating'
 import {addDelCompare} from '../../../../store/actionCreators/actionCreate'
 import { useSelector } from 'react-redux'
 

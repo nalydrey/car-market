@@ -1,21 +1,21 @@
-import Rating from "../rating/Rating";
+import Rating from "../../UI elements/rating/Rating";
 import './Card.scss'
-import {addDelCompare, loadAllCars} from "../../store/actionCreators/actionCreate";
+import {addDelCompare} from "../../../store/actionCreators/actionCreate";
 import { useState } from "react";
 import { useEffect } from "react";
-import Preloader from "../preloader/Preloader";
+import Preloader from "../../UI elements/preloader/Preloader";
 import { useNavigate } from "react-router-dom";
-import noFoto from '../../assets/images/NoImage.jpg'
-import Slider from "../Slider/Slider";
-import {ReactComponent as Prev} from '../../assets/icons/prev.svg';
-import {ReactComponent as Next} from '../../assets/icons/next.svg';
-import {ReactComponent as Edit} from "../../assets/icons/edit-pen-svgrepo-com.svg";
-import {ReactComponent as Remove} from "../../assets/icons/delete-133.svg";
-import {changeEditStatus, loadAuto, refreshForm} from "../../store/actionCreators/actionCreatePageElements";
+import noFoto from '../../../assets/images/NoImage.jpg'
+import Slider from "../../Slider/Slider";
+import {ReactComponent as Prev} from '../../../assets/icons/prev.svg';
+import {ReactComponent as Next} from '../../../assets/icons/next.svg';
+import {ReactComponent as Edit} from "../../../assets/icons/edit-pen-svgrepo-com.svg";
+import {ReactComponent as Remove} from "../../../assets/icons/delete-133.svg";
+import {changeEditStatus, loadAuto, refreshForm} from "../../../store/actionCreators/actionCreatePageElements";
 import axios from "axios";
-import {firstLoad, url} from "../../App";
+import {firstLoad, url} from "../../../App";
 import {useSelector} from "react-redux";
-import {pushCarToHistory} from "../../store/actionCreators/actionCreatorCurrentUser";
+import {pushCarToHistory} from "../../../store/actionCreators/actionCreatorCurrentUser";
 
 const prev = <Prev/>
 const next = <Next/>
@@ -43,7 +43,6 @@ const Card = (props) => {
 
    const goToDiscription = () => {
         navigate(`/car/${id}`)
-       // currentUser && addToHistory()
        pushCarToHistory(id, currentUser.id)
    }
 
@@ -54,7 +53,7 @@ const Card = (props) => {
 
    const stop = (e) => {
        e.stopPropagation()
-       deleteFromHist(id)
+       deleteCard && deleteFromHist(id)
    }
 
    const editCar = (e) => {
@@ -76,7 +75,7 @@ const Card = (props) => {
 
     const deleteFromHistory = (e) =>{
         e.stopPropagation()
-        deleteFromHist(id)
+        deleteCard && deleteFromHist(id)
     }
 
   return (
@@ -88,7 +87,6 @@ const Card = (props) => {
                      {image.map((img, ind)=> {
                         return <div className="bar__item" key={ind} style={{backgroundImage: `url(${img})`}}/>
                     })}
-
                  </Slider>
                 :
                 <Preloader/>}

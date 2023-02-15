@@ -1,7 +1,7 @@
 import React from 'react';
 import './Personal.scss'
 
-import personal from "../../datas/personal";
+import personal from "../../../datas/personal";
 
 const Personal = (props) => {
 

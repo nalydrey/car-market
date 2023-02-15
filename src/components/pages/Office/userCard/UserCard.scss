@@ -1,0 +1,59 @@
+@import "/src/styles/variables";
+
+.user-card{
+  transition: .5s;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  padding: 15px;
+  border-radius: 15px;
+  background: $blockBackground;
+  max-width: 300px;
+  display: grid;
+  grid-template-areas:
+  'avatar title'
+  'avatar seller'
+  'contacts contacts';
+  &:hover{
+    border-bottom: 1px solid white;
+  }
+  button{
+    transition: 1s;
+    position: absolute;
+    background: #640808;
+    right: 10px;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    &:hover{
+      fill: white;
+    }
+  }
+}
+
+.user-card__foto{
+  grid-area: avatar;
+  width: 100px;
+  height: 100px;
+}
+
+.user-card__title{
+  height: 40px;
+  border-bottom: 1px solid white;
+  grid-area: title;
+}
+
+.user-card__organization{
+  grid-area: seller;
+}
+.user-card__contacts-list{
+  grid-area: contacts;
+  display: flex;
+  font-size: 20px;
+  gap: 10px;
+  flex-direction: column;
+  li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

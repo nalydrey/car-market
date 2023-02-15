@@ -96,8 +96,8 @@
       "fuel": "electric",
       "drive": "front",
       "count passenger": 5,
-      "rating": 3.33,
-      "totalRat": 20,
+      "rating": 4.1,
+      "totalRat": 123,
       "views": 0,
       "ribbonStatus": "",
       "compared": false,
@@ -141,7 +141,7 @@
           "Other": false
         }
       },
-      "vievs": 6
+      "vievs": 30
     },
     {
       "id": 3,
@@ -301,8 +301,8 @@
       "fuel": "gasoline",
       "drive": "front",
       "count passenger": 5,
-      "rating": 4.33,
-      "totalRat": 13,
+      "rating": 3.39,
+      "totalRat": 61,
       "views": 0,
       "ribbonStatus": "",
       "compared": false,
@@ -346,7 +346,7 @@
           "Other": false
         }
       },
-      "vievs": 3
+      "vievs": 18
     },
     {
       "id": 6,
@@ -369,8 +369,8 @@
       "fuel": "electric",
       "drive": "front",
       "count passenger": 5,
-      "rating": 6,
-      "totalRat": 6,
+      "rating": 3.45,
+      "totalRat": 76,
       "views": 0,
       "ribbonStatus": "",
       "compared": false,
@@ -414,18 +414,109 @@
           "Other": false
         }
       },
-      "vievs": 1
+      "vievs": 22
+    },
+    {
+      "id": 7,
+      "userId": 5,
+      "image": [
+        " https://drive.google.com/uc?export=view&id=1Ke-9nTKVYUuHnaGuxOo_Cs5dnY8CpbID",
+        " https://drive.google.com/uc?export=view&id=11qpuDNm9et0Khkjeil2C1AdRF8F6TwHV",
+        " https://drive.google.com/uc?export=view&id=1K_yPq2SStXldOviD7Ww8XtOKc9B2GTMW"
+      ],
+      "brand": "Toyota",
+      "model": "Prius",
+      "title": "Toyota Prius",
+      "price": 28000,
+      "oldPrice": null,
+      "date addition": "15.02.2023, 15:57:19",
+      "location": {
+        "country": "Japan",
+        "town": "Tokio"
+      },
+      "year": "2023",
+      "fuel": "hybrid",
+      "drive": "front",
+      "count passenger": 5,
+      "rating": 0,
+      "totalRat": 0,
+      "views": 0,
+      "ribbonStatus": "",
+      "compared": false,
+      "isNew": true,
+      "description": "Over the years, driving a Toyota Prius was a rolling admission that you'd be willing to sacrifice everything on the altar of maximum fuel economy. Power and performance were axed, which makes some sense. Still, no previous Prius could crack even the lowly 10-second barrier to 60 mph. The list of forsaken attributes also included attractive styling, good driver ergonomics, and the barest modicum of handling prowess. The Prius has always been a one-trick pony that lacked actual ponies.",
+      "characteristics": {
+        "general info": {
+          "brand": "Toyota",
+          "body type": "hatchback",
+          "color": "yellow"
+        },
+        "engine details": {
+          "fuel type": "hybrid",
+          "mileage": 50,
+          "transmission": "automat",
+          "engine capacity": 196,
+          "power": 196
+        },
+        "dimension": {
+          "length": 4560,
+          "width": 1780,
+          "height": 1420,
+          "cargo volume": 500
+        },
+        "features": {
+          "Power Steering": true,
+          "Heated Seats": true,
+          "USB Port": true,
+          "AC": true,
+          "Bluetooth": true,
+          "Alarm": true,
+          "Wifi": true,
+          "Cruise Control": true,
+          "Front Parking Sensor": false,
+          "Rear Parking Sensor": true,
+          "Power Window": true,
+          "Sunroof": false,
+          "Sound System": false,
+          "Memory Seat": false,
+          "Roof Rack": false,
+          "Other": false
+        }
+      }
     }
   ],
   "users": [
     {
+      "id": 2,
+      "isAdmin": false,
+      "avatar": "https://drive.google.com/uc?export=view&id=1rFzEnlXiD_2t3BvW9sn7KPwDf3FtVMnb",
+      "user": {
+        "firstName": "Andrey",
+        "lastName": "Nik",
+        "organization": "seller",
+        "password": "222"
+      },
+      "type": "",
+      "contacts": {
+        "tel": "3215476",
+        "email": "andr@andr",
+        "instagram": "",
+        "facebook": ""
+      },
+      "advertCounter": 0,
+      "viewedCars": [],
+      "addedCars": [],
+      "comments": [],
+      "massages": []
+    },
+    {
       "id": 1,
       "isAdmin": true,
-      "avatar": "https://drive.google.com/uc?export=view&id=1xbIzwGZ-I5_ZpBrB5hIU5THyHIWPG_I5",
+      "avatar": "https://drive.google.com/uc?export=view&id=1yuW0Lmeov-cc5xQRSK0XvmT-5uxG77CW",
       "user": {
         "firstName": "Alex",
         "lastName": "",
-        "organization": "seller",
+        "organization": "dealer",
         "password": "aaa"
       },
       "type": "",
@@ -442,24 +533,110 @@
       "massages": []
     },
     {
-      "id": 2,
-      "isAdmin": false,
+      "id": 3,
+      "isAdmin": true,
       "avatar": "",
       "user": {
-        "firstName": "Andrey",
+        "firstName": "Evgen",
         "lastName": "",
         "organization": "seller",
-        "password": "ccc"
+        "password": "aaa"
       },
       "type": "",
       "contacts": {
-        "tel": "3215476",
-        "email": "andr@andr",
+        "tel": "1234-54-32",
+        "email": "evgen@mail.com",
         "instagram": "",
         "facebook": ""
       },
       "advertCounter": 0,
       "viewedCars": [],
+      "addedCars": [],
+      "comments": [],
+      "massages": [
+        {
+          "userId": "",
+          "name": "",
+          "email": "",
+          "phone": "",
+          "comment": "sdfds"
+        },
+        {
+          "userId": "",
+          "name": "dsfds",
+          "email": "dsfdsf",
+          "phone": "dsfsd",
+          "comment": "sdfds"
+        },
+        {
+          "userId": 2,
+          "avatar": "https://drive.google.com/uc?export=view&id=1rFzEnlXiD_2t3BvW9sn7KPwDf3FtVMnb",
+          "name": "dsf",
+          "email": "dsf",
+          "phone": "dfsf",
+          "comment": "dsfdf"
+        },
+        {
+          "userId": 1,
+          "avatar": "https://drive.google.com/uc?export=view&id=1yuW0Lmeov-cc5xQRSK0XvmT-5uxG77CW",
+          "image": "",
+          "name": "",
+          "email": "",
+          "phone": "",
+          "comment": "fghfh",
+          "subject": ""
+        },
+        {
+          "userId": 4,
+          "avatar": "",
+          "image": "",
+          "name": "gearg",
+          "email": "gearg@gearg",
+          "phone": "111",
+          "comment": "dfgdfgdfgdfgdfd",
+          "subject": ""
+        },
+        {
+          "image": "",
+          "name": "dsf",
+          "email": "sdf",
+          "phone": "sdf",
+          "comment": "sdf",
+          "subject": ""
+        },
+        {
+          "userId": 2,
+          "avatar": "https://drive.google.com/uc?export=view&id=1rFzEnlXiD_2t3BvW9sn7KPwDf3FtVMnb",
+          "image": "",
+          "name": "Andrey",
+          "email": "andr@andr",
+          "phone": "3215476",
+          "comment": "ssfdfgdfgdfgdfg",
+          "subject": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "isAdmin": false,
+      "avatar": "https://drive.google.com/uc?export=view&id=1rFzEnlXiD_2t3BvW9sn7KPwDf3FtVMnb",
+      "user": {
+        "firstName": "Guest",
+        "lastName": "",
+        "organization": "seller",
+        "password": "qqq"
+      },
+      "type": "",
+      "contacts": {
+        "tel": "3214578",
+        "email": "guest@guest",
+        "instagram": "",
+        "facebook": ""
+      },
+      "advertCounter": 0,
+      "viewedCars": [
+        7
+      ],
       "addedCars": [],
       "comments": [],
       "massages": []
@@ -514,5 +691,375 @@
         "text": "Accumsan urna, posuere non viverra varius fringilla urna enim. Etiam congue faucibus arcu mauris risus massa nisi. Amet, imperdiet risus adipiscing est ullamcorper sit amet, vitae arcu. Quis consectetur ut urna, at sem rhoncus, scelerisque vitae. Semper amet neque enim diam. Risus sed nisl tincidunt morbi commodo ut tortor ornare integer. Arcu dolor, eget tellus, quis arcu tellus risus molestie. Felis ornare turpis ut nullam. Fames ac urna, ac felis. Vel eget dui arcu, netus ullamcorper massa massa non. Scelerisque posuere eget sit placerat sed libero non feugiat felis."
       }
     ]
-  }
+  },
+  "news": [
+    {
+      "id": 1,
+      "counterView": 5,
+      "dateAddition": "30 June 2023",
+      "tags": [
+        "autopilot",
+        "car"
+      ],
+      "comments": [
+        {
+          "id": "1",
+          "avatar": "https://drive.google.com/uc?export=view&id=1-CGtUvd46Kug6CdBGmKumgjyLLQRnYvr",
+          "user": "Ryan Carder",
+          "text": "Orci faucibus sit porttitor amet neque. Luctus ut maecenas urna pretium tristique aliquam, ante. Ut scelerisque mauris consequat, ornare orci enim. Dolor velit, in nisl fermentum vel, tempor vitae neque, libero. Ac quam aliquam vel lectus. Quam dignissim vehicula gravida aliquam aliquam gravida tempus posuere. Volutpat facilisi nunc, quis enim urna est. Suspendisse amet, in blandit nec id mattis in consequat. Mattis enim aliquet pellentesque vel, vitae id. Est et fermentum at tempus eget nibh ultrices."
+        }
+      ],
+      "author": {
+        "firstName": "Carla",
+        "lastName": "Baptista",
+        "avatar": "https://drive.google.com/uc?export=view&id=1pB-7XzqsG0isx86m0Sh5r3WQkiHgJO0X",
+        "special": "car expert",
+        "contacts": {
+          "tel": "240-865-3730",
+          "email": "carla.b@mail.com"
+        }
+      },
+      "title": "Lorem Ipsum",
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget praesent gravida sed rutrum suspendisse eu. Lectus fermentum in gravida nibh in vel. Accumsan gravida nec ultricies risus eget arcu turpis sit lorem. ",
+      "image": "https://drive.google.com/uc?export=view&id=1K5Vf_lEjhhUwt0k1pLJVyTtuwr_5yLWs",
+      "text": [
+        "Ullamcorper pellentesque diam eget volutpat. Ut senectus tincidunt elit sit vitae quam id. Quisque sed at elit sit viverra rutrum id id odio. Consequat, convallis iaculis dictum urna lectus fames arcu, at. Pretium venenatis pharetra, risus, sagittis rhoncus viverra nunc suspendisse facilisis. ",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget praesent gravida sed rutrum suspendisse eu. Lectus fermentum in gravida nibh in vel. Accumsan gravida nec ultricies risus eget arcu turpis sit lorem. "
+      ],
+      "subArt": [
+        {
+          "title": "Why?",
+          "image": "https://drive.google.com/uc?export=view&id=1yhMdfsF7u5bnQff3JOrLCkrg0YXkBdA6",
+          "text": "",
+          "list": [
+            "Leo amet, posuere nibh nam nulla vestibulum sagittis mauris.",
+            "Elementum lacus, et sed praesent lectus nisi diam pulvinar eget.",
+            "Vulputate nibh molestie cras dapibus.",
+            "Blandit venenatis, commodo magnis dictumst ut consequat, etiam sed."
+          ]
+        },
+        {
+          "title": "How?",
+          "image": "",
+          "text": "",
+          "list": [
+            "Leo amet, posuere nibh nam nulla vestibulum sagittis mauris.",
+            "Elementum lacus, et sed praesent lectus nisi diam pulvinar eget.",
+            "Vulputate nibh molestie cras dapibus.",
+            "Blandit venenatis, commodo magnis dictumst ut consequat, etiam sed."
+          ]
+        },
+        {
+          "title": "Finishing",
+          "image": "",
+          "text": "Leo amet, posuere nibh nam nulla vestibulum sagittis mauris. Elementum lacus, et sed praesent lectus nisi diam pulvinar eget. Vulputate nibh molestie cras dapibus. Blandit venenatis, commodo magnis dictumst ut consequat, etiam sed. Scelerisque non diam ut aliquet placerat nibh. Porta sed turpis parturient eu arcu enim facilisis. Fermentum, blandit mollis dictumst volutpat. Risus odio enim sed a id risus, natoque in.",
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "counterView": 6,
+      "dateAddition": "12 Feb 2023",
+      "tags": [
+        "autopilot",
+        "car",
+        "electric",
+        "picup"
+      ],
+      "comments": [
+        {
+          "id": "1",
+          "avatar": "https://drive.google.com/uc?export=view&id=1-CGtUvd46Kug6CdBGmKumgjyLLQRnYvr",
+          "user": "Ryan Carder",
+          "text": "Orci faucibus sit porttitor amet neque. Luctus ut maecenas urna pretium tristique aliquam, ante. Ut scelerisque mauris consequat, ornare orci enim. Dolor velit, in nisl fermentum vel, tempor vitae neque, libero. Ac quam aliquam vel lectus. Quam dignissim vehicula gravida aliquam aliquam gravida tempus posuere. Volutpat facilisi nunc, quis enim urna est. Suspendisse amet, in blandit nec id mattis in consequat. Mattis enim aliquet pellentesque vel, vitae id. Est et fermentum at tempus eget nibh ultrices."
+        }
+      ],
+      "author": {
+        "firstName": "Joey",
+        "lastName": "Capparella",
+        "avatar": "https://drive.google.com/uc?export=view&id=1BYwcZU9EUxI_BOMzd96qSWpNw1ChjHlw",
+        "special": "car expert",
+        "contacts": {
+          "tel": "240-865-3730",
+          "email": "joey.c@mail.com"
+        }
+      },
+      "title": "2024 Ram 1500 REV Revealed in Production Form",
+      "intro": "The electric version of Ram's 1500 pickup is being shown during the Super Bowl, and you can pre-order the truck before production starts next year.",
+      "image": "https://drive.google.com/uc?export=view&id=12U-X0GTvseffcBz4FvVNtEMDd6Rgnabr",
+      "text": [
+        "The production version of the Ram 1500 REV electric pickup is here, and it looks quite different from Ram's dramatic EV concept truck first shown last month. Much like the Ford F-150 Lightning, the electric Ram's styling is much like the gas truck's, only with futuristic headlights and taillights and unique wheels.",
+        "Other than its more modern-looking front and rear ends, the 1500 REV's shape is nearly identical to any other Ram pickup's. This version has a crew-cab body and a short bed, although Ram hasn't yet said if it will offer any other configurations. Underneath the similar body lies a different platform, as the REV rides on a new architecture called STLA Frame, which is purpose-built for body-on-frame EV models. Based on the conventional look of this production truck, we don't expect it to incorporate many of the concept version's more outlandish features, such as its third-row jump seats, but there is a frunk."
+      ],
+      "subArt": [
+        {
+          "title": "",
+          "image": "https://drive.google.com/uc?export=view&id=1BnYJqyVH5p9_0UDELG-LKhkOb9TU0pYY",
+          "text": "",
+          "list": [
+            "Ram has revealed the production version of the Ram 1500 REV electric pickup.",
+            "It looks similar to the gas-powered Ram, unlike the dramatic Ram electric pickup concept shown last month.",
+            "The Ram 1500 REV will be shown during a Super Bowl ad tonight and production starts next year."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "counterView": 5,
+      "dateAddition": "10 Feb 2023",
+      "tags": [
+        "autopilot",
+        "car",
+        "electric",
+        "premium"
+      ],
+      "comments": [
+        {
+          "id": "1",
+          "avatar": "https://drive.google.com/uc?export=view&id=1-CGtUvd46Kug6CdBGmKumgjyLLQRnYvr",
+          "user": "Ryan Carder",
+          "text": "Orci faucibus sit porttitor amet neque. Luctus ut maecenas urna pretium tristique aliquam, ante. Ut scelerisque mauris consequat, ornare orci enim. Dolor velit, in nisl fermentum vel, tempor vitae neque, libero. Ac quam aliquam vel lectus. Quam dignissim vehicula gravida aliquam aliquam gravida tempus posuere. Volutpat facilisi nunc, quis enim urna est. Suspendisse amet, in blandit nec id mattis in consequat. Mattis enim aliquet pellentesque vel, vitae id. Est et fermentum at tempus eget nibh ultrices."
+        },
+        {
+          "userId": 1,
+          "user": "Alex ",
+          "avatar": "https://drive.google.com/uc?export=view&id=1yuW0Lmeov-cc5xQRSK0XvmT-5uxG77CW",
+          "text": "Sixty-two miles of range is rather respectable.  There is one of these (nonhybrid, obviously) in the neighborhood with a blacked-out B-pillar, and it's amazing how much better it looks.",
+          "id": "945a074f-76cc-4507-8208-71e8cd4ed2bc"
+        }
+      ],
+      "author": {
+        "firstName": "Brendan ",
+        "lastName": "Mcller",
+        "avatar": "",
+        "special": "car expert",
+        "contacts": {
+          "tel": "240-865-3730",
+          "email": "brendan.mc@mail.com"
+        }
+      },
+      "title": "Mercedes-Maybach Launches a Plug-In S580e",
+      "intro": "This gorgeous, ultra-luxurious version of the S-class is the Maybach division's first hybrid, and it's only going to a few lucky people in China and Europe.",
+      "image": "https://drive.google.com/uc?export=view&id=1tKCbq8KIppk8j-8gYmWAqV20d0JBp-zr",
+      "text": [
+        "Seven years after showing off the all-electric Mercedes-Maybach Vision 6 at the 2016 Pebble Beach Concours d'Elegance, the ultra-luxury division is only now launching its first plug-in-hybrid production model. That model, the just-introduced S580e, will be rolled out in a conservative fashion, first made available in China, then Thailand, then Europe. Electrification is coming to Mercedes-Maybach, but with the slow deliberation of one of the World War I dirigibles that the company's engines once powered.",
+        "Should you wish to splatter rear-seat occupants with caviar and champagne, this new Mercedes-Maybach will sprint to highway speeds with most of the same vigor as its V-8– and V-12–powered cousins. But that sort of disrespectful behavior will get you in trouble, or, given the power wielded by the sort of people who can afford a Maybach, perhaps fired.",
+        "No, a Mercedes-Maybach is for serene, airship-like gliding, which the S580e promises to do par excellence. For one thing, with all due respect to rapper Rick Ross, true Maybach music is measured in near silence. A V-8–powered Maybach murmurs at just 64 decibels of in-cabin noise at 70 mph. Capable of running purely on electrons, the S580e will be even more discreet.",
+        "On a full charge, Mercedes says the Maybach S580e will run to a top speed of just under 87 mph on battery power and have a maximum range of 62 miles (per the optimistic global WLTP standard, at least). Versus a normal S-class, the Maybach variant is some seven inches longer for greater rear-seat room and can be optioned with all sorts of opulent goodies, including a rear-seat refrigerator and branded champagne glasses."
+      ],
+      "subArt": [
+        {
+          "title": "",
+          "image": "https://drive.google.com/uc?export=view&id=1QGMgrxFqwPYjvOdzQV2hUPku77Ou-uoM",
+          "text": "",
+          "list": [
+            "Powered by a hybridized inline-six, this latest Mercedes is the first Maybach-badged car that can be plugged in.",
+            "This Maybach is essentially a more luxurious version of the Mercedes S-Class, and it builds on the S580e's well-tuned powertrain with added length and luxury.",
+            "So far this car is only earmarked for Asia and Europe, and we're not sure it will reach the U.S."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "counterView": 6,
+      "dateAddition": "10 Feb 2023",
+      "tags": [
+        "SUV",
+        "car"
+      ],
+      "comments": [],
+      "author": {
+        "firstName": "Austin",
+        "lastName": "Irwin",
+        "avatar": "",
+        "special": "car expert",
+        "contacts": {
+          "tel": "132-541-5278",
+          "email": "austin.i@mail.com"
+        }
+      },
+      "title": "2024 Chevrolet Trax",
+      "intro": "This gorgeous, ultra-luxurious version of the S-class is the Maybach division's first hybrid, and it's only going to a few lucky people in China and Europe.",
+      "image": "https://drive.google.com/uc?export=view&id=1yChd4_vVs5GdDoAJUZKoOQJOXGEFV9V1",
+      "text": [
+        "The Chevy Trax has until now been known for its snack-size proportions and affordable starting price. Just as quick as Chevy ended its production run, the Trax returns as an all-new model with a dazzling redesign, more space, and enhanced safety features. Every Trax is front-wheel driven and powered by a 137-hp turbocharged three-cylinder engine and six-speed automatic transmission. It borrows that powertrain from the smaller Trailblazer; its style inspiration comes from the mid-size Blazer. The new Trax will continue to be built in GM’s South Korea plant, and its low starting price should make it the third-cheapest crossover on the market, behind the subcompact Kia Soul and Hyundai Venue. The Trax is scheduled to arrive in the spring of 2023."
+      ],
+      "subArt": [
+        {
+          "title": "What's New for 2024",
+          "image": "https://drive.google.com/uc?export=view&id=1QdF1Pepg6le7neaNjXYzyTNl-s0Lc642",
+          "text": "After a brief hiatus, the Chevy Trax is scheduled to reappear sometime in spring, 2023 as a thicker crossover with more standard features than before. New inside and out, the Trax has a longer wheelbase with more rear legroom and increased cargo capacity. The Trax is now offered in five trim levels rather than just two. Chevy uses the 137-hp turbocharged three-cylinder from the Trailblazer this time around, giving the Trax 18 fewer horsepower than the previous model—a significant reduction when you have only 155 ponies to start with.",
+          "list": []
+        },
+        {
+          "title": "Engine, Transmission, and Performance",
+          "image": "https://drive.google.com/uc?export=view&id=1QdF1Pepg6le7neaNjXYzyTNl-s0Lc642",
+          "text": "Every Chevrolet Trax is powered by a 137-hp 1.2-liter turbocharged three-cylinder engine and six-speed automatic transmission. It’s the same powertrain under the hood of the Chevy Trailblazer. This is the only powertrain, and it’s front-wheel drive only. While the Trax is somewhat larger in size than the Trailblazer, the last Trailblazer we tested reached 60 mph in a patience-demanding 9.4 seconds, but it was all-wheel drive. We expect the Trax’s performance to be about the same when we eventually test it.",
+          "list": []
+        },
+        {
+          "title": "Interior, Comfort, and Cargo",
+          "image": "https://drive.google.com/uc?export=view&id=1p_bzBymulHScc2WDGgkxKhuHqoT_81bv",
+          "text": "The new Chevy Trax has a completely redesigned interior. Its driver-facing infotainment screen and climate controls are neatly placed, and the rest of the interior is made up from the unexceptional materials expected in this affordable segment. The new Trax has a longer wheelbase than before, which has resulted in about three inches of additional rear legroom and more cargo space. While tech luxuries such as remote start, heated front seats and steering wheel, and a sunroof are trim-dependent, these features help liven up an otherwise corporate interior.",
+          "list": []
+        },
+        {
+          "title": "Safety and Driver-Assistance Features",
+          "image": "",
+          "text": "",
+          "list": [
+            "Standard automated emergency braking with pedestrian detection",
+            "Standard lane-departure warning and lane-keeping assist",
+            "Available adaptive cruise control"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "counterView": 1,
+      "dateAddition": "10 Feb 2023",
+      "tags": [
+        "car",
+        "premium",
+        "sport"
+      ],
+      "comments": [],
+      "author": {
+        "firstName": "Georg",
+        "lastName": "Kacher",
+        "avatar": "https://drive.google.com/uc?export=view&id=1WpI83-Ng1bp1cyggrSsa6NeJB3HU5b7D",
+        "special": "car expert",
+        "contacts": {
+          "tel": "412-214-9125",
+          "email": "georg.k@mail.com"
+        }
+      },
+      "title": "Aston Martin and Lucid Is an Odd Couple Pairing That Just Might Work",
+      "intro": "As the old-world British automaker seeks a new partner, the bleeding-edge U.S. EV maker is a top contender.",
+      "image": "https://drive.google.com/uc?export=view&id=1RtUE9KDcmKOpgLJRSNrrzMQZdSiGeKf5",
+      "text": [
+        "Aston Martin's friends-with-benefits relationship with AMG is coming undone. Former AMG chief Tobias Moers was pushed out as Aston CEO last year, and the makeshift R&D satellite he set up around the corner from AMG in Affalterbach was shuttered before it could even begin operation. The British brand still uses AMG engines and Benz's previous-gen infotainment systems. And Mercedes will honor all contracts and provide Aston with know-how and parts until the last of Aston's current gas-powered models bites the dust in 2026 or 2027.",
+        "However, according to several sources, Aston's planned all-new EV lineup, which was to see replacements for Vantage, DB11, DBS, and DBX in the 2026-2029 timeframe, will no longer use the Mercedes AMG 59X matrix. Quips a German insider: \"AMG and Pagani—that's true friendship. AMG and Aston is merely a business case with a fixed expiration date.\"",
+        "While it is possible for Aston to extend the life cycle of its current portfolio, the marque is increasingly desperate for pace-setting fresh metal. Topping the list is a striking all-new EV coupe/convertible aimed squarely at the 2026 Ferrari F8 Tributo/Roma replacement. Executive chairman Lawrence Stroll, the Canadian billionaire who led a consortium to take a controlling stake in Aston Martin in 2020, slotted in former Ferrari CEO Amedeo Felisa to replace Moers. The chief sales and marketing manager Marco Matteacci, the CTO Roberto Fedeli, and other Italian high-flyers have been recruited from the deep Ferrari/Lamborghini/Maserati talent pool, but it's increasingly clear that talent isn't enough. Aston needs a strategic partner."
+      ],
+      "subArt": [
+        {
+          "title": "Geely Getting Interested?",
+          "image": "https://drive.google.com/uc?export=view&id=16L0NPxFsOjBdT1I7fvvBDga9uV9Ds4_m",
+          "text": "After Stroll's group, and Mercedes-Benz, the next biggest shareholder in Aston Martin is Geely's Li Shifu. The acquisitive Geely chief is reportedly interested in adding Aston Martin to his mixed bag of brands, which includes Volvo, Polestar, and Lotus. The Anglophile Shifu is a true Aston aficionado who allegedly developed a habit of giving his daughter a bespoke English sports car as a birthday present. To obtain control of Aston Martin, the Chinese tycoon could either take advantage of the British concern's modest market cap of $1.2 billion and engineer a straightforward buyout or attempt a friendly takeover with potentially significant two-way synergy effects for Aston, Lotus, and potentially some of his Chinese brands.",
+          "list": []
+        },
+        {
+          "title": "Lucid Could Be a Win-Win",
+          "image": "https://drive.google.com/uc?export=view&id=14QQl5aXogJD4nrCrqm2-CvhfBZAmt2o2",
+          "text": "So far, though, Stroll has ignored Geely's courtship. Instead, Stroll has started flirting with the Saudi Arabian government fund PIF. The Saudis are in the position to offer fresh money as well as a tech partnership with Lucid Motors, in which they own a 60.5 percent controlling interest. Stroll has also recently started talking again directly to Lucid's Peter Rawlinson and Eric Bach. Why Lucid? Because cooperating with the U.S. EV startup may well lead to a win-win scenario. The original idea conceived in late 2021 was for Lucid to cover vehicles up to $200,000, while Aston would cater to the $225,000-plus clientele including the supercar/hypercar segment. At the same time, the Americans would terminate their own patchy and underfinanced distribution scheme and join forces with the 134 established Aston dealers.",
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "counterView": 3,
+      "dateAddition": "10 Feb 2023",
+      "tags": [
+        "car",
+        "premium",
+        "sport",
+        "SUV",
+        "electric"
+      ],
+      "comments": [],
+      "author": {
+        "firstName": "Eric",
+        "lastName": "Stafford",
+        "avatar": "",
+        "special": "car expert",
+        "contacts": {
+          "tel": "315-9173-3217",
+          "email": "eric.st@mail.com"
+        }
+      },
+      "title": "2023 Audi e-tron / e-tron Sportback",
+      "intro": "The most charming element of the Audi e-tron and the sleeker e-tron Sportback is that it’s not visually obvious that these luxury SUVs are fully electric.",
+      "image": "https://drive.google.com/uc?export=view&id=17x_hszKx_wR39b7TDz6vNBtHLUur272A",
+      "text": [
+        "The most charming element of the Audi e-tron and the sleeker e-tron Sportback is that it’s not visually obvious that these luxury SUVs are fully electric. Both models share an all-wheel-drive powertrain that generates 355 horsepower with an EPA-estimated range of as much as 222 miles (or 218 miles for e-tron Sportback). In Sport mode, the e-tron can even produce as much as 402 horsepower, but only for a moment. It’s styled like typical SUVs, with stylish wheels, LED head- and taillights, and unlike the Tesla Model X or Ford Mustang Mach-E, the e-tron wears a traditional grille on its front bumper. The e-tron’s 150-kW fast-charger can recharge the battery up to 80 percent in about 30 minutes, and adapters, cables, or small groceries can all be conveniently stored in the frunk. For the e-tron, familiarity and comfort take priority over maximum driving range, producing an experience that’s more luxurious than flamboyant."
+      ],
+      "subArt": [
+        {
+          "title": "What's New for 2023?",
+          "image": "https://drive.google.com/uc?export=view&id=12GTcV9cyZXwLYTH_3sYxIVl1tsbetOFW",
+          "text": "Audi makes mild changes to e-tron and e-tron Sportback trims for 2023. Black headliner is now standard on base Sportback SUVs. For e-tron Sportback Prestige trims, new standard equipment includes 22-inch five-spoke wheels, orange front and rear brake calipers, rear side airbags, Audi’s Matrix-design headlights, and the Black Optic exterior package. Both e-tron S and e-tron Sportback S get carbon square inlays and the LED interior lighting package as standard, while Prestige trim levels of those SUVs now get Audi’s Matrix-design headlights.",
+          "list": []
+        },
+        {
+          "title": "EV Motor, Power, and Performance",
+          "image": "https://drive.google.com/uc?export=view&id=1pk5HcS3TD2aO5_x0VBDIq3R0a4HUDHGA",
+          "text": "Beneath the e-tron's heavily creased bodywork are two electric motors, one located at the front axle and the other at the rear. Together they provide electronic all-wheel drive, but the rear motor does most of the work. In regular driving situations, they make a combined 355 horsepower and 414 pound-feet of torque. However, putting the transmission in Sport mode briefly unlocks 402 ponies and 490 pound-feet. Our driving impressions revealed that the e-tron was swift and composed. Its snappy acceleration is typical of electric vehicles, and the smooth and quiet ride quality confirmed its luxury bona fides. Its stopping system expertly blended its traditional brakes with the obligatory regenerative braking system. However, we were disappointed that its regen wasn't aggressive enough to enable one-pedal driving during our test of the Sportback model. Still, the e-tron demonstrates traditional SUV characteristics with the ability to tow up to 4000 pounds. The more powerful e-tron S and e-tron Sportback S boosts output to 496 horsepower and 718 pound-feet of torque. That's possible via its triple motors, and while we haven't tested it yet, Audi estimates it can arrive at 60 mph a full second sooner than non-S e-trons.",
+          "list": []
+        },
+        {
+          "title": "GRange, Charging, and Battery Life",
+          "image": "https://drive.google.com/uc?export=view&id=1uTYVDB4E2Zl29iRyFN4h5JQ_baxzEoqi",
+          "text": "The regular e-tron has an EPA-estimated driving range of 222 miles, and the Sportback version is rated at 218 miles. However, both variants still trail rivals such as the I-Pace (234 miles) and the Model X Long Range (up to 371 miles). The e-tron S 496-hp performance model gets an EPA-estimated 181 miles of range, while the e-tron S sportback eeks out 185 on a single charge. Every e-tron features an impressive 150-kW fast charger that allows it to replenish 80 percent of its battery in about 30 minutes. By comparison, the Jaguar EV has a 100-kW DC charger that takes longer to recharge its battery. Those using a more conventional 240-volt outlet will be able to fully charge the e-tron in about nine hours.",
+          "list": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "counterView": 8,
+      "dateAddition": "10 Feb 2023",
+      "tags": [
+        "car",
+        "electric",
+        "hatchback"
+      ],
+      "comments": [],
+      "author": {
+        "firstName": "Jack",
+        "lastName": "Fitzerald",
+        "avatar": "https://drive.google.com/uc?export=view&id=1gBGqFIPvykS_lnJJBC_j3NX89EvYPlwp",
+        "special": "car expert",
+        "contacts": {
+          "tel": "213-7538-4383",
+          "email": "jack.f@mail.com"
+        }
+      },
+      "title": "Hyundai Evolve+ EV",
+      "intro": "The all-in-one subscription for the Ioniq 5 includes insurance, maintenance, and of course an EV, and for the Kona EV the plan is even cheaper.",
+      "image": "https://drive.google.com/uc?export=view&id=1AbbsGeoXxj7y_-BvHt4Uluh5sLE8zubE",
+      "text": [
+        "Hyundai is jumping into the vehicle-by-subscription game, with the announcement of its new Evolve+ EV service. At launch the service is pretty limited in scope. The Kona Electric and Ioniq 5 are the only vehicles available to subscribers. The Kona starts at $699 per month, while the Ioniq costs $899 per month. Hyundai says Evolve+ is better than vehicle subscriptions offered by other manufacturers because subscribers can cancel at any time during the service, and there are no commitments beyond month-to-month payments."
+      ],
+      "subArt": [
+        {
+          "title": "",
+          "image": "",
+          "text": "",
+          "list": [
+            "Hyundai has launched a one-price app-based subscription service called Evolve+ EV, which includes insurance, roadside assistance, and maintenance.",
+            "At launch, the available vehicle choices are the Kona Electric and the Ioniq 5, and the service is only available in seven cities across six states.",
+            "Subscriptions for the Kona Electric start at $699 per month, with subscriptions for the Ioniq 5 starting at $899 per month."
+          ]
+        },
+        {
+          "title": "There's an App for That",
+          "image": "",
+          "text": "Just like everything else these days, there's an app for the service. Subscribers can go in the app, find a car, and pay online. No pesky human interactions needed until you pick up and drop off the car at your local dealer. In order to be eligible for Evolve+, drivers need to be at least 25 years old, have at least three years of clean driving, and hold a credit score of 650 or higher.",
+          "list": []
+        },
+        {
+          "title": "",
+          "image": "",
+          "text": "",
+          "list": []
+        }
+      ]
+    }
+  ]
 }

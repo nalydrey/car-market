@@ -46,6 +46,7 @@ a {
   margin: 0 auto;
 }
 
+
 .larger__container{
   max-width: 1290px;
   padding: 0 15px;
@@ -72,11 +73,15 @@ button{
   border-radius: 3px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 input[type='text'],
 input[type='email'],
 input[type='password'],
-input[type='tel']
+input[type='tel'],
+input[type='number']
 {
   padding: 15px;
   border-radius: 3px;
@@ -111,5 +116,14 @@ input[type='tel']
 
 .header__wrap h1{
   text-transform: capitalize;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 

@@ -1,4 +1,20 @@
+@import '/src/styles/variables.scss';
+
 main{
     flex-grow: 1;
     
+}
+
+.toTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $buttonColor;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
 }

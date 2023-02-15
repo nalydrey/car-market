@@ -3,10 +3,13 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { url } from '../../../../App'
 import { useNavigate } from 'react-router-dom'
-import { createUser } from '../../../../store/actionCreators/actionCreateAddSellers'
+import {cleanRegisterForm, createUser} from '../../../../store/actionCreators/actionCreateAddSellers'
 import { addUserId } from '../../../../store/actionCreators/actionCreateAddCar'
 import { PopUpFailed } from '../../../OutputComponents/PopUp'
-import { showHidePopUpFailed, allowAccess } from '../../../../store/actionCreators/actionCreatePageElements'
+import { showHidePopUpFailed} from '../../../../store/actionCreators/actionCreatePageElements'
+import {allowAccess} from "../../../../store/actionCreators/actionCreatorCurrentUser";
+import InpString from "../../../UI elements/InpString/InpString";
+import axios from "axios";
 
 
 
@@ -15,34 +18,43 @@ export const RegisterForm = () => {
 const user = useSelector((state)=>state.newUser)
 const addUser = (e) => {
     e.preventDefault()
-    fetch(url+'users', {
-        method: 'POST',
-        body: JSON.stringify(user),
-        headers: {'content-type': 'application/json;charset=UTF-8'}
-    })
-    e.target.reset()
-} 
+    axios.post(url+'users', user).then(resp => cleanRegisterForm())
+}
 
   return (
      <form action="" onSubmit={addUser}>
-        <label htmlFor="">
-            <input type="text" required onChange={(e)=>createUser('FULL_NAME', e.target.value)}/>
-            <span>Full Name</span>
-        </label>
-        <label htmlFor="">
-            <input type="email" required onChange={(e)=>createUser('EMAIL', e.target.value)}/>
-            <span>Email</span>
-        </label>
-        <label htmlFor="">
-            <input type="tel" required onChange={(e)=>createUser('TEL', e.target.value)}/>
-            <span>Phone Number</span>
-        </label>
-        <label htmlFor="">
-            <input type="password" required onChange={(e)=>createUser('PASSWORD', e.target.value)}/>
-            <span>Password</span>
-        </label>
+         <InpString name={'Name'}
+                    type={'text'}
+                    placeholder={'Name'}
+                    value={user.user.firstName}
+                    setValue={(text)=>createUser('FULL_NAME', text)}
+                    required
+         />
+         <InpString name={'Email'}
+                    type={'email'}
+                    placeholder={'email@mail.com'}
+                    value={user.contacts.email}
+                    setValue={(text)=>createUser('EMAIL', text)}
+                    required
+         />
+         <InpString name={'Phone number'}
+                    type={'number'}
+                    value={user.contacts.tel}
+                    placeholder={'000-000-000'}
+                    setValue={(text)=>createUser('TEL', text)}
+                    required
+         />
+         <InpString name={'password'}
+                    type={'password'}
+                    placeholder={'31aawFRQ'}
+                    value={user.user.password}
+                    setValue={(text)=>createUser('PASSWORD', text)}
+                    required
+         />
+
+
         <input className='submit__button' type="submit" value='Create My Account' />
-    </form>
+     </form>
   )
 }
 
@@ -57,12 +69,10 @@ export const LoginForm = () => {
         console.log(email + '   ' + password);
         e.preventDefault()
         
-        fetch(url+`users?user.password=${password}&user.email=${email}`)
+        fetch(url+`users?contacts.email=${email}&user.password=${password}`)
             .then((req)=>req.json())
             .then((json)=>{
-                console.log(json.length);
                 if(!json.length){
-                    console.log('!!!');
                    showHidePopUpFailed(true)
                 }
                 else{
@@ -78,15 +88,19 @@ export const LoginForm = () => {
 
   return (
     <>
-        <form action="" onSubmit={checkUser}>       
-            <label htmlFor="">
-                <input type="email" required onChange={(e)=>{setEmail(e.target.value)}}/>
-            <span>Email</span>
-            </label>        
-            <label htmlFor="">
-                <input type="password" required onChange={(e)=>setPassword(e.target.value)}/>
-            <span>Password</span>
-            </label>
+        <form action="" onSubmit={checkUser}>
+            <InpString name={'email'}
+                       type={'email'}
+                       value={email}
+                       setValue={(text)=>setEmail(text)}
+                       required
+            />
+            <InpString name={'passwors'}
+                       type={'password'}
+                       value={password}
+                       setValue={(text)=>setPassword(text)}
+                       required
+            />
             <input className='submit__button' type="submit" value='Login' />
         </form>
         <PopUpFailed/>
