@@ -9,21 +9,23 @@ import noFoto from '../../assets/images/NoImage.jpg'
 import Slider from "../Slider/Slider";
 import {ReactComponent as Prev} from '../../assets/icons/prev.svg';
 import {ReactComponent as Next} from '../../assets/icons/next.svg';
+import {ReactComponent as Edit} from "../../assets/icons/edit-pen-svgrepo-com.svg";
+import {ReactComponent as Remove} from "../../assets/icons/delete-133.svg";
 import {changeEditStatus, loadAuto, refreshForm} from "../../store/actionCreators/actionCreatePageElements";
 import axios from "axios";
 import {firstLoad, url} from "../../App";
 import {useSelector} from "react-redux";
+import {pushCarToHistory} from "../../store/actionCreators/actionCreatorCurrentUser";
 
 const prev = <Prev/>
 const next = <Next/>
 const Card = (props) => {
     // console.log('render Card');
-    console.log(props)
-    const { compared, id, userId, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew } = props
+    // console.log(props)
+    const { compared, id, userId, year, drive, fuel, countPassanger, vievs, ribbonStatus, title, price, location, isNew, deleteCard=null, deleteFromHist=null } = props
     let { image=[] } = props
 
-    const currentUser = useSelector(state => state.pageElements.currentUser)
-    console.log(currentUser)
+    const currentUser = useSelector(state => state.currentUser)
     !image.length && (image = [noFoto])
 
    const [foto, setFoto] = useState(false)
@@ -41,6 +43,8 @@ const Card = (props) => {
 
    const goToDiscription = () => {
         navigate(`/car/${id}`)
+       // currentUser && addToHistory()
+       pushCarToHistory(id, currentUser.id)
    }
 
    const addToCompare = (e) => {
@@ -50,6 +54,7 @@ const Card = (props) => {
 
    const stop = (e) => {
        e.stopPropagation()
+       deleteFromHist(id)
    }
 
    const editCar = (e) => {
@@ -62,9 +67,16 @@ const Card = (props) => {
 
     const deleteCar = (e) =>{
         e.stopPropagation()
-        // changeEditStatus(true)
-        // loadAuto(id)
-        axios.delete(url+`cars/${id}`).then((resp)=> firstLoad())
+        axios.delete(url+`cars/${id}`).then((resp)=> {
+            console.log('!!!')
+            deleteCard && deleteCard()
+            firstLoad()
+        })
+    }
+
+    const deleteFromHistory = (e) =>{
+        e.stopPropagation()
+        deleteFromHist(id)
     }
 
   return (
@@ -114,11 +126,15 @@ const Card = (props) => {
         <div className="ribbon">
             <div className="ribbon__text">{ribbonStatus}</div>
         </div>}
-        {currentUser && (currentUser.id === userId) && <button className='car__edit' onClick={editCar}/>}
-        {currentUser && (currentUser.id === userId) &&<button className='car__delete' onClick={deleteCar}/>}
+
+        {currentUser && (currentUser.id === userId) &&
+        <div className='card__control'>
+            <button className='car__edit' onClick={editCar}><Edit/></button>
+            <button className='car__delete' onClick={deleteCar}><Remove/></button>
+        </div>}
+        {deleteFromHist && <button className='car__delete history' onClick={deleteFromHistory}><Remove/></button>}
 
 
-        
 
     </div>
   )

@@ -17,6 +17,7 @@
   padding: 15px;
   min-width: 200px;
   transition: 0.5s;
+
   span{
     position: relative;
     z-index: 1;
@@ -73,3 +74,11 @@
     background: $background;
   }
 }
+
+.active__button{
+  span{
+    color: #006aaa;
+  }
+}
+
+

@@ -1,9 +1,9 @@
 import React, {useCallback, useState} from 'react'
 import './InfoAccordion.scss'
-import changeInscription from '../../functions/changeInscription'
+import changeInscription from '../../../functions/changeInscription'
 import ImageViewer from "react-simple-image-viewer";
 import {useNavigate} from "react-router-dom";
-import {ReactComponent as Remove} from '../../assets/icons/delete-133.svg'
+import {ReactComponent as Remove} from '../../../assets/icons/delete-133.svg'
 
 const InfoAccordion = (props) => {
     const {data, objName} = props
@@ -119,7 +119,7 @@ const InfoAccordion = (props) => {
 
 export const InfoDescr = (props) => {
     const {data=[], isAdmin=false, deleteInfo} = props
-    console.log(data)
+    // console.log(data)
 
     const [isOpen, setOpen] = useState(false)
 

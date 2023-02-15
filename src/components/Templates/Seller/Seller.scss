@@ -11,6 +11,9 @@ $width: 56px;
     background: $blockBackground;
     li{
         flex-grow: 1;
+        span{
+            font-size: 18px;
+        }
     }
     li:not(:first-child){
         border-left: 1px solid white;
@@ -32,12 +35,19 @@ $width: 56px;
 .seller__name{
     display: grid;
     gap: 0px 15px;
+    align-items: center;
     grid-template-columns: $width;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     'avatar name'
     'avatar type';
     h4{
         grid-area: name;
+        font-size: 18px;
+    }
+    h5{
+        margin-bottom: 0px;
+        font-size: 14px;
     }
     p{
         grid-area: type;
